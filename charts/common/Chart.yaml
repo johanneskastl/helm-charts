@@ -1,17 +1,12 @@
 apiVersion: v2
 name: common
-description: Function library for k8s-at-home charts
+description: Function library for charts that were forked from k8s-at-home after its deprecation
 type: library
-version: 4.5.2
+version: 5.0.0
 kubeVersion: ">=1.16.0-0"
 keywords:
-  - k8s-at-home
   - common
-home: https://github.com/k8s-at-home/library-charts/tree/main/stable/common
+home: https://github.com/johanneskastl/helm-charts/tree/main/charts/common
 maintainers:
-  - name: bjw-s
-    email: me@bjw-s.dev
-  - name: onedr0p
-    email: devin.kray@gmail.com
-  - name: dirtycajunrice
-    email: nick@cajun.pro
+  - name: johanneskastl
+    email: kastl@b1-systems.de
