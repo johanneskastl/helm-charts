@@ -27,7 +27,7 @@ jobs:
       - name: Run chart-testing (list-changed)
         id: list-changed
         run: |
-          changed=$(ct list-changed --target-branch main | grep -v '>>>')
+          changed=$(ct list-changed --target-branch main)
           if [[ -n "$changed" ]] && [[ "$changed" =~ "charts/" ]]; then
             echo "::set-output name=changed::true"
           fi
