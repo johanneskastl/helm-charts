@@ -100,6 +100,20 @@ N/A
 
 ## Changelog
 
+### Version 11.0.3
+
+#### Added
+
+N/A
+
+#### Changed
+
+* README.md: remove another k8s-at-home
+
+#### Fixed
+
+N/A
+
 ### Version 11.0.2
 
 #### Added
