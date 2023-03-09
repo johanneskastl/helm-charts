@@ -229,4 +229,45 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/uptime-kuma-2.0.0/uptime-kuma-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-09T18:05:06.737486326Z"
+  wallabag:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Forked the chart from k8s-at-home (at version 7.1.2)
+    apiVersion: v2
+    appVersion: 2.4.2
+    created: "2023-03-09T20:11:40.534097131Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.13.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.12
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.14
+    description: A self hostable application for saving web pages, freely.
+    digest: fc095d1005819e7b7292f587af0e7719037844a45b9632f16fa4d74541aafefb
+    home: https://github.com/johanneskastl/helm-charts/tree/maain/charts/wallabag
+    icon: https://raw.githubusercontent.com/wallabag/logo/master/app-android/logo-app-android-icon-bg-white-512.png
+    keywords:
+    - wallabag
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: wallabag
+    sources:
+    - https://github.com/wallabag/docker
+    - https://hub.docker.com/wallabag/wallabag
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
+    version: 8.0.0
+generated: "2023-03-09T20:11:40.534121931Z"
