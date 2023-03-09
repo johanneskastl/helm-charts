@@ -100,6 +100,35 @@ N/A
 
 ## Changelog
 
+### Version 11.0.2
+
+#### Added
+
+N/A
+
+#### Changed
+
+* README.md: remove leftover references to k8s-at-home in URLs
+* README.md: cleanup
+
+#### Fixed
+
+N/A
+
+### Version 11.0.1
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 0.20
+
+#### Fixed
+
+N/A
+
 ### Version 11.0.0
 
 #### Added
