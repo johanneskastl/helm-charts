@@ -29,11 +29,9 @@ Include this chart as a dependency in your `Chart.yaml` e.g.
 # Chart.yaml
 dependencies:
 - name: common
-  version: 4.5.1
-  repository: https://k8s-at-home.com/charts/
+  version: 5.0.0
+  repository: https://github.com/johanneskastl/helm-charts/
 ```
-
-For more information, take a look at the [Docs](http://docs.k8s-at-home.com/our-helm-charts/common-library/).
 
 ## Configuration
 
@@ -41,11 +39,11 @@ Read through the [values.yaml](./values.yaml) file. It has several commented out
 
 ## Custom configuration
 
-N/A
+None.
 
 ## Values
 
-**Important**: When deploying an application Helm chart you can add more values from our common library chart [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common)
+**Important**: When deploying an application Helm chart you can add more values from the common library chart [here](https://github.com/johanneskastl/helm-charts/tree/main/charts/common)
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
