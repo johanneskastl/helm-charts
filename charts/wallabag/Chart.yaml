@@ -1,0 +1,37 @@
+---
+apiVersion: v2
+appVersion: 2.4.2
+description: A self hostable application for saving web pages, freely.
+name: wallabag
+version: 8.0.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - wallabag
+home: https://github.com/johanneskastl/helm-charts/tree/maain/charts/wallabag
+icon: "https://raw.githubusercontent.com/wallabag/logo/master/app-android/logo-app-android-icon-bg-white-512.png"
+sources:
+  - https://github.com/wallabag/docker
+  - https://hub.docker.com/wallabag/wallabag
+maintainers:
+  - name: johanneskastl
+    email: kastl@b1-systems.de
+dependencies:
+  - name: common
+    repository: https://johanneskastl.github.io/helm-charts/
+    version: 5.0.0
+  - name: redis
+    version: 16.13.1
+    repository: https://charts.bitnami.com/bitnami
+    condition: redis.enabled
+  - name: postgresql
+    version: 11.6.12
+    repository: https://charts.bitnami.com/bitnami
+    condition: postgresql.enabled
+  - name: mariadb
+    version: 11.0.14
+    repository: https://charts.bitnami.com/bitnami
+    condition: mariadb.enabled
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Forked the chart from k8s-at-home (at version 7.1.2)
