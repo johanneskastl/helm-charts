@@ -168,6 +168,36 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/common-5.0.0/common-5.0.0.tgz
     version: 5.0.0
+  syncthing:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Forked the chart from k8s-at-home (at version 3.5.2)
+    apiVersion: v2
+    appVersion: 1.18.2
+    created: "2023-03-09T21:15:00.261867599Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    description: Open Source Continuous File Synchronization
+    digest: 63795de65e4fd19bb7107e011911ce944026f54d750c4dd38880c1c3c6c94632
+    home: https://github.com/ohanneskastl/helm-charts/tree/master/charts/stable/syncthing
+    icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
+    keywords:
+    - syncthing
+    - file sync
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: syncthing
+    sources:
+    - https://syncthing.net/
+    - https://github.com/syncthing/syncthing
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/syncthing-4.0.0/syncthing-4.0.0.tgz
+    version: 4.0.0
   uptime-kuma:
   - annotations:
       artifacthub.io/changes: |-
@@ -307,4 +337,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-03-09T21:02:39.515630793Z"
+generated: "2023-03-09T21:15:00.261889799Z"
