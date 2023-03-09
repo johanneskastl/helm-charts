@@ -1,0 +1,33 @@
+---
+apiVersion: v2
+appVersion: 1.25.2
+description: Vaultwarden is a Bitwarden compatible server in Rust
+name: vaultwarden
+version: 6.0.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - Vaultwarden
+  - bitwardenrs
+home: "https://github.com/johanneskastl/helm-charts/tree/main/charts/vaultwarden"
+icon: "https://sesoodan.sirv.com/bitwarden_rs.png"
+sources:
+  - https://github.com/dani-garcia/vaultwarden
+maintainers:
+  - name: johanneskastl
+    email: kastl@b1-systems.de
+dependencies:
+  - name: common
+    repository: https://johanneskastl.github.io/helm-charts/
+    version: 5.0.0
+  - name: mariadb
+    version: 11.0.14
+    repository: https://charts.bitnami.com/bitnami
+    condition: mariadb.enabled
+  - name: postgresql
+    version: 11.6.12
+    repository: https://charts.bitnami.com/bitnami
+    condition: postgresql.enabled
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Forked the chart from k8s-at-home (at version 5.3.2)
