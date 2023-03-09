@@ -1,6 +1,6 @@
 # blocky
 
-![Version: 11.0.0](https://img.shields.io/badge/Version-10.5.2-informational?style=flat-square) ![AppVersion: v0.20](https://img.shields.io/badge/AppVersion-v0.18-informational?style=flat-square)
+![Version: 11.0.4](https://img.shields.io/badge/Version-11.0.4-informational?style=flat-square) ![AppVersion: v0.20](https://img.shields.io/badge/AppVersion-v0.18-informational?style=flat-square)
 
 DNS proxy as ad-blocker for local network
 
@@ -97,6 +97,22 @@ N/A
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
 | redis | object | See values.yaml | Enable and configure redis subchart under this key. Useful if you're running more than one replica of blocky dns. For more options see [redis chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/redis) |
 | service | object | See values.yaml | Configures service settings for the chart. |
+
+## Changelog
+
+### Version 11.0.4
+
+#### Added
+
+N/A
+
+#### Changed
+
+* README.md: cleanup
+
+#### Fixed
+
+N/A
 
 ## Changelog
 

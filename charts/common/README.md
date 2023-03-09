@@ -1,10 +1,10 @@
 # common
 
-![Version: 4.5.2](https://img.shields.io/badge/Version-4.5.2-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
+![Version: 5.0.1](https://img.shields.io/badge/Version-5.0.0-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
 
-Function library for k8s-at-home charts
+Function library chart
 
-Since a lot of the k8s-at-home charts follow a similar pattern, this library was built to reduce maintenance cost between the charts that use it and try achieve a goal of being DRY.
+Forked from the [k8s-at-home library-charts](https://github.com/k8s-at-home/library-charts/) repository, as it is unfortunately deprecated.
 
 ## Requirements
 
@@ -29,11 +29,9 @@ Include this chart as a dependency in your `Chart.yaml` e.g.
 # Chart.yaml
 dependencies:
 - name: common
-  version: 4.5.1
-  repository: https://k8s-at-home.com/charts/
+  version: 5.0.0
+  repository: https://github.com/johanneskastl/helm-charts/
 ```
-
-For more information, take a look at the [Docs](http://docs.k8s-at-home.com/our-helm-charts/common-library/).
 
 ## Configuration
 
@@ -41,17 +39,17 @@ Read through the [values.yaml](./values.yaml) file. It has several commented out
 
 ## Custom configuration
 
-N/A
+None.
 
 ## Values
 
-**Important**: When deploying an application Helm chart you can add more values from our common library chart [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common)
+**Important**: When deploying an application Helm chart you can add more values from the common library chart [here](https://github.com/johanneskastl/helm-charts/tree/main/charts/common)
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | additionalContainers | object | `{}` | Specify any additional containers here as dictionary items. Each additional container should have its own key. Helm templates can be used. |
 | addons | object | See below | The common chart supports several add-ons. These can be configured under this key. |
-| addons.codeserver | object | See values.yaml | The common library supports adding a code-server add-on to access files. It can be configured under this key. For more info, check out [our docs](http://docs.k8s-at-home.com/our-helm-charts/common-library-add-ons/#code-server) |
+| addons.codeserver | object | See values.yaml | The common library supports adding a code-server add-on to access files. It can be configured under this key. For more info, check out [the k8s-at-home docs](http://docs.k8s-at-home.com/our-helm-charts/common-library-add-ons/#code-server) |
 | addons.codeserver.args | list | `["--auth","none"]` | Set codeserver command line arguments. Consider setting --user-data-dir to a persistent location to preserve code-server setting changes |
 | addons.codeserver.enabled | bool | `false` | Enable running a code-server container in the pod |
 | addons.codeserver.env | object | `{}` | Set any environment variables for code-server here |
@@ -83,7 +81,7 @@ N/A
 | addons.promtail.logs | list | `[]` | The paths to logs on the volume |
 | addons.promtail.loki | string | `""` | The URL to Loki |
 | addons.promtail.volumeMounts | list | `[]` | Specify a list of volumes that get mounted in the promtail container. At least 1 volumeMount is required! |
-| addons.vpn | object | See values.yaml | The common chart supports adding a VPN add-on. It can be configured under this key. For more info, check out [our docs](http://docs.k8s-at-home.com/our-helm-charts/common-library-add-ons/#wireguard-vpn) |
+| addons.vpn | object | See values.yaml | The common chart supports adding a VPN add-on. It can be configured under this key. For more info, check out [the k8s-at-home docs](http://docs.k8s-at-home.com/our-helm-charts/common-library-add-ons/#wireguard-vpn) |
 | addons.vpn.args | list | `[]` | Override the args for the vpn sidecar container |
 | addons.vpn.configFile | string | `nil` | Provide a customized vpn configuration file to be used by the VPN. |
 | addons.vpn.configFileSecret | string | `nil` | Reference an existing secret that contains the VPN configuration file The chart expects it to be present under the `vpnConfigfile` key. |
@@ -237,336 +235,34 @@ All notable changes to this library Helm chart will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [4.5.2]
-
-#### Fixed
-
-- Fixed environment variable processing logic for main container when initContainers or additionalContainers were set.
-
-### [4.5.1]
-
-#### Fixed
-
-- Fixed environment variable processing logic for initContainers and additionalContainers.
-
-### [4.5.0]
+### [5.0.1]
 
 #### Added
 
-- Support checksum/config annotations for configMaps to automate roll deployments/daemonsets/statefulsets after config changes.
-- Support Gluetun VPN client add-on. Please see [the project repository](https://github.com/qdm12/gluetun) for more information and how to configure.
-- Added support for the `envFrom` field in the VPN add-on.
+N/A
 
 #### Changed
 
-- Updated and pinned `netshoot` add-on image to `v0.7`.
-- Updated `code-server` add-on image to `4.5.1`.
-- Updated `promtail` add-on image to `2.6.1`.
+- README.md cleanup, remove leftover k8s-at-home URLs
 
 #### Fixed
 
-- Added `ingressClassName` description under the `code-server` add-on.
-- `valueFrom` now works correctly when `env` is a list of variables.
+N/A
 
-### [4.4.2]
-
-#### Fixed
-
-- Change the scope for some of the annotation/label includes.
-
-### [4.4.1]
-
-#### Fixed
-
-- Fix a typo that would make charts / objects containing annotations not render correctly.
-
-### [4.4.0]
+### [5.0.0]
 
 #### Added
 
-- Support for `nfs` as a persistence type. [[ref](https://docs.k8s-at-home.com/our-helm-charts/common-library-storage/#nfs-volume)].
-- Support for setting custom `args` for VPN containers.
-- Support setting additional global labels. These will be applied to all objects rendered by the chart.
-- Support setting additional global annotations. These will be applied to all objects rendered by the chart.
-- Support Helm templating in `podAnnotations`.
+N/A
 
 #### Changed
 
-- `externalTrafficPolicy` (when a value is specified) is now set for all Service types. (fixes https://github.com/k8s-at-home/library-charts/issues/125)
-- Changed the unit test framework to an easier and more readable solution.
+- Forked the common library chart from k8s-at-home (at version 4.5.2), where it is no longer maintained.
 
 #### Fixed
 
-- Fix a typo in the generated Notes.
-- Explicitly add `imagePullSecrets` to `values.yaml` to improve discoverability of the setting.
-
-### [4.3.0]
-
-#### Added
-
-- Support setting `podManagementPolicy` on StatefulSet
-- Support setting the `runtimeClassName` of pods
-
-#### Changed
-
-- Improved environment variables documentation to correctly reflect the available syntax options.
-
-### [4.2.0]
-
-#### Added
-
-- Support for defining ipFamilyPolicy and ipFamilies in service resources
-
-### [4.1.0]
-
-#### Changed
-
-- Updated Wireguard add-on image tag to `v1.0.20210914`.
-
-#### Added
-
-- Support for specifying whether a pod should auto mount a service account token.
-- Support for specifying configMaps directly in values.yaml.
-- Support for specifying annotations/labels on the VPN add-on `NetworkPolicy`.
-- Support for specifying custom podSelector labels on the VPN add-on `NetworkPolicy`.
-- Added `secret` and `configMap` as persistence types. [[ref]](http://docs.k8s-at-home.com/our-helm-charts/common-library-storage/).
-
-### [4.0.1]
-
-#### Fixed
-
-- Fixed an issue where users weren't able to set custom ingress labels.
-
-### [4.0.0]
-
-#### Added
-
-- Support for specifying container termination message path and policy (#77).
-- Support for specifying Pod termination grace period.
-- Support for specifying PVC labels for `persistence` items.
-
-#### Changed
-
-- **BREAKING**: Renamed the `skipuninstall` key to `retain` for `persistence` items.
-- **BREAKING**: `initContainers` now expects a dictionary instead of a list to make merging less error-prone. initContainers are ordered by their key.
-- **BREAKING**: `additionalContainers` now expects a dictionary instead of a list to make merging less error-prone.
-
-### [3.3.0]
-
-#### Added
-
-- Support ability to specify the [mountPropagation](https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation) key under persistence items (https://github.com/k8s-at-home/library-charts/issues/74).
-
-#### Changed
-
-- Changed the docstring for `persistence` to better reference [our documentation](http://docs.k8s-at-home.com/our-helm-charts/common-library-storage/) regarding Storage options.
-
-#### Fixed
-
-- Fixed an issue where the default `repository` value for the Wireguard addon was incorrect (https://github.com/k8s-at-home/library-charts/issues/69).
-- Fixed an issue where probes were not referencing the service `targetPort`.
-
-### [3.2.0]
-
-#### Added
-
-- Support for specifying [topologySpreadConstraints](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/) for a pod.
-- Support for specifying multiple `subPath` items under `persistence` keys.
-
-#### Removed
-
-- Removed persistence examples from the `values.yaml` file. These will be documented instead in [our documentation](http://docs.k8s-at-home.com/our-helm-charts/common-library/).
-
-### [3.1.1]
-
-#### Fixed
-
-- Fixed an issue where the default service would not be determined correctly for Ingress objects.
-- Fixed an issue where the code-server addon ingress would reference the wrong service when multiple hosts were specified (https://github.com/k8s-at-home/library-charts/issues/64).
-
-### [3.1.0]
-
-#### Added
-
-- Support to disable the controller when no container is deployed.
-
-#### Fixed
-
-- Fixed an issue where the code-server addon ingress would reference the wrong service.
-
-### [3.0.2]
-
-#### Fixed
-
-- Fixed an issue where the `common.names.fullname` template would not properly render.
-
-### [3.0.1]
-
-#### Fixed
-
-- Fixed an issue where the `nameOverride` and `fullnameOverride` could throw an error.
-
-### [3.0.0]
-
-#### Added
-
-- It is now possible to flag an ingress / service / port as primary. This will then be used
-  by default in the chart notes, probes, etc.
-- Individual ports can now be enabled / disabled.
-- Allow setting Pod labels using the `podLabels` field.
-- Allow setting `volumeName` for PVC's.
-- Annotated the values.yaml to better describe what fields do. This is also reflected in the [README.md](README.md) file.
-- Added a [netshoot](https://github.com/nicolaka/netshoot) add-on. This allows for injecting a network trouble-shooting swiss-army sidecar container.
-
-#### Changed
-
-- Probes are now automatically disabled (except for custom defined probes) when no service is enabled.
-- Moved the primary ingress from `ingress` to `ingress.main`.
-- Moved the primary service from `service` to `service.main`.
-- Multiple ingress objects can now be specified under the `ingress` key.
-- Multiple service objects can now be specified under the `service` key.
-- `nameSuffix` has been renamed to `nameOverride`.
-- `hostPathMounts` has been integrated with `persistence`.
-- `additionalVolumes` has been integrated with `persistence`.
-- Test framework has been rewritten from Ruby to Go.
-
-#### Fixed
-
-- Cleaned up YAML document separators (`---`).
-- Fixed indenting of the `lifecycle` field.
-
-#### Removed
-
-- Removed support for `ingress.additionalIngresses`.
-- Removed support for `services.additionalServices`.
-- Removed support for TrueNAS SCALE features. These are out of scope for our project.
-
-### [2.5.0]
-
-#### Added
-
-- Added `Horizontal Pod Autoscaler`
-- Can now use "HTTP" or "HTTPS" as port protocol (which use TCP under-the-hood)
-- Setting the port protocol to "HTTPS" adds traefik annotation to use https towards the backend service
-- Add option to automatically generate a configmap for use with the TrueNAS SCALE UI portal-button
-- Added option to use TrueNAS SCALE default storageClass by using `SCALE-ZFS` storageClass
-- It is now possible to set the `serviceName` and `servicePort` per Ingress path
-
-#### Changed
-
-- Port protocol gets used to determine install-notes URL (http or https)
-
-### [2.4.0]
-
-#### Added
-
-- `hostPathMounts` to mount hostPaths with a single values.yaml setting
-- Automated ownership fixing job for `hostPathMounts`
-- `envList` to use a list of environment variables in addition to the current dict or template
-
-#### Changed
-
-- Set `dnsPolicy` default based on `hostNetwork` setting
-
-#### Fixed
-
-- Fixed unit-tests not correctly testing no-env scenario's
-
-### [2.3.1]
-
-#### Fixed
-
-- Fixed the VPN addon secret name when providing inline VPN configuration.
-
-### [2.3.0]
-
-#### Added
-
-- Allow `configFileSecret` to be specified under the VPN add-on, to reference an existing secret.
-- Allow `git.deployKey` to be specified under the codeserver add-on. Please refer to `values.yaml` for more details.
-
-#### Changed
-
-- Modified unit tests to no longer depend on `jq`.
-
-#### Fixed
-
-- `secretName` is now truly optional under Ingress TLS configuration.
-
-### [2.2.0]
-
-#### Added
-
-- Persistence `nameSuffix` can now be set to `-` to disable suffixing that PVC.
-- Support for configuring `lifecycle`
-- Support for configuring `pathTpl` in Ingress (#15).
-
-#### Fixed
-
-- Ingress `pathType` is now actually configurable. Fixes #16.
-- PVC's are always forced to a newline. Fixes #17.
-
-### [2.1.0]
-
-#### Added
-
-- Added support for shipping logs to Loki using the new `promtail` add-on.
-
-#### Changed
-
-- Upgraded the default image in the `codeserver` add-on to `v3.9.2`
-
-### [2.0.1]
-
-#### Fixed
-
-- Volumes referencing persistentVolumeClaims actually reference the PVC again.
-- Items under persistence now default their `mountPath` to the item name, as they should have been doing.
-
-### [2.0.0]
-
-#### Added
-
-- Added support for using Helm template language in `additionalContainers`.
-
-#### Changed
-
-- **Breaking:** `persistence.emptyDir` was changed to allow more configuration options, such as `medium` and `sizeLimit`.
-
-### [1.0.0]
-
-#### Changed
-
-- Moved common library chart to separate repository
-
-#### Fixed
-
-- The `command` and `args` values now properly support both string and list values.
-
-[4.0.0]: #400
-[3.3.0]: #330
-[3.2.0]: #320
-[3.1.1]: #311
-[3.1.0]: #310
-[3.0.2]: #302
-[3.0.1]: #301
-[3.0.0]: #300
-[2.5.0]: #250
-[2.4.0]: #240
-[2.3.1]: #231
-[2.3.0]: #230
-[2.2.0]: #220
-[2.1.0]: #210
-[2.0.1]: #201
-[2.0.0]: #200
-[1.0.0]: #100
+N/A
 
 ## Support
 
-- See the [Docs](https://docs.k8s-at-home.com/our-helm-charts/getting-started/)
-- Open an [issue](https://github.com/k8s-at-home/charts/issues/new/choose)
-- Ask a [question](https://github.com/k8s-at-home/organization/discussions)
-- Join our [Discord](https://discord.gg/sTMX7Vh) community
-
-----------------------------------------------
-Autogenerated from chart metadata using [helm-docs v1.5.0](https://github.com/norwoodj/helm-docs/releases/v1.5.0)
+Open an [issue](https://github.com/johanneskastl/helm-charts/issues/).
