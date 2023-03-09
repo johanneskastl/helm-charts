@@ -3,6 +3,7 @@
 Collection of helm charts I used in my personal clusters.
 
 - [blocky](./charts/blocky/README.md)
+- [jellyfin](./charts/jellyfin/README.md)
 - [uptime-kuma](./charts/uptime-kuma/README.md)
 - [vaultwarden](./charts/vaultwarden/README.md)
 - [wallabag](./charts/wallabag/README.md)
