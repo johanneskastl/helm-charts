@@ -117,3 +117,4 @@ N/A
 
 ## Support
 
+Open an [issue](https://github.com/johanneskastl/helm-charts/issues/).
