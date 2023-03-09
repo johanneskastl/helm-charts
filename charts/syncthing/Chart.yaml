@@ -8,15 +8,14 @@ kubeVersion: ">=1.16.0-0"
 keywords:
   - syncthing
   - file sync
-home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/syncthing
+home: https://github.com/ohanneskastl/helm-charts/tree/master/charts/stable/syncthing
 icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
 sources:
   - https://syncthing.net/
   - https://github.com/syncthing/syncthing
 maintainers:
-  - name: FlipEnergy
-    email: dennis.zhang.nrg@gmail.com
-  - name: claughinghouse
+  - name: johanneskastl
+    email: kastl@b1-systems.de
 dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com
