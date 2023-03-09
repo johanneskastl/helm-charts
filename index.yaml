@@ -52,4 +52,35 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/common-5.0.0/common-5.0.0.tgz
     version: 5.0.0
-generated: "2023-03-08T20:09:55.467027404Z"
+  uptime-kuma:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Forked the chart from k8s-at-home (at version 1.4.2)
+    apiVersion: v2
+    appVersion: 1.17.1
+    created: "2023-03-09T11:46:34.273254037Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: 4ebdeaccfb781e7afc7a383f57469627ea5cb90ad69bc49d22e28f6710d7d691
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/uptime-kuma-2.0.0/uptime-kuma-2.0.0.tgz
+    version: 2.0.0
+generated: "2023-03-09T11:46:34.273261937Z"
