@@ -7,14 +7,14 @@ version: 8.0.0
 kubeVersion: ">=1.16.0-0"
 keywords:
   - wallabag
-home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/wallabag
+home: https://github.com/johanneskastl/helm-charts/tree/maain/charts/wallabag
 icon: "https://raw.githubusercontent.com/wallabag/logo/master/app-android/logo-app-android-icon-bg-white-512.png"
 sources:
   - https://github.com/wallabag/docker
   - https://hub.docker.com/wallabag/wallabag
 maintainers:
-  - name: Patricol
-    url: https://patricol.co/
+  - name: johanneskastl
+    email: kastl@b1-systems.de
 dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com
