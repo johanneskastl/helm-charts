@@ -1,6 +1,6 @@
 # uptime-kuma
 
-![Version: 1.4.2](https://img.shields.io/badge/Version-1.4.2-informational?style=flat-square) ![AppVersion: 1.17.1](https://img.shields.io/badge/AppVersion-1.17.1-informational?style=flat-square)
+![Version: 2.0.1](https://img.shields.io/badge/Version-2.0.1-informational?style=flat-square) ![AppVersion: 1.17.1](https://img.shields.io/badge/AppVersion-1.17.1-informational?style=flat-square)
 
 A fancy self-hosted monitoring tool for your websites and applications
 
@@ -86,6 +86,20 @@ N/A
 
 ## Changelog
 
+### Version 2.0.1
+
+#### Added
+
+N/A
+
+#### Changed
+
+* README.md cleanup
+
+#### Fixed
+
+N/A
+
 ### Version 2.0.0
 
 #### Added
@@ -99,7 +113,6 @@ N/A
 #### Fixed
 
 N/A
-
 
 ## Support
 
