@@ -4,6 +4,39 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: adapt README
+    apiVersion: v2
+    appVersion: v0.20
+    created: "2023-03-09T12:02:08.792483435Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.13.1
+    description: DNS proxy as ad-blocker for local network
+    digest: f23520ebcfcac086bbae3b330312e5ccfc9c3672dcb10ae4ebda3642164e73f6
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/blocky
+    icon: https://github.com/0xERR0R/blocky/raw/master/docs/blocky.svg?sanitize=true
+    keywords:
+    - blocky
+    - adblock
+    - dns
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: blocky
+    sources:
+    - https://github.com/0xERR0R/blocky
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/blocky-11.0.2/blocky-11.0.2.tgz
+    version: 11.0.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Update appVersion to v0.20
     apiVersion: v2
     appVersion: v0.20
@@ -83,4 +116,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/uptime-kuma-2.0.0/uptime-kuma-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-09T11:46:34.273261937Z"
+generated: "2023-03-09T12:02:08.792501435Z"
