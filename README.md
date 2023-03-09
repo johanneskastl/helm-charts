@@ -5,6 +5,7 @@ Collection of helm charts I used in my personal clusters.
 - [blocky](./charts/blocky/README.md)
 - [uptime-kuma](./charts/uptime-kuma/README.md)
 - [vaultwarden](./charts/vaultwarden/README.md)
+- [wallabag](./charts/wallabag/README.md)
 
 This repository also contains a library chart called common, that is used by the actual helm charts.
 
