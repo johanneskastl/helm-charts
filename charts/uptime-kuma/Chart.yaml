@@ -10,13 +10,13 @@ keywords:
   - status
   - status-page
   - monitoring
-home: https://github.com/k8s-at-home/charts/tree/master/charts/incubator/uptime-kuma
+home: https://github.com/johanneskastl/helm-charts/tree/main/charts/uptime-kuma
 icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
 sources:
   - https://github.com/louislam/uptime-kuma
 maintainers:
-  - name: pysen
-    email: pysen@svartavillan.se
+  - name: johanneskastl
+    email: kastl@b1-systems.de
 dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com
