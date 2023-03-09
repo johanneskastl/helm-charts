@@ -4,6 +4,39 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: README cleanup
+    apiVersion: v2
+    appVersion: v0.20
+    created: "2023-03-09T18:05:06.387115822Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.13.1
+    description: DNS proxy as ad-blocker for local network
+    digest: 3ddb0c817d82f7435417903b972eb6d7fc2f3603ecc4b12fd24ae068752360c9
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/blocky
+    icon: https://github.com/0xERR0R/blocky/raw/master/docs/blocky.svg?sanitize=true
+    keywords:
+    - blocky
+    - adblock
+    - dns
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: blocky
+    sources:
+    - https://github.com/0xERR0R/blocky
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/blocky-11.0.4/blocky-11.0.4.tgz
+    version: 11.0.4
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: adapt README
     apiVersion: v2
     appVersion: v0.20
@@ -102,6 +135,23 @@ entries:
     version: 11.0.1
   common:
   - apiVersion: v2
+    created: "2023-03-09T18:05:06.548521101Z"
+    description: Function library for charts that were forked from k8s-at-home after
+      its deprecation
+    digest: 734fe597e5101b2435db6da733853c6ed60857d2c276e3be8a6f540b901c719d
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/common
+    keywords:
+    - common
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: common
+    type: library
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/common-5.0.1/common-5.0.1.tgz
+    version: 5.0.1
+  - apiVersion: v2
     created: "2023-03-08T19:27:09.558378887Z"
     description: Function library for charts that were forked from k8s-at-home after
       its deprecation
@@ -119,6 +169,36 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/common-5.0.0/common-5.0.0.tgz
     version: 5.0.0
   uptime-kuma:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: README.md cleanup
+    apiVersion: v2
+    appVersion: 1.17.1
+    created: "2023-03-09T18:05:06.737465924Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: ed1286ff3ea7db94fc8377824773a574daf1215d4191afb7f6c64fb2ea3f4a47
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/uptime-kuma-2.0.1/uptime-kuma-2.0.1.tgz
+    version: 2.0.1
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -149,4 +229,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/uptime-kuma-2.0.0/uptime-kuma-2.0.0.tgz
     version: 2.0.0
-generated: "2023-03-09T17:37:26.377934633Z"
+generated: "2023-03-09T18:05:06.737486326Z"
