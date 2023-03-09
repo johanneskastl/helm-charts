@@ -4,7 +4,7 @@
 
 DNS proxy as ad-blocker for local network
 
-**This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/k8s-at-home/charts/issues/new/choose)**
+**This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/johanneskastl/helm-charts/issues/)**
 
 ## Source Code
 
@@ -99,6 +99,20 @@ N/A
 | service | object | See values.yaml | Configures service settings for the chart. |
 
 ## Changelog
+
+### Version 11.0.3
+
+#### Added
+
+N/A
+
+#### Changed
+
+* README.md: remove another k8s-at-home
+
+#### Fixed
+
+N/A
 
 ### Version 11.0.2
 
