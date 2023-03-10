@@ -9,14 +9,14 @@ keywords:
   - jellyfin
   - plex
   - emby
-home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/jellyfin
+home: https://github.com/johanneskastl/helm-charts/tree/main/charts/jellyfin
 icon: https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/icon-solid-black.svg
 sources:
   - https://hub.docker.com/r/jellyfin/jellyfin
   - https://github.com/jellyfin/jellyfin
 maintainers:
-  - name: billimek
-    email: jeff@billimek.com
+  - name: johanneskastl
+    email: kastl@b1-systems.de
 dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com
