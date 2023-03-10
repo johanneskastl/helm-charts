@@ -1,0 +1,25 @@
+---
+apiVersion: v2
+appVersion: 2.2.2
+description: An Application dashboard and launcher
+name: heimdall
+version: 9.0.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - heimdall
+home: https://github.com/johanneskastl/helm-charts/tree/main/charts/heimdall
+icon: https://i.imgur.com/mM4tcO5.png
+sources:
+  - https://hub.docker.com/r/linuxserver/heimdall/
+  - https://github.com/linuxserver/heimdall
+maintainers:
+  - name: johanneskastl
+    email: kastl@b1-systems.de
+dependencies:
+  - name: common
+    repository: https://johanneskastl.github.io/helm-charts/
+    version: 5.0.0
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Forked the chart from k8s-at-home (at version 8.4.2)
