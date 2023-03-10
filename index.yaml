@@ -168,7 +168,67 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/common-5.0.0/common-5.0.0.tgz
     version: 5.0.0
+  jellyfin:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Forked the chart from k8s-at-home (at version 9.5.3)
+    apiVersion: v2
+    appVersion: 10.8.1
+    created: "2023-03-10T07:08:01.845687374Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    description: Jellyfin is a Free Software Media System
+    digest: 71788a96d0993ebe1077b486ac638d7b1b946c4aa7d5261691ed3f9a184381ea
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/jellyfin
+    icon: https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/icon-solid-black.svg
+    keywords:
+    - jellyfin
+    - plex
+    - emby
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: jellyfin
+    sources:
+    - https://hub.docker.com/r/jellyfin/jellyfin
+    - https://github.com/jellyfin/jellyfin
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/jellyfin-10.0.0/jellyfin-10.0.0.tgz
+    version: 10.0.0
   syncthing:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Fix link in home URL
+    apiVersion: v2
+    appVersion: 1.18.2
+    created: "2023-03-10T07:08:02.037902319Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    description: Open Source Continuous File Synchronization
+    digest: a36e0473fa4edc2c0764e3b2f6dc35cf36cfbc77d530f8c73aeb33d9abea0512
+    home: https://github.com/johanneskastl/helm-charts/tree/master/charts/stable/syncthing
+    icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
+    keywords:
+    - syncthing
+    - file sync
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: syncthing
+    sources:
+    - https://syncthing.net/
+    - https://github.com/syncthing/syncthing
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/syncthing-4.0.1/syncthing-4.0.1.tgz
+    version: 4.0.1
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -373,4 +433,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-03-09T21:16:42.295451287Z"
+generated: "2023-03-10T07:08:02.037934719Z"
