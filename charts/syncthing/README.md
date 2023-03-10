@@ -1,6 +1,6 @@
 # syncthing
 
-![Version: 4.0.0](https://img.shields.io/badge/Version-4.0.0-informational?style=flat-square) ![AppVersion: 1.18.2](https://img.shields.io/badge/AppVersion-1.18.2-informational?style=flat-square)
+![Version: 4.0.1](https://img.shields.io/badge/Version-4.0.1-informational?style=flat-square) ![AppVersion: 1.18.2](https://img.shields.io/badge/AppVersion-1.18.2-informational?style=flat-square)
 
 Open Source Continuous File Synchronization
 
@@ -86,6 +86,20 @@ N/A
 | service | object | See values.yaml | Configures service settings for the chart. |
 
 ## Changelog
+
+### Version 4.0.1
+
+#### Added
+
+N/A
+
+#### Changed
+
+* Chart.yaml: Fix link in home URL
+
+#### Fixed
+
+N/A
 
 ### Version 4.0.0
 
