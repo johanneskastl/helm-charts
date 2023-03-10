@@ -168,6 +168,35 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/common-5.0.0/common-5.0.0.tgz
     version: 5.0.0
+  heimdall:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Forked the chart from k8s-at-home (at version 8.4.2)
+    apiVersion: v2
+    appVersion: 2.2.2
+    created: "2023-03-10T07:34:23.735387085Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    description: An Application dashboard and launcher
+    digest: 9406f5cb189eb31a13db2a2d0e7757c65866dcd51b988e224dd888b104aa6177
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/heimdall
+    icon: https://i.imgur.com/mM4tcO5.png
+    keywords:
+    - heimdall
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: heimdall
+    sources:
+    - https://hub.docker.com/r/linuxserver/heimdall/
+    - https://github.com/linuxserver/heimdall
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/heimdall-9.0.0/heimdall-9.0.0.tgz
+    version: 9.0.0
   jellyfin:
   - annotations:
       artifacthub.io/changes: |-
@@ -433,4 +462,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-03-10T07:08:02.037934719Z"
+generated: "2023-03-10T07:34:23.735424386Z"
