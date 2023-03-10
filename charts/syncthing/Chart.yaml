@@ -3,12 +3,12 @@ apiVersion: v2
 appVersion: 1.18.2
 description: Open Source Continuous File Synchronization
 name: syncthing
-version: 4.0.0
+version: 4.0.1
 kubeVersion: ">=1.16.0-0"
 keywords:
   - syncthing
   - file sync
-home: https://github.com/ohanneskastl/helm-charts/tree/master/charts/stable/syncthing
+home: https://github.com/johanneskastl/helm-charts/tree/master/charts/stable/syncthing
 icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
 sources:
   - https://syncthing.net/
@@ -23,4 +23,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Forked the chart from k8s-at-home (at version 3.5.2)
+      description: Fix link in home URL

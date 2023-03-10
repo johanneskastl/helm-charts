@@ -1,17 +1,17 @@
-# syncthing
+# jellyfin
 
-![Version: 4.0.1](https://img.shields.io/badge/Version-4.0.1-informational?style=flat-square) ![AppVersion: 1.18.2](https://img.shields.io/badge/AppVersion-1.18.2-informational?style=flat-square)
+![Version: 10.0.0](https://img.shields.io/badge/Version-10.0.0-informational?style=flat-square) ![AppVersion: 10.8.1](https://img.shields.io/badge/AppVersion-10.8.1-informational?style=flat-square)
 
-Open Source Continuous File Synchronization
+Jellyfin is a Free Software Media System
 
-Forked from the chart in the [k8s-at-home repository](https://github.com/k8s-at-home/charts) at version 3.5.2.
+Forked from the chart in the [k8s-at-home repository](https://github.com/k8s-at-home/charts) at version 9.5.3.
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/johanneskastl/helm-charts/issues/)**
 
 ## Source Code
 
-* <https://syncthing.net/>
-* <https://github.com/syncthing/syncthing>
+* <https://hub.docker.com/r/jellyfin/jellyfin>
+* <https://github.com/jellyfin/jellyfin>
 
 ## Requirements
 
@@ -28,23 +28,23 @@ Kubernetes: `>=1.16.0-0`
 ```console
 helm repo add johanneskastl-helm-charts https://johanneskastl.github.io/helm-charts/
 helm repo update
-helm install syncthing johanneskastl-helm-charts/syncthing
+helm install jellyfin johanneskastl-helm-charts/jellyfin
 ```
 
 ## Installing the Chart
 
-To install the chart with the release name `syncthing`
+To install the chart with the release name `jellyfin`
 
 ```console
-helm install syncthing johanneskastl-helm-charts/syncthing
+helm install jellyfin johanneskastl-helm-charts/jellyfin
 ```
 
 ## Uninstalling the Chart
 
-To uninstall the `syncthing` deployment
+To uninstall the `jellyfin` deployment
 
 ```console
-helm uninstall syncthing
+helm uninstall jellyfin
 ```
 
 The command removes all the Kubernetes components associated with the chart **including persistent volumes** and deletes the release.
@@ -57,15 +57,15 @@ Other values may be used from the [values.yaml](https://github.com/johanneskastl
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
-helm install syncthing \
+helm install jellyfin \
   --set env.TZ="America/New York" \
-    johanneskastl-helm-charts/syncthing
+    johanneskastl-helm-charts/jellyfin
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install syncthing johanneskastl-helm-charts/syncthing -f values.yaml
+helm install jellyfin johanneskastl-helm-charts/jellyfin -f values.yaml
 ```
 
 ## Custom configuration
@@ -78,16 +78,19 @@ N/A
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| env | object | See below | environment variables. See [image docs](https://jellyfin.org/docs/general/administration/configuration.html) for more details. |
+| env.TZ | string | `"UTC"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
-| image.repository | string | `"syncthing/syncthing"` | image repository |
-| image.tag | string | `"1.18.2"` | image tag |
+| image.repository | string | `"jellyfin/jellyfin"` | image repository |
+| image.tag | string | chart.appVersion | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
+| podSecurityContext | object | `{}` | Configure the Security Context for the Pod |
 | service | object | See values.yaml | Configures service settings for the chart. |
 
 ## Changelog
 
-### Version 4.0.1
+### Version 10.0.0
 
 #### Added
 
@@ -95,21 +98,7 @@ N/A
 
 #### Changed
 
-* Chart.yaml: Fix link in home URL
-
-#### Fixed
-
-N/A
-
-### Version 4.0.0
-
-#### Added
-
-N/A
-
-#### Changed
-
-* Forked the chart from k8s-at-home (at version 3.5.2)
+* Forked the chart from k8s-at-home (at version 9.5.3)
 
 #### Fixed
 
