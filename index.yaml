@@ -291,6 +291,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update appVersion to 1.19.3
+    apiVersion: v2
+    appVersion: 1.19.3
+    created: "2023-03-17T12:36:44.765906034Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: d768460548fb072a5ceb335997c5ec429300e88992f695c25b2a6c310a58236c
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/uptime-kuma-2.2.3/uptime-kuma-2.2.3.tgz
+    version: 2.2.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update appVersion to 1.19.2
     apiVersion: v2
     appVersion: 1.19.2
@@ -732,4 +762,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-03-17T12:29:06.629440528Z"
+generated: "2023-03-17T12:36:44.765954734Z"
