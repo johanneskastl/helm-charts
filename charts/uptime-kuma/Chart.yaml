@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: 1.20.2
+appVersion: 1.21.0
 description: A fancy self-hosted monitoring tool for your websites and applications
 name: uptime-kuma
-version: 2.3.2
+version: 2.4.0
 kubeVersion: ">=1.16.0-0"
 keywords:
   - uptime-kuma
@@ -24,4 +24,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update appVersion to 1.20.2
+      description: update appVersion to 1.21.0
