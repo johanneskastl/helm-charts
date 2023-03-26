@@ -287,6 +287,35 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/syncthing-4.0.0/syncthing-4.0.0.tgz
     version: 4.0.0
+  tailscale:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: chart created
+    apiVersion: v2
+    appVersion: v1.38.2
+    created: "2023-03-26T08:51:26.188043764Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    description: Run a tailscale subnet router in Kubernetes
+    digest: de43886183916579cd44966726bb00e98c99a681be68ac90e4556e01a1890257
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/tailscale
+    keywords:
+    - tailscale
+    - vpn
+    - wireguard
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: tailscale
+    sources:
+    - https://github.com/tailscale/tailscale
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/tailscale-0.0.1/tailscale-0.0.1.tgz
+    version: 0.0.1
   uptime-kuma:
   - annotations:
       artifacthub.io/changes: |-
@@ -972,4 +1001,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-03-20T10:34:09.215117939Z"
+generated: "2023-03-26T08:51:26.188191673Z"
