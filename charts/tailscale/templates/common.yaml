@@ -7,6 +7,9 @@ env:
     TS_KUBE_SECRET: {{ .Values.env.TS_KUBE_SECRET }}
     TS_USERSPACE: {{ .Values.env.TS_USERSPACE }}
     TS_ROUTES: {{ .Values.env.TS_ROUTES | required ".Values.env.TS_ROUTES is required, please supply the routes this subnet router is providing" }}
+envFrom:
+  - secretRef:
+      name: {{ .Values.env.TS_KUBE_SECRET }}
       {{- end -}}
     {{- $_ := mergeOverwrite .Values (include "tailscale.hardcodedValues" . | fromYaml) -}}
 
