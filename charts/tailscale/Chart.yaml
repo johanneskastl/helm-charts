@@ -1,0 +1,25 @@
+---
+apiVersion: v2
+appVersion: v1.38.2
+description: Run a tailscale subnet router in Kubernetes
+name: tailscale
+version: 0.0.1
+kubeVersion: ">=1.19.0-0"
+keywords:
+  - tailscale
+  - vpn
+  - wireguard
+home: https://github.com/johanneskastl/helm-charts/tree/main/charts/tailscale
+sources:
+  - https://github.com/tailscale/tailscale
+maintainers:
+  - name: johanneskastl
+    email: kastl@b1-systems.de
+dependencies:
+  - name: common
+    repository: https://johanneskastl.github.io/helm-charts/
+    version: 5.0.0
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: chart created

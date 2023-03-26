@@ -1,0 +1,56 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from the common library chart. You can check the default values/options here:
+# https://github.com/johanneskastl/helm-charts/tree/main/charts/common/values.yaml
+#
+
+image:
+  # -- image repository
+  repository: tailscale/tailscale
+  # -- image tag
+  # @default -- chart.appVersion
+  tag:
+  # -- image pull policy
+  pullPolicy: Always
+
+# -- environment variables
+# @default -- See below
+env:
+  TS_KUBE_SECRET: tailscale-auth
+  TS_USERSPACE: true
+  TS_ROUTES:
+
+envFrom:
+- secretRef:
+    name: tailscale-auth
+
+serviceAccount:
+  # -- Specifies whether a service account should be created
+  create: true
+
+  # -- Annotations to add to the service account
+  annotations: {}
+
+  # -- The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: "tailscale"
+
+# -- Configure the Security Context for the Pod
+podSecurityContext:
+  runAsUser: 1000
+  runAsGroup: 1000
+
+# this chart does not have a service
+service:
+  main:
+    enabled: false
+
+# this chart does not set any probes
+probes:
+  liveness:
+    enabled: false
+  readiness:
+    enabled: false
+  startup:
+    enabled: false

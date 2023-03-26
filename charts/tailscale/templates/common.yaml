@@ -1,0 +1,14 @@
+{{/* Make sure all variables are set properly */}}
+{{- include "common.values.setup" . }}
+
+{{/* Append the hardcoded settings */}}
+{{- define "tailscale.hardcodedValues" -}}
+env:
+    TS_KUBE_SECRET: {{ .Values.env.TS_KUBE_SECRET }}
+    TS_USERSPACE: {{ .Values.env.TS_USERSPACE }}
+    TS_ROUTES: {{ .Values.env.TS_ROUTES | required ".Values.env.TS_ROUTES is required, please supply the routes this subnet router is providing" }}
+      {{- end -}}
+    {{- $_ := mergeOverwrite .Values (include "tailscale.hardcodedValues" . | fromYaml) -}}
+
+    {{/* Render the templates */}}
+{{ include "common.all" . }}
