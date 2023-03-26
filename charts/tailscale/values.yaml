@@ -21,10 +21,6 @@ env:
   TS_USERSPACE: true
   TS_ROUTES:
 
-envFrom:
-- secretRef:
-    name: tailscale-auth
-
 serviceAccount:
   # -- Specifies whether a service account should be created
   create: true

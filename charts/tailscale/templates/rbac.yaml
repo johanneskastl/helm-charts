@@ -12,9 +12,7 @@ rules:
 - apiGroups:
   - ""
   resourceNames:
-  {{- with (index .Values.envFrom 0) }}
-  - {{ .secretRef.name }}
-  {{- end }}
+  - {{ .Values.env.TS_KUBE_SECRET }}
   resources:
   - secrets
   verbs:
