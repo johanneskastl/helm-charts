@@ -1,6 +1,6 @@
 # blocky
 
-![Version: 11.0.4](https://img.shields.io/badge/Version-11.0.4-informational?style=flat-square) ![AppVersion: v0.20](https://img.shields.io/badge/AppVersion-v0.18-informational?style=flat-square)
+![Version: 11.1.0](https://img.shields.io/badge/Version-11.1.0-informational?style=flat-square) ![AppVersion: v0.21](https://img.shields.io/badge/AppVersion-v0.21-informational?style=flat-square)
 
 DNS proxy as ad-blocker for local network
 
@@ -100,6 +100,20 @@ N/A
 
 ## Changelog
 
+### Version 11.1.0
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to v0.21
+
+#### Fixed
+
+N/A
+
 ### Version 11.0.4
 
 #### Added
@@ -113,8 +127,6 @@ N/A
 #### Fixed
 
 N/A
-
-## Changelog
 
 ### Version 11.0.3
 
