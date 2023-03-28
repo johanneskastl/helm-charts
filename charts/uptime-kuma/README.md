@@ -1,6 +1,6 @@
 # uptime-kuma
 
-![Version: 2.0.1](https://img.shields.io/badge/Version-2.0.1-informational?style=flat-square) ![AppVersion: 1.17.1](https://img.shields.io/badge/AppVersion-1.17.1-informational?style=flat-square)
+![Version: 2.4.1](https://img.shields.io/badge/Version-2.4.1-informational?style=flat-square) ![AppVersion: 1.21.1](https://img.shields.io/badge/AppVersion-1.21.1-informational?style=flat-square)
 
 A fancy self-hosted monitoring tool for your websites and applications
 
@@ -85,6 +85,258 @@ N/A
 | service | object | See values.yaml | Configures service settings for the chart. |
 
 ## Changelog
+
+### Version 2.4.1
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.21.1
+
+#### Fixed
+
+N/A
+
+### Version 2.4.0
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.21.0
+
+#### Fixed
+
+N/A
+
+### Version 2.3.2
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.20.2
+
+#### Fixed
+
+N/A
+
+### Version 2.3.1
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.20.1
+
+#### Fixed
+
+N/A
+
+### Version 2.3.0
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.20.0
+
+#### Fixed
+
+N/A
+
+### Version 2.2.6
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.19.6
+
+#### Fixed
+
+N/A
+
+### Version 2.2.5
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.19.5
+
+#### Fixed
+
+N/A
+
+### Version 2.2.4
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.19.4
+
+#### Fixed
+
+N/A
+
+### Version 2.2.3
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.19.3
+
+#### Fixed
+
+N/A
+
+### Version 2.2.2
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.19.2
+
+#### Fixed
+
+N/A
+
+### Version 2.2.1
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.19.1
+
+#### Fixed
+
+N/A
+
+### Version 2.2.0
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.19.0
+
+#### Fixed
+
+N/A
+
+### Version 2.1.5
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.18.5
+
+#### Fixed
+
+N/A
+
+### Version 2.1.4
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.18.4
+
+#### Fixed
+
+N/A
+
+### Version 2.1.3
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.18.3
+
+#### Fixed
+
+N/A
+
+### Version 2.1.2
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.18.2
+
+#### Fixed
+
+N/A
+
+### Version 2.1.1
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.18.1
+
+#### Fixed
+
+N/A
+
+### Version 2.1.0
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.18.0
+
+#### Fixed
+
+N/A
 
 ### Version 2.0.1
 
