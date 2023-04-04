@@ -2,8 +2,8 @@
 #
 # IMPORTANT NOTE
 #
-# This chart inherits from our common library chart. You can check the default values/options here:
-# https://github.com/nicholaswilde/helm-charts/tree/main/charts/common/values.yaml
+# This chart inherits from the common library chart. You can check the default values/options here:
+# https://github.com/johanneskastl/helm-charts/tree/main/charts/common/values.yaml
 #
 
 image:
