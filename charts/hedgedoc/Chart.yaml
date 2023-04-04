@@ -5,6 +5,12 @@ description: HedgeDoc lets you create real-time collaborative markdown notes.
 name: hedgedoc
 version: 1.1.0
 type: application
+keywords:
+  - hedgedoc
+  - hedge
+  - doc
+  - markdown
+  - editor
 home: "https://github.com/nicholaswilde/helm-charts/tree/main/charts/hedgedoc"
 icon: "https://avatars1.githubusercontent.com/u/67865462"
 dependencies:
@@ -15,12 +21,6 @@ dependencies:
     version: ~1.0.5
     repository: https://nicholaswilde.github.io/helm-charts/
     condition: mariadb.enabled
-keywords:
-  - hedgedoc
-  - hedge
-  - doc
-  - markdown
-  - editor
 sources:
   - https://github.com/hedgedoc/hedgedoc
   - https://hub.docker.com/r/linuxserver/hedgedoc
