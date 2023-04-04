@@ -1,0 +1,51 @@
+---
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from our common library chart. You can check the default values/options here:
+# https://github.com/nicholaswilde/helm-charts/tree/main/charts/common/values.yaml
+#
+
+image:
+  repository: ghcr.io/linuxserver/hedgedoc
+  pullPolicy: IfNotPresent
+  tag: "version-1.9.0"
+
+secret: {}
+  # DB_PASS: "hedgedoc-pass"
+
+# See more environment variables in the hedgedoc documentation
+# https://github.com/linuxserver/docker-hedgedoc#parameters
+env: {}
+  # TZ:
+  # PUID: "1000"
+  # PGID: "1000"
+  # DB_USER: "hedgedoc"
+  # DB_HOST: "mariadb"
+  # DB_NAME: "hedgedoc"
+  # DB_PORT: "3306"
+
+service:
+  port:
+    port: 3000
+
+ingress:
+  enabled: false
+
+persistence:
+  config:
+    enabled: false
+    emptyDir: false
+    mountPath: /config
+
+# Enable mariadb
+# https://github.com/nicholaswilde/helm-charts/blob/main/charts/mariadb/values.yaml
+mariadb:
+  enabled: false
+  secret:
+    MYSQL_ROOT_PASSWORD: hedgedoc-pass
+    MYSQL_PASSWORD: hedgedoc-pass
+  env:
+    MYSQL_USER: hedgedoc
+    MYSQL_DATABASE: hedgedoc
+  fullnameOverride: template-mariadb
