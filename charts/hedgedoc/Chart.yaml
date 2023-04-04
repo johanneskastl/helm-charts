@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
 appVersion: 1.9.0
-version: 1.1.0
-name: hedgedoc
 description: HedgeDoc lets you create real-time collaborative markdown notes.
+name: hedgedoc
+version: 1.1.0
 type: application
 home: "https://github.com/nicholaswilde/helm-charts/tree/main/charts/hedgedoc"
 icon: "https://avatars1.githubusercontent.com/u/67865462"
