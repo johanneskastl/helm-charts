@@ -75,9 +75,10 @@ helm install {{ template "chart.name" . }} {{ template "helm.path" . }} -f value
 - [ ] Incorporate Docker secret.
 {{- end -}}
 
-{{- define "troubleshooting" -}}
-## Troubleshooting
-See [Wiki](https://github.com/nicholaswilde/helm-charts/wiki/Troubleshooting).
+{{- define "support" -}}
+## Support
+
+Open an [issue](https://github.com/johanneskastl/helm-charts/issues/).
 {{- end -}}
 
 {{- define "author" -}}
@@ -111,7 +112,7 @@ This project was started in 2020 by [Nicholas Wilde](https://github.com/{{ templ
 
 {{ template "configuration.example.file" . }}
 
-{{ template "troubleshooting" . }}
+{{ template "support" . }}
 
 {{ template "author" . }}
 
