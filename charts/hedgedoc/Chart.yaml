@@ -20,8 +20,8 @@ maintainers:
     email: kastl@b1-systems.de
 dependencies:
   - name: common
-    version: ~0.1.13
-    repository: https://nicholaswilde.github.io/helm-charts/
+    repository: https://johanneskastl.github.io/helm-charts/
+    version: 5.0.0
   - name: mariadb
     version: ~1.0.5
     repository: https://nicholaswilde.github.io/helm-charts/
