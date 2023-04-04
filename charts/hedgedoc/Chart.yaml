@@ -29,7 +29,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |
     - kind: changed
-      description: Bump chart to version-1.9.0
-  artifacthub.io/images: |
-    - name: hedgedoc
-      image: ghcr.io/linuxserver/hedgedoc:version-1.9.0
+      description: Fork chart from nicholaswilde at version-1.9.0
