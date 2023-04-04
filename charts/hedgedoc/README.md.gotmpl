@@ -79,11 +79,7 @@ helm install {{ template "chart.name" . }} {{ template "helm.path" . }} -f value
 ## Support
 
 Open an [issue](https://github.com/johanneskastl/helm-charts/issues/).
-{{- end -}}
 
-{{- define "author" -}}
-## Author
-This project was started in 2020 by [Nicholas Wilde](https://github.com/{{ template "repository.organization" . }}).
 {{- end -}}
 
 {{ template "chart.header" . }}
@@ -113,7 +109,5 @@ This project was started in 2020 by [Nicholas Wilde](https://github.com/{{ templ
 {{ template "configuration.example.file" . }}
 
 {{ template "support" . }}
-
-{{ template "author" . }}
 
 {{ template "helm-docs.versionFooter" . }}
