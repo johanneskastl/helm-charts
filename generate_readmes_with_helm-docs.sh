@@ -32,7 +32,8 @@ else
     root="${repository}/charts"
 fi
 
-for chart in ${charts}; do
+for chart in ${charts}
+do
     chart_directory="$(dirname "${chart}")"
     echo "-] Copying templates to ${chart_directory}"
     # Copy CONFIG template to each Chart directory, do not overwrite if exists
