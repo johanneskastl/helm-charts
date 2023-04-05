@@ -9,7 +9,7 @@
 image:
   repository: ghcr.io/linuxserver/hedgedoc
   pullPolicy: IfNotPresent
-  tag:
+  tag: ""
 
 secret: {}
   # DB_PASS: "hedgedoc-pass"
