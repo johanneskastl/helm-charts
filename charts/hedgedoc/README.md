@@ -54,4 +54,3 @@ helm install hedgedoc johanneskastl/hedgedoc -f values.yaml
 ## Support
 
 Open an [issue](https://github.com/johanneskastl/helm-charts/issues/).
-
