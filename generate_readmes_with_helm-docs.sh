@@ -40,7 +40,7 @@ do
     cp -n "${readme_config_template}" "${chart_directory}" || true
 done
 
-# Run helm-docs for charts using the common library and the common library itself
+# Run helm-docs for charts
 # 20230405 use binary from k8s-at-home fork
 helm-docs-k8s-at-home \
     --ignore-file="${repository}/.helmdocsignore" \
