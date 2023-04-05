@@ -46,6 +46,23 @@ persistence:
 controller:
   strategy: RollingUpdate
 
+probes:
+  liveness:
+    spec:
+      initialDelaySeconds: 30
+      timeoutSeconds: 10
+      failureThreshold: 5
+  readiness:
+    spec:
+      initialDelaySeconds: 30
+      timeoutSeconds: 10
+      failureThreshold: 5
+  startup:
+    spec:
+      initialDelaySeconds: 30
+      timeoutSeconds: 10
+      failureThreshold: 5
+
 # Enable mariadb
 # https://github.com/nicholaswilde/helm-charts/blob/main/charts/mariadb/values.yaml
 mariadb:
