@@ -62,26 +62,62 @@
             "$id": "#/properties/service",
             "description": "An explanation about the purpose of this instance.",
             "required": [
-                "port"
+                "main"
             ],
-            "title": "Service object",
+            "title": "Service object for main",
             "type": "object",
             "properties": {
-                "port": {
-                    "$id": "#/properties/service/properties/port",
+                "main": {
+                    "$id": "#/properties/service/properties/main",
                     "description": "An explanation about the purpose of this instance.",
                     "required": [
-                        "port"
+                        "enabled",
+                        "ports"
                     ],
-                    "title": "Service port object",
+                    "title": "Service object",
                     "type": "object",
                     "properties": {
-                        "port": {
-                            "$id": "#/properties/service/properties/port/properties/port",
-                            "default": 3000,
+                        "enabled": {
+                            "$id": "#/properties/service/properties/main/properties/enabled",
                             "description": "An explanation about the purpose of this instance.",
-                            "title": "Service port number",
-                            "type": "integer"
+                            "title": "enable the main service",
+                            "type": "boolean"
+                        },
+                        "ports": {
+                            "$id": "#/properties/service/properties/main/properties/ports",
+                            "description": "An explanation about the purpose of this instance.",
+                            "required": [
+                                "http"
+                            ],
+                            "title": "Service ports object",
+                            "type": "object",
+                            "properties": {
+                                "http": {
+                                    "$id": "#/properties/service/properties/main/properties/ports/properties/http",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "required": [
+                                        "enabled",
+                                        "port"
+                                    ],
+                                    "title": "Service object",
+                                    "type": "object",
+                                    "properties": {
+                                        "enabled": {
+                                            "$id": "#/properties/service/properties/main/properties/ports/properties/http/properties/enabled",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "title": "enable the http service",
+                                            "type": "boolean"
+                                        },
+			                "port": {
+                                            "$id": "#/properties/service/properties/main/properties/ports/properties/http/properties/port",
+                                            "default": 3000,
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "title": "Service port number",
+                                            "type": "integer"
+			                }
+			            }
+                                }
+                            }
                         }
                     }
                 }
