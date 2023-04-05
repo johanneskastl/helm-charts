@@ -1,6 +1,20 @@
 name: Lint and Test Charts
 
-on: pull_request
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'charts/**'
+      - '!charts/**/README.md'
+      - '!charts/**/README.md.gotmpl'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'charts/**'
+      - '!charts/**/README.md'
+      - '!charts/**/README.md.gotmpl'
 
 jobs:
   lint-test:
