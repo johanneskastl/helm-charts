@@ -3,11 +3,11 @@ apiVersion: v2
 appVersion: 2.4.2
 description: A self hostable application for saving web pages, freely.
 name: wallabag
-version: 8.0.0
+version: 8.0.1
 kubeVersion: ">=1.16.0-0"
 keywords:
   - wallabag
-home: https://github.com/johanneskastl/helm-charts/tree/maain/charts/wallabag
+home: https://github.com/johanneskastl/helm-charts/tree/main/charts/wallabag
 icon: "https://raw.githubusercontent.com/wallabag/logo/master/app-android/logo-app-android-icon-bg-white-512.png"
 sources:
   - https://github.com/wallabag/docker
@@ -34,4 +34,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Forked the chart from k8s-at-home (at version 7.1.2)
+      description: fixed typo in home URL
