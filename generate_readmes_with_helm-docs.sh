@@ -40,7 +40,8 @@ for chart in ${charts}; do
 done
 
 # Run helm-docs for charts using the common library and the common library itself
-helm-docs \
+# 20230405 use binary from k8s-at-home fork
+helm-docs-k8s-at-home \
     --ignore-file="${repository}/.helmdocsignore" \
     --template-files="${readme_template}" \
     --template-files="$(basename "${readme_config_template}")" \
