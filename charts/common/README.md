@@ -1,10 +1,10 @@
 # common
 
-![Version: 5.0.1](https://img.shields.io/badge/Version-5.0.0-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
+![Version: 5.0.1](https://img.shields.io/badge/Version-5.0.1-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
 
-Function library chart
+Function library for charts that were forked from k8s-at-home after its deprecation
 
-Forked from the [k8s-at-home library-charts](https://github.com/k8s-at-home/library-charts/) repository, as it is unfortunately deprecated.
+This chart was forked from the [k8s-at-home library charts](https://github.com/k8s-at-home/library-charts) repository, as it will no longer be maintained. As I am using several of the k8s-at-home charts, I will keep maintaining this chart and use it for the charts in this repository.
 
 ## Requirements
 
