@@ -205,6 +205,41 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: whitespace fixes in values.schema.json
+    apiVersion: v2
+    appVersion: 1.9.0
+    created: "2023-04-05T17:02:55.006714683Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://nicholaswilde.github.io/helm-charts/
+      version: ~1.0.5
+    description: HedgeDoc lets you create real-time collaborative markdown notes.
+    digest: 4c7da6740cfc54b9b29753e9b5efd3d77d1d8b7428cfa7423575f6269fef43d3
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/hedgedoc
+    icon: https://avatars1.githubusercontent.com/u/67865462
+    keywords:
+    - hedgedoc
+    - hedge
+    - doc
+    - markdown
+    - editor
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: hedgedoc
+    sources:
+    - https://github.com/hedgedoc/hedgedoc
+    - https://hub.docker.com/r/linuxserver/hedgedoc
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/hedgedoc-2.0.1/hedgedoc-2.0.1.tgz
+    version: 2.0.1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Fork chart from nicholaswilde at version-1.9.0
     apiVersion: v2
     appVersion: 1.9.0
@@ -1158,4 +1193,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-04-05T16:48:48.014804973Z"
+generated: "2023-04-05T17:02:55.006783884Z"
