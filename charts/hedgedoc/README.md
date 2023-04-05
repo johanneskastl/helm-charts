@@ -4,6 +4,8 @@
 
 HedgeDoc lets you create real-time collaborative markdown notes.
 
+This chart was forked from Nicholas Wilde's [helm-charts](https://github.com/nicholaswilde/helm-charts) repository, after it seemed to be abandoned.
+
 ## Dependencies
 
 | Repository | Name | Version |
