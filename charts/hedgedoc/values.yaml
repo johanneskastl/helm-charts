@@ -30,7 +30,8 @@ service:
     port: 3000
 
 ingress:
-  enabled: false
+  main:
+    enabled: false
 
 persistence:
   config:
