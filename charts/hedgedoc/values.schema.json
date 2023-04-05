@@ -127,17 +127,27 @@
             "$id": "#/properties/ingress",
             "description": "An explanation about the purpose of this instance.",
             "required": [
-                "enabled"
+                "main"
             ],
             "title": "Ingress object",
             "type": "object",
             "properties": {
-                "enabled": {
-                    "$id": "#/properties/ingress/properties/enabled",
-                    "default": false,
+                "main": {
+                    "$id": "#/properties/ingress/properties/main",
                     "description": "An explanation about the purpose of this instance.",
-                    "title": "Enable ingress",
-                    "type": "boolean"
+                    "title": "main ingress",
+                    "required": [
+                        "enabled"
+                    ],
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "$id": "#/properties/ingress/properties/main/properties/enabled",
+                            "description": "An explanation about the purpose of this instance.",
+                            "title": "enable ingress",
+                            "type": "boolean"
+                        }
+                    }
                 }
             }
         },
