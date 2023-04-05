@@ -16,7 +16,13 @@ secret: {}
 
 # See more environment variables in the hedgedoc documentation
 # https://github.com/linuxserver/docker-hedgedoc#parameters
-env: {}
+env:
+  # set this to example.org
+  CMD_DOMAIN:
+  # set this to "['localhost', 'example.org']"
+  CMD_ALLOW_ORIGIN:
+  # CMD_PROTOCOL_USESSL: false
+  # CMD_URL_ADDPORT: false
   # TZ:
   # PUID: "1000"
   # PGID: "1000"
