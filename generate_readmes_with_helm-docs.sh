@@ -16,6 +16,7 @@ repository=$(git rev-parse --show-toplevel)
 # Templates to copy into each chart directory
 readme_template="${repository}/.helm-docs-templates//README.md.gotmpl"
 readme_config_template="${repository}/.helm-docs-templates//README_CONFIG.md.gotmpl"
+readme_changelog_template="README_CHANGELOG.md.gotmpl"
 
 # Gather all charts using the common library, excluding common-test
 charts=$(find "${repository}" -name "Chart.yaml")
