@@ -108,14 +108,14 @@
                                             "title": "enable the http service",
                                             "type": "boolean"
                                         },
-			                "port": {
+                                        "port": {
                                             "$id": "#/properties/service/properties/main/properties/ports/properties/http/properties/port",
                                             "default": 3000,
                                             "description": "An explanation about the purpose of this instance.",
                                             "title": "Service port number",
                                             "type": "integer"
-			                }
-			            }
+                                        }
+                                    }
                                 }
                             }
                         }
