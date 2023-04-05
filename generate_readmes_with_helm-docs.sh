@@ -47,4 +47,5 @@ helm-docs-k8s-at-home \
     --ignore-file="${repository}/.helmdocsignore" \
     --template-files="$(basename "${readme_template}")" \
     --template-files="$(basename "${readme_config_template}")" \
+    --template-files="$(basename "${readme_changelog_template}")" \
     --chart-search-root="${root}"
