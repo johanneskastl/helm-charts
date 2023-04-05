@@ -26,8 +26,12 @@ env: {}
   # DB_PORT: "3306"
 
 service:
-  port:
-    port: 3000
+  main:
+    enabled: true
+    ports:
+      http:
+        enabled: true
+        port: 3000
 
 ingress:
   main:
