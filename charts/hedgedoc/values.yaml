@@ -43,6 +43,9 @@ persistence:
     emptyDir: false
     mountPath: /config
 
+controller:
+  strategy: RollingUpdate
+
 # Enable mariadb
 # https://github.com/nicholaswilde/helm-charts/blob/main/charts/mariadb/values.yaml
 mariadb:
