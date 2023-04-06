@@ -1,6 +1,6 @@
 # hedgedoc
 
-![Version: 2.0.8](https://img.shields.io/badge/Version-2.0.8-informational?style=flat-square) ![AppVersion: 1.9.7](https://img.shields.io/badge/AppVersion-1.9.7-informational?style=flat-square)
+![Version: 2.0.9](https://img.shields.io/badge/Version-2.0.9-informational?style=flat-square) ![AppVersion: 1.9.7](https://img.shields.io/badge/AppVersion-1.9.7-informational?style=flat-square)
 
 HedgeDoc lets you create real-time collaborative markdown notes.
 
@@ -12,6 +12,10 @@ This chart was forked from Nicholas Wilde's [helm-charts](https://github.com/nic
 
 * <https://github.com/hedgedoc/hedgedoc>
 * <https://hub.docker.com/r/linuxserver/hedgedoc>
+
+## Requirements
+
+Kubernetes: `>=1.19.0-0`
 
 ## Dependencies
 
