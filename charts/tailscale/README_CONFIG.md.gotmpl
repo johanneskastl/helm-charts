@@ -7,6 +7,21 @@ This chart allows you to route traffic from another host via the tailscale netwo
 
 This chart generates a `serviceAccount` and the necessary `Role` and `RoleBinding`, so the `serviceAccount` is allowed to read **and** write the secret that contains the API key.
 
+You need to have a tailscale account. And you need a **reusable** tailscale API key.
+
+Store the API-key in a secret in the namespace. By default, this chart requires a secret called `tailscale-auth`, which should look like this:
+
+```yaml
+apiVersion: v1
+stringData:
+  TS_AUTH_KEY: tskey-auth-...
+kind: Secret
+metadata:
+  name: tailscale-auth
+```
+
+Replace `tskey-auth-...` with your actual API key.
+
 {{- end -}}
 
 {{- define "custom.custom.configuration.header" -}}
