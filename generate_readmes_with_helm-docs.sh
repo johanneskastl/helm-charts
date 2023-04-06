@@ -4,6 +4,14 @@ set -eu
 # Generate helm-docs for Helm charts
 # Usage ./gen-helm-docs.sh [chart]
 
+if [ $# -gt 1 ]
+then
+    echo "Please use this script without arguments or"
+    echo "with only one single chart name as argument"
+    echo "Usage: ./gen-helm-docs.sh [chart]"
+    exit 1
+fi
+
 # require helm-docs
 command -v helm-docs >/dev/null 2>&1 || {
     echo >&2 "helm-docs (https://github.com/k8s-at-home/helm-docs) is not installed. Aborting."
