@@ -45,7 +45,6 @@ fi
 # Run helm-docs for charts
 # 20230405 use binary from k8s-at-home fork
 helm-docs-k8s-at-home \
-    --ignore-file="${repository}/.helmdocsignore" \
     --template-files="${readme_template}" \
     --template-files="${readme_config_template}" \
     --template-files="${readme_changelog_template}" \
