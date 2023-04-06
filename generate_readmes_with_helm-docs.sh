@@ -37,8 +37,6 @@ if [ $# == 1 ] ; then
     readme_template="../../.helm-docs-templates/README.md.gotmpl"
 
 else
-    # Gather all charts using the common library, excluding common-test
-    charts=$(find "${repository}" -name "Chart.yaml")
 
     root="${repository}/charts"
     readme_template="../.helm-docs-templates/README.md.gotmpl"
