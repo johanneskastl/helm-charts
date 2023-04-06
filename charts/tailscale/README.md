@@ -69,6 +69,22 @@ The command removes all the Kubernetes components associated with the chart **in
 
 ## Configuration
 
+The best way is to use a YAML file that specifies the values for the above parameters. This YAML file can be provided while installing the chart:
+
+```console
+helm install tailscale johanneskastl-helm-charts/tailscale -f values.yaml
+```
+
+Alternatively, specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
+
+```console
+helm install tailscale \
+  --set env.TS_ROUTES="..." \
+    johanneskastl-helm-charts/tailscale
+```
+
+## Custom configuration
+
 This chart uses the [common library chart](https://github.com/johanneskastl/helm-charts/tree/main/charts/common). So you **could** used other parameters from the [values.yaml](https://github.com/johanneskastl/helm-charts/tree/main/charts/common/values.yaml).
 
 However, this chart does not need other parameters than these ones:
@@ -90,24 +106,6 @@ If you wish, you can tweak the image tag and specify which image to use:
 | image.tag | string | chart.appVersion | image tag |
 
 Read through the [values.yaml](./values.yaml) file to see the complete list of parameters used. Tweaking other parameters than the ones above is **not supported**, you are on your own in that case...
-
-The best way is to use a YAML file that specifies the values for the above parameters. This YAML file can be provided while installing the chart:
-
-```console
-helm install tailscale johanneskastl-helm-charts/tailscale -f values.yaml
-```
-
-Alternatively, specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
-
-```console
-helm install tailscale \
-  --set env.TS_ROUTES="..." \
-    johanneskastl-helm-charts/tailscale
-```
-
-## Custom configuration
-
-N/A
 
 ## Changelog
 
