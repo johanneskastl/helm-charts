@@ -31,5 +31,26 @@ Replace `tskey-auth-...` with your actual API key.
 {{- define "custom.custom.configuration" -}}
 {{ template "custom.custom.configuration.header" . }}
 
-N/A
+This chart uses the [common library chart](https://github.com/johanneskastl/helm-charts/tree/main/charts/common). So you **could** used other parameters from the [values.yaml](https://github.com/johanneskastl/helm-charts/tree/main/charts/common/values.yaml).
+
+However, this chart does not need other parameters than these ones:
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `env.TS_KUBE_SECRET` | string | `"tailscale-auth"` | Name of the secret containing the tailscale API key for this machine |
+| `env.TS_USERSPACE` | string | `true` |  |
+| `env.TS_ROUTES` | string | none, setting this is **mandatory** | Routes this tailscale router should publish |
+
+`env.TS_ROUTES` should contain your cluster's `service_cidr`, which allows you to forward traffic from the tailscale network to services running inside your cluster.
+
+If you wish, you can tweak the image tag and specify which image to use:
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| image.pullPolicy | string | `"Always"` | image pull policy |
+| image.repository | string | `"tailscale/tailscale"` | image repository |
+| image.tag | string | chart.appVersion | image tag |
+
+Read through the [values.yaml](./values.yaml) file to see the complete list of parameters used. Tweaking other parameters than the ones above is **not supported**, you are on your own in that case...
+
 {{- end -}}
