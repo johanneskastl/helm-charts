@@ -25,9 +25,6 @@ repository=$(git rev-parse --show-toplevel)
 readme_config_template="README_CONFIG.md.gotmpl"
 readme_changelog_template="README_CHANGELOG.md.gotmpl"
 
-# Gather all charts using the common library, excluding common-test
-charts=$(find "${repository}" -name "Chart.yaml")
-
 # Allow for a specific chart to be passed in as a argument
 if [ $# == 1 ] ; then
     charts="${repository}/charts/$1/Chart.yaml"
@@ -38,6 +35,8 @@ if [ $# == 1 ] ; then
     fi
 else
     root="${repository}/charts"
+    # Gather all charts using the common library, excluding common-test
+    charts=$(find "${repository}" -name "Chart.yaml")
 fi
 
 # Run helm-docs for charts
