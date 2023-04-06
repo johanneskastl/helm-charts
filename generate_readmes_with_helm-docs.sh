@@ -32,14 +32,6 @@ else
     root="${repository}/charts"
 fi
 
-for chart in ${charts}
-do
-    chart_directory="$(dirname "${chart}")"
-    echo "-] Copying templates to ${chart_directory}"
-    # Copy CONFIG template to each Chart directory, do not overwrite if exists
-    cp -n "${readme_config_template}" "${chart_directory}" || true
-done
-
 # Run helm-docs for charts
 # 20230405 use binary from k8s-at-home fork
 helm-docs-k8s-at-home \
