@@ -14,7 +14,7 @@ command -v helm-docs >/dev/null 2>&1 || {
 repository=$(git rev-parse --show-toplevel)
 
 # Templates to use for README generation
-readme_config_template="${repository}/.helm-docs-templates//README_CONFIG.md.gotmpl"
+readme_config_template="README_CONFIG.md.gotmpl"
 readme_changelog_template="README_CHANGELOG.md.gotmpl"
 
 # Gather all charts using the common library, excluding common-test
@@ -37,6 +37,6 @@ fi
 helm-docs-k8s-at-home \
     --ignore-file="${repository}/.helmdocsignore" \
     --template-files="../../.helm-docs-templates/README.md.gotmpl" \
-    --template-files="$(basename "${readme_config_template}")" \
+    --template-files="${readme_config_template}" \
     --template-files="$(basename "${readme_changelog_template}")" \
     --chart-search-root="${root}"
