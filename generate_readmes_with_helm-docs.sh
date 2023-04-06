@@ -38,5 +38,5 @@ helm-docs-k8s-at-home \
     --ignore-file="${repository}/.helmdocsignore" \
     --template-files="../../.helm-docs-templates/README.md.gotmpl" \
     --template-files="${readme_config_template}" \
-    --template-files="$(basename "${readme_changelog_template}")" \
+    --template-files="${readme_changelog_template}" \
     --chart-search-root="${root}"
