@@ -38,8 +38,8 @@ if [ $# == 1 ] ; then
 
 else
 
-    root="${repository}/charts"
-    readme_template="../.helm-docs-templates/README.md.gotmpl"
+    root="."
+    readme_template=".helm-docs-templates/README.md.gotmpl"
 fi
 
 # Run helm-docs for charts
