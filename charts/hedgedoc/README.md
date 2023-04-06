@@ -65,6 +65,171 @@ Alternatively, a YAML file that specifies the values for the above parameters ca
 helm install hedgedoc johanneskastl-helm-charts/hedgedoc -f values.yaml
 ```
 
+## Custom configuration
+
+N/A
+
+## Values
+
+**Important**: When deploying an application Helm chart you can add more values from the common library chart [here](https://github.com/johanneskastl/helm-charts/tree/main/charts/common)
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| controller.strategy | string | `"RollingUpdate"` |  |
+| env | object | `{"CMD_ALLOW_ORIGIN":null,"CMD_DOMAIN":null}` |  https://github.com/linuxserver/docker-hedgedoc#parameters |
+| image | object | `{"pullPolicy":"IfNotPresent","repository":"ghcr.io/linuxserver/hedgedoc","tag":""}` |  IMPORTANT NOTE This chart inherits from the common library chart. You can check the default values/options here: https://github.com/johanneskastl/helm-charts/tree/main/charts/common/values.yaml |
+| ingress.main.enabled | bool | `false` |  |
+| mariadb | object | `{"enabled":false,"env":{"MYSQL_DATABASE":"hedgedoc","MYSQL_USER":"hedgedoc"},"fullnameOverride":"template-mariadb","secret":{"MYSQL_PASSWORD":"hedgedoc-pass","MYSQL_ROOT_PASSWORD":"hedgedoc-pass"}}` |  https://github.com/nicholaswilde/helm-charts/blob/main/charts/mariadb/values.yaml |
+| persistence.config.emptyDir | bool | `false` |  |
+| persistence.config.enabled | bool | `false` |  |
+| persistence.config.mountPath | string | `"/config"` |  |
+| probes.liveness.spec.failureThreshold | int | `5` |  |
+| probes.liveness.spec.initialDelaySeconds | int | `30` |  |
+| probes.liveness.spec.timeoutSeconds | int | `10` |  |
+| probes.readiness.spec.failureThreshold | int | `5` |  |
+| probes.readiness.spec.initialDelaySeconds | int | `30` |  |
+| probes.readiness.spec.timeoutSeconds | int | `10` |  |
+| probes.startup.spec.failureThreshold | int | `5` |  |
+| probes.startup.spec.initialDelaySeconds | int | `30` |  |
+| probes.startup.spec.timeoutSeconds | int | `10` |  |
+| secret | object | `{}` |  |
+| service.main.enabled | bool | `true` |  |
+| service.main.ports.http.enabled | bool | `true` |  |
+| service.main.ports.http.port | int | `3000` |  |
+
+## Changelog
+
+All notable changes to this Helm chart will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### 2.0.8
+
+#### Added
+
+N/A
+
+#### Changed
+
+- update appVersion to 1.9.7
+
+#### Fixed
+
+N/A
+
+### 2.0.7
+
+#### Added
+
+N/A
+
+#### Changed
+
+- update appVersion to 1.9.6
+
+#### Fixed
+
+N/A
+
+### 2.0.6
+
+#### Added
+
+N/A
+
+#### Changed
+
+- update appVersion to 1.9.5
+
+#### Fixed
+
+N/A
+
+### 2.0.5
+
+#### Added
+
+N/A
+
+#### Changed
+
+- update appVersion to 1.9.4
+
+#### Fixed
+
+N/A
+
+### 2.0.4
+
+#### Added
+
+N/A
+
+#### Changed
+
+- update appVersion to 1.9.3
+
+#### Fixed
+
+N/A
+
+### 2.0.3
+
+#### Added
+
+N/A
+
+#### Changed
+
+- update appVersion to 1.9.2
+
+#### Fixed
+
+N/A
+
+### 2.0.2
+
+#### Added
+
+N/A
+
+#### Changed
+
+- update appVersion to 1.9.1
+
+#### Fixed
+
+N/A
+
+### 2.0.1
+
+#### Added
+
+N/A
+
+#### Changed
+
+- whitespace fixes in values.schema.json
+
+#### Fixed
+
+N/A
+
+### 2.0.0
+
+#### Added
+
+N/A
+
+#### Changed
+
+- Forked the chart from Nicholas Wilde at version 1.1.0
+
+#### Fixed
+
+N/A
+
 ## Support
 
 Open an [issue](https://github.com/johanneskastl/helm-charts/issues/).
