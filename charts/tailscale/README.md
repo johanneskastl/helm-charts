@@ -69,18 +69,21 @@ The command removes all the Kubernetes components associated with the chart **in
 
 ## Configuration
 
-The best way is to use a YAML file that specifies the values for the above parameters. This YAML file can be provided while installing the chart:
+Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
+Other values may be used from the [values.yaml](https://github.com/johanneskastl/helm-charts/tree/main/charts/common/values.yaml) from the [common library](https://github.com/johanneskastl/helm-charts/tree/main/charts/common).
 
-```console
-helm install tailscale johanneskastl-helm-charts/tailscale -f values.yaml
-```
-
-Alternatively, specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
+Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
 helm install tailscale \
-  --set env.TS_ROUTES="..." \
+  --set env.TZ="America/New York" \
     johanneskastl-helm-charts/tailscale
+```
+
+Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
+
+```console
+helm install tailscale johanneskastl-helm-charts/tailscale -f values.yaml
 ```
 
 ## Custom configuration
@@ -106,6 +109,25 @@ If you wish, you can tweak the image tag and specify which image to use:
 | image.tag | string | chart.appVersion | image tag |
 
 Read through the [values.yaml](./values.yaml) file to see the complete list of parameters used. Tweaking other parameters than the ones above is **not supported**, you are on your own in that case...
+
+## Values
+
+**Important**: When deploying an application Helm chart you can add more values from the common library chart [here](https://github.com/johanneskastl/helm-charts/tree/main/charts/common)
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| env | object | See below | environment variables |
+| image.pullPolicy | string | `"Always"` | image pull policy |
+| image.repository | string | `"tailscale/tailscale"` | image repository |
+| image.tag | string | chart.appVersion | image tag |
+| podSecurityContext | object | `{"runAsGroup":1000,"runAsUser":1000}` | Configure the Security Context for the Pod |
+| probes.liveness.enabled | bool | `false` |  |
+| probes.readiness.enabled | bool | `false` |  |
+| probes.startup.enabled | bool | `false` |  |
+| service.main.enabled | bool | `false` |  |
+| serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
+| serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
+| serviceAccount.name | string | `"tailscale"` | The name of the service account to use. If not set and create is true, a name is generated using the fullname template |
 
 ## Changelog
 
