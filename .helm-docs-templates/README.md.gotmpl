@@ -99,32 +99,6 @@ helm install {{ template "chart.name" . }} {{ template "custom.helm.path" . }} -
 Open an [issue](https://github.com/johanneskastl/helm-charts/issues/).
 {{- end -}}
 
-{{- define "custom.changelog" -}}
-{{ $changeTypes := list "added" "changed" "fixed" }}
-## Changelog
-
-### Version {{ template "chart.version" . }}
-
-{{ range $changeType := $changeTypes }}
-  {{- with (index $.Annotations "artifacthub.io/changes") }}
-    {{- print "#### " ($changeType | title)  | nindent 0  }}
-    {{- print "" | nindent 0  }}
-    {{- $changesFound := false }}
-    {{- $changes := ((print "changes:\n" .) | fromYaml).changes }}
-    {{- range $changes }}
-      {{- if eq .kind $changeType }}
-        {{- print "* " .description  | nindent 0 }}
-        {{- $changesFound = true }}
-      {{- end }}
-    {{- end }}
-    {{- if not $changesFound }}
-      {{- print "N/A" | nindent 0 }}
-    {{- end }}
-    {{- print "" | nindent 0  }}
-  {{- end }}
-{{- end }}
-{{- end -}}
-
 {{ template "chart.header" . }}
 
 {{ template "chart.versionBadge" . }}{{ template "chart.typeBadge" . }}{{ template "chart.appVersionBadge" . }}
