@@ -14,7 +14,6 @@ command -v helm-docs >/dev/null 2>&1 || {
 repository=$(git rev-parse --show-toplevel)
 
 # Templates to copy into each chart directory
-readme_template="${repository}/.helm-docs-templates//README.md.gotmpl"
 readme_config_template="${repository}/.helm-docs-templates//README_CONFIG.md.gotmpl"
 readme_changelog_template="README_CHANGELOG.md.gotmpl"
 
@@ -45,7 +44,7 @@ done
 # 20230405 use binary from k8s-at-home fork
 helm-docs-k8s-at-home \
     --ignore-file="${repository}/.helmdocsignore" \
-    --template-files="$(basename "${readme_template}")" \
+    --template-files="../../.helm-docs-templates/README.md.gotmpl" \
     --template-files="$(basename "${readme_config_template}")" \
     --template-files="$(basename "${readme_changelog_template}")" \
     --chart-search-root="${root}"
