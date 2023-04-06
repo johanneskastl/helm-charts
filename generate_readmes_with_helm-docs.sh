@@ -28,22 +28,27 @@ readme_changelog_template="README_CHANGELOG.md.gotmpl"
 # Allow for a specific chart to be passed in as a argument
 if [ $# == 1 ] ; then
     charts="${repository}/charts/$1/Chart.yaml"
-    root="$(dirname "${charts}")"
     if [ ! -f "$charts" ]; then
         echo "File ${charts} does not exist."
         exit 1
     fi
+
+    root="$(dirname "${charts}")"
+    readme_template="../../.helm-docs-templates/README.md.gotmpl"
+
 else
-    root="${repository}/charts"
     # Gather all charts using the common library, excluding common-test
     charts=$(find "${repository}" -name "Chart.yaml")
+
+    root="${repository}/charts"
+    readme_template="../.helm-docs-templates/README.md.gotmpl"
 fi
 
 # Run helm-docs for charts
 # 20230405 use binary from k8s-at-home fork
 helm-docs-k8s-at-home \
     --ignore-file="${repository}/.helmdocsignore" \
-    --template-files="../../.helm-docs-templates/README.md.gotmpl" \
+    --template-files="${readme_template}" \
     --template-files="${readme_config_template}" \
     --template-files="${readme_changelog_template}" \
     --chart-search-root="${root}"
