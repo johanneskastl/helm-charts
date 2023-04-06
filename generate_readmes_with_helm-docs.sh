@@ -21,7 +21,7 @@ readme_changelog_template="README_CHANGELOG.md.gotmpl"
 charts=$(find "${repository}" -name "Chart.yaml")
 
 # Allow for a specific chart to be passed in as a argument
-if [ $# -gt 0 ] && [ -n "$1" ] ; then
+if [ $# == 1 ] ; then
     charts="${repository}/charts/$1/Chart.yaml"
     root="$(dirname "${charts}")"
     if [ ! -f "$charts" ]; then
