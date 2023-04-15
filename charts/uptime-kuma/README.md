@@ -1,6 +1,6 @@
 # uptime-kuma
 
-![Version: 2.4.2](https://img.shields.io/badge/Version-2.4.2-informational?style=flat-square) ![AppVersion: 1.21.2](https://img.shields.io/badge/AppVersion-1.21.2-informational?style=flat-square)
+![Version: 2.4.3](https://img.shields.io/badge/Version-2.4.3-informational?style=flat-square) ![AppVersion: 1.21.2](https://img.shields.io/badge/AppVersion-1.21.2-informational?style=flat-square)
 
 A fancy self-hosted monitoring tool for your websites and applications
 
@@ -90,6 +90,20 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 2.4.3
+
+#### Added
+
+N/A
+
+#### Changed
+
+* generate README with helm-docs
+
+#### Fixed
+
+N/A
 
 ### Version 2.4.2
 
