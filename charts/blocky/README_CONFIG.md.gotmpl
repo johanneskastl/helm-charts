@@ -1,15 +1,10 @@
-{{- define "custom.custom.configuration.header" -}}
-## Custom configuration
+{{- define "custom.notes" -}}
+**This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/johanneskastl/helm-charts/issues/)**
 {{- end -}}
 
 {{- define "custom.custom.configuration" -}}
-{{ template "custom.custom.configuration.header" . }}
+## Custom configuration
 
-### [10.3.0]
-
-### Added
-
-- Add dependency for redis database as the application now supports it. [Redis - Blocky](https://0xerr0r.github.io/blocky/configuration/#redis)
-- The redis dependency increases the minimum latest version of k8s to version 1.19+
+N/A
 
 {{- end -}}
