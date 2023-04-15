@@ -2,13 +2,13 @@
 set -eu
 
 # Generate helm-docs for Helm charts
-# Usage ./gen-helm-docs.sh [chart]
+# Usage ./common_README_with_helm-docs.sh [chart]
 
 if [ $# -gt 1 ]
 then
     echo "Please use this script without arguments or"
     echo "with only one single chart name as argument"
-    echo "Usage: ./gen-helm-docs.sh [chart]"
+    echo "Usage: ./common_README_with_helm-docs.sh [chart]"
     exit 1
 fi
 
