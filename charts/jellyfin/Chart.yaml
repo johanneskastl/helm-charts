@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: 10.8.1
 description: Jellyfin is a Free Software Media System
 name: jellyfin
-version: 10.0.0
+version: 10.0.1
 kubeVersion: ">=1.16.0-0"
 keywords:
   - jellyfin
@@ -24,4 +24,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Forked the chart from k8s-at-home (at version 9.5.3)
+      description: generate README with helm-docs
