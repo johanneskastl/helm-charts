@@ -130,7 +130,7 @@ persistence:
     enabled: true
     name: 389ds-letsencrypt-ca
     # -- Sets the persistence type
-    type: secret
+    type: configMap
     # -- Where to mount the volume in the main container.
     mountPath: /data/tls/ca/
     # -- Specify if the volume should be mounted read-only.
