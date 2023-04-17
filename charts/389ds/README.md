@@ -18,7 +18,7 @@ Kubernetes: `>=1.19.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://johanneskastl.github.io/helm-charts/ | common | 5.0.2 |
+| https://johanneskastl.github.io/helm-charts/ | common | 5.0.3 |
 
 ## TL;DR
 
@@ -75,33 +75,75 @@ N/A
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| env | object | See below | environment variables |
+| env | object | `{}` |  |
+| envFrom[0].secretRef.name | string | `"389ds-environment"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"389ds/dirsrv"` | image repository |
 | image.tag | string | chart.appVersion | image tag |
-| ingress.enabled | bool | `false` |  |
-| podSecurityContext | object | `{}` | Configure the Security Context for the Pod |
+| persistence.389ds-ca.enabled | bool | `true` |  |
+| persistence.389ds-ca.mountPath | string | `"/data/tls/ca/"` | Where to mount the volume in the main container. |
+| persistence.389ds-ca.name | string | `"389ds-letsencrypt-ca"` |  |
+| persistence.389ds-ca.readOnly | bool | `true` | Specify if the volume should be mounted read-only. |
+| persistence.389ds-ca.type | string | `"configMap"` | Sets the persistence type |
+| persistence.389ds-certs.enabled | bool | `true` |  |
+| persistence.389ds-certs.items[0].key | string | `"tls.key"` |  |
+| persistence.389ds-certs.items[0].path | string | `"server.key"` |  |
+| persistence.389ds-certs.items[1].key | string | `"tls.crt"` |  |
+| persistence.389ds-certs.items[1].path | string | `"server.crt"` |  |
+| persistence.389ds-certs.mountPath | string | `"/data/tls/"` | Where to mount the volume in the main container. |
+| persistence.389ds-certs.name | string | `nil` |  |
+| persistence.389ds-certs.readOnly | bool | `true` | Specify if the volume should be mounted read-only. |
+| persistence.389ds-certs.type | string | `"secret"` | Sets the persistence type |
+| persistence.data.accessMode | string | `"ReadWriteOnce"` | AccessMode for the persistent volume. |
+| persistence.data.enabled | bool | `true` |  |
+| persistence.data.mountPath | string | `"/data/"` | Where to mount the volume in the main container. |
+| persistence.data.retain | bool | `true` | Set to true to retain the PVC upon `helm uninstall` |
+| persistence.data.size | string | `"1Gi"` | The amount of storage that is requested for the persistent volume. |
+| probes.liveness.custom | bool | `true` |  |
 | probes.liveness.enabled | bool | `true` |  |
+| probes.liveness.spec.exec.command[0] | string | `"/usr/lib/dirsrv/dscontainer"` |  |
+| probes.liveness.spec.exec.command[1] | string | `"-H"` |  |
+| probes.liveness.spec.failureThreshold | int | `3` |  |
+| probes.liveness.spec.initialDelaySeconds | int | `0` |  |
+| probes.liveness.spec.periodSeconds | int | `15` |  |
+| probes.liveness.spec.timeoutSeconds | int | `1` |  |
+| probes.readiness.custom | bool | `true` |  |
 | probes.readiness.enabled | bool | `true` |  |
+| probes.readiness.spec.exec.command[0] | string | `"/usr/lib/dirsrv/dscontainer"` |  |
+| probes.readiness.spec.exec.command[1] | string | `"-H"` |  |
+| probes.readiness.spec.failureThreshold | int | `3` |  |
+| probes.readiness.spec.initialDelaySeconds | int | `0` |  |
+| probes.readiness.spec.periodSeconds | int | `15` |  |
+| probes.readiness.spec.timeoutSeconds | int | `1` |  |
+| probes.startup.custom | bool | `true` |  |
 | probes.startup.enabled | bool | `true` |  |
-| service.annotations | object | `{}` |  |
-| service.ports.ldap-tcp.enabled | bool | `true` |  |
-| service.ports.ldap-tcp.port | int | `389` |  |
-| service.ports.ldap-tcp.protocol | string | `"TCP"` |  |
-| service.ports.ldap-tcp.targetPort | int | `3389` |  |
-| service.ports.ldap-udp.enabled | bool | `false` |  |
-| service.ports.ldap-udp.port | int | `389` |  |
-| service.ports.ldap-udp.protocol | string | `"UDP"` |  |
-| service.ports.ldap-udp.targetPort | int | `3389` |  |
-| service.ports.ldaps-tcp.enabled | bool | `true` |  |
-| service.ports.ldaps-tcp.port | int | `636` |  |
-| service.ports.ldaps-tcp.protocol | string | `"TCP"` |  |
-| service.ports.ldaps-tcp.targetPort | int | `3636` |  |
-| service.ports.ldaps-udp.enabled | bool | `false` |  |
-| service.ports.ldaps-udp.port | int | `636` |  |
-| service.ports.ldaps-udp.protocol | string | `"UDP"` |  |
-| service.ports.ldaps-udp.targetPort | int | `3636` |  |
-| service.type | string | `"LoadBalancer"` |  |
+| probes.startup.spec.exec.command[0] | string | `"/usr/lib/dirsrv/dscontainer"` |  |
+| probes.startup.spec.exec.command[1] | string | `"-H"` |  |
+| probes.startup.spec.failureThreshold | int | `3` |  |
+| probes.startup.spec.initialDelaySeconds | int | `30` |  |
+| probes.startup.spec.periodSeconds | int | `15` |  |
+| probes.startup.spec.timeoutSeconds | int | `1` |  |
+| service.main.annotations | object | `{}` |  |
+| service.main.enabled | bool | `true` |  |
+| service.main.namePrefix | string | `"service"` |  |
+| service.main.ports.http.enabled | bool | `false` |  |
+| service.main.ports.ldap-tcp.enabled | bool | `true` |  |
+| service.main.ports.ldap-tcp.port | int | `389` |  |
+| service.main.ports.ldap-tcp.protocol | string | `"TCP"` |  |
+| service.main.ports.ldap-tcp.targetPort | int | `3389` |  |
+| service.main.ports.ldap-udp.enabled | bool | `false` |  |
+| service.main.ports.ldap-udp.port | int | `389` |  |
+| service.main.ports.ldap-udp.protocol | string | `"UDP"` |  |
+| service.main.ports.ldap-udp.targetPort | int | `3389` |  |
+| service.main.ports.ldaps-tcp.enabled | bool | `true` |  |
+| service.main.ports.ldaps-tcp.port | int | `636` |  |
+| service.main.ports.ldaps-tcp.protocol | string | `"TCP"` |  |
+| service.main.ports.ldaps-tcp.targetPort | int | `3636` |  |
+| service.main.ports.ldaps-udp.enabled | bool | `false` |  |
+| service.main.ports.ldaps-udp.port | int | `636` |  |
+| service.main.ports.ldaps-udp.protocol | string | `"UDP"` |  |
+| service.main.ports.ldaps-udp.targetPort | int | `3636` |  |
+| service.main.type | string | `"LoadBalancer"` |  |
 | serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
 | serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
 | serviceAccount.name | string | `""` | The name of the service account to use. If not set and create is true, a name is generated using the fullname template |
