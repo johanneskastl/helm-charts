@@ -14,6 +14,9 @@ within the common library.
 {{- if and (hasKey $values "nameOverride") $values.nameOverride -}}
   {{- $serviceName = printf "%v-%v" $serviceName $values.nameOverride -}}
 {{ end -}}
+{{- if and (hasKey $values "namePrefix") $values.namePrefix -}}
+  {{- $serviceName = printf "%v-%v" $values.namePrefix $serviceName -}}
+{{ end -}}
 {{- $svcType := $values.type | default "" -}}
 {{- $primaryPort := get $values.ports (include "common.classes.service.ports.primary" (dict "values" $values)) }}
 ---
