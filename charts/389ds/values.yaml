@@ -99,3 +99,39 @@ service:
         port: 636
         protocol: UDP
         targetPort: 3636
+
+persistence:
+  data:
+    enabled: true
+    # -- Where to mount the volume in the main container.
+    mountPath: /data/
+    # -- AccessMode for the persistent volume.
+    accessMode: ReadWriteOnce
+    # -- The amount of storage that is requested for the persistent volume.
+    size: 1Gi
+    # -- Set to true to retain the PVC upon `helm uninstall`
+    retain: true
+  389ds-certs:
+    enabled: true
+    # Please insert the name of an existing TLS secret
+    name:
+    items:
+    - key: tls.key
+      path: server.key
+    - key: tls.crt
+      path: server.crt
+    # -- Sets the persistence type
+    type: secret
+    # -- Where to mount the volume in the main container.
+    mountPath: /data/tls/
+    # -- Specify if the volume should be mounted read-only.
+    readOnly: true
+  389ds-ca:
+    enabled: true
+    name: 389ds-letsencrypt-ca
+    # -- Sets the persistence type
+    type: secret
+    # -- Where to mount the volume in the main container.
+    mountPath: /data/tls/ca/
+    # -- Specify if the volume should be mounted read-only.
+    readOnly: true
