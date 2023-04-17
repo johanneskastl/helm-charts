@@ -32,7 +32,7 @@ metadata:
     traefik.ingress.kubernetes.io/service.serversscheme: https
   {{- end }}
   {{- with (merge ($values.annotations | default dict) (include "common.annotations" $ | fromYaml)) }}
-    {{ toYaml . | nindent 4 }}
+    {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
   {{- if (or (eq $svcType "ClusterIP") (empty $svcType)) }}
