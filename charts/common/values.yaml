@@ -259,6 +259,9 @@ service:
     # -- Override the name suffix that is used for this service
     nameOverride:
 
+    # -- Override the name prefix that is used for this service
+    namePrefix:
+
     # -- Set the service type
     type: ClusterIP
 
