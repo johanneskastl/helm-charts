@@ -20,7 +20,7 @@ maintainers:
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
-    version: 5.0.3
+    version: 5.0.4
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
