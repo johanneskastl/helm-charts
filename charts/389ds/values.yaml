@@ -1,0 +1,101 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from the common library chart. You can check the default values/options here:
+# https://github.com/johanneskastl/helm-charts/tree/main/charts/common/values.yaml
+#
+
+image:
+  # -- image repository
+  repository: 389ds/dirsrv
+  # -- image tag
+  # @default -- chart.appVersion
+  tag:
+  # -- image pull policy
+  pullPolicy: IfNotPresent
+
+serviceAccount:
+  # -- Specifies whether a service account should be created
+  create: true
+
+  # -- Annotations to add to the service account
+  annotations: {}
+
+  # -- The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+env: {}
+
+envFrom:
+- secretRef:
+    name: 389ds-environment
+
+probes:
+  liveness:
+    enabled: true
+    custom: true
+    spec:
+      exec:
+        command:
+          - /usr/lib/dirsrv/dscontainer
+          - -H
+      initialDelaySeconds: 0
+      periodSeconds: 15
+      timeoutSeconds: 1
+      failureThreshold: 3
+
+  readiness:
+    enabled: true
+    custom: true
+    spec:
+      exec:
+        command:
+          - /usr/lib/dirsrv/dscontainer
+          - -H
+      initialDelaySeconds: 0
+      periodSeconds: 15
+      timeoutSeconds: 1
+      failureThreshold: 3
+
+  startup:
+    enabled: true
+    custom: true
+    spec:
+      exec:
+        command:
+          - /usr/lib/dirsrv/dscontainer
+          - -H
+      initialDelaySeconds: 30
+      periodSeconds: 15
+      timeoutSeconds: 1
+      failureThreshold: 3
+
+service:
+  main:
+    enabled: true
+    type: LoadBalancer
+    annotations: {}
+    ports:
+      http:
+        enabled: false
+      ldap-tcp:
+        enabled: true
+        port: 389
+        protocol: TCP
+        targetPort: 3389
+      ldap-udp:
+        enabled: false
+        port: 389
+        protocol: UDP
+        targetPort: 3389
+      ldaps-tcp:
+        enabled: true
+        port: 636
+        protocol: TCP
+        targetPort: 3636
+      ldaps-udp:
+        enabled: false
+        port: 636
+        protocol: UDP
+        targetPort: 3636
