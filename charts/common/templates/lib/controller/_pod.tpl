@@ -5,7 +5,7 @@ The pod definition included in the controller.
   {{- with .Values.imagePullSecrets }}
 imagePullSecrets:
     {{- toYaml . | nindent 2 }}
-  {{- end }}
+  {{- end -}}
 serviceAccountName: {{ include "common.names.serviceAccountName" . }}
 automountServiceAccountToken: {{ .Values.automountServiceAccountToken }}
   {{- with .Values.podSecurityContext }}
