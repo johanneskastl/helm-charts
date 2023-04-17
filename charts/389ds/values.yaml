@@ -75,6 +75,7 @@ service:
   main:
     enabled: true
     type: LoadBalancer
+    namePrefix: service
     annotations: {}
     ports:
       http:
