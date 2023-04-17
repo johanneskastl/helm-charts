@@ -1,6 +1,6 @@
 # common
 
-![Version: 5.0.2](https://img.shields.io/badge/Version-5.0.2-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
+![Version: 5.0.3](https://img.shields.io/badge/Version-5.0.3-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
 
 Function library for charts that were forked from k8s-at-home after its deprecation
 
@@ -209,6 +209,7 @@ N/A
 | service.main.ipFamilyPolicy | string | `nil` | Specify the ip policy. Options: SingleStack, PreferDualStack, RequireDualStack |
 | service.main.labels | object | `{}` | Provide additional labels which may be required. |
 | service.main.nameOverride | string | `nil` | Override the name suffix that is used for this service |
+| service.main.namePrefix | string | `nil` | Override the name prefix that is used for this service |
 | service.main.ports | object | See below | Configure the Service port information here. Additional ports can be added by adding a dictionary key similar to the 'http' service. |
 | service.main.ports.http.enabled | bool | `true` | Enables or disables the port |
 | service.main.ports.http.nodePort | string | `nil` | Specify the nodePort value for the LoadBalancer and NodePort service types. [[ref]](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport) |
@@ -234,6 +235,21 @@ All notable changes to this library Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### [5.0.3]
+
+#### Added
+
+- add namePrefix for services
+
+#### Changed
+
+N/A
+
+#### Fixed
+
+- fix whitespace errors in service annotations
+- fix whitespace errors in pod spec before serviceAccountName
 
 ### [5.0.2]
 
