@@ -41,7 +41,7 @@ spec:
     metadata:
       {{- with include ("common.podAnnotations") . }}
       annotations:
-        {{- . | nindent 8 }}
+        {{- . | trim | nindent 8 }}
       {{- end }}
       labels:
         {{- include "common.labels.selectorLabels" . | nindent 8 }}
