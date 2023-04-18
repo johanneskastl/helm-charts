@@ -1,0 +1,27 @@
+---
+apiVersion: v2
+appVersion: '2.2'
+description: 389ds LDAP server
+name: 389ds
+version: 0.0.1
+kubeVersion: ">=1.19.0-0"
+keywords:
+  - 389-ds
+  - 389ds
+  - dirsrv
+  - LDAP
+home: https://github.com/johanneskastl/helm-charts/tree/main/charts/389ds
+icon: https://www.port389.org/images/logo-header-transparent.png
+sources:
+  - https://github.com/389ds/389-ds-base/
+maintainers:
+  - name: johanneskastl
+    email: kastl@b1-systems.de
+dependencies:
+  - name: common
+    repository: https://johanneskastl.github.io/helm-charts/
+    version: 5.0.5
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: first version of the chart
