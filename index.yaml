@@ -1,5 +1,36 @@
 apiVersion: v1
 entries:
+  389ds:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: first version of the chart
+    apiVersion: v2
+    appVersion: "2.2"
+    created: "2023-04-18T10:33:00.697033355Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: 389ds LDAP server
+    digest: 1526f0f091eebeda92151c523a802d93624596af221a055d929f3abce2824bc9
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/389ds
+    icon: https://www.port389.org/images/logo-header-transparent.png
+    keywords:
+    - 389-ds
+    - 389ds
+    - dirsrv
+    - LDAP
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: 389ds
+    sources:
+    - https://github.com/389ds/389-ds-base/
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/389ds-0.0.1/389ds-0.0.1.tgz
+    version: 0.0.1
   blocky:
   - annotations:
       artifacthub.io/changes: |-
@@ -1796,4 +1827,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-04-18T09:15:37.88551494Z"
+generated: "2023-04-18T10:33:00.697397656Z"
