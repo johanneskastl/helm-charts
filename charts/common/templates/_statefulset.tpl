@@ -45,6 +45,7 @@ spec:
         {{- end }}
     spec:
       {{- include "common.controller.pod" . | nindent 6 }}
+  {{ with .Values.volumeClaimTemplates }}
   volumeClaimTemplates:
     {{- range $index, $vct := .Values.volumeClaimTemplates }}
     - metadata:
@@ -59,4 +60,5 @@ spec:
         storageClassName: {{ if (eq "-" $vct.storageClass) }}""{{- else }}{{ $vct.storageClass | quote }}{{- end }}
         {{- end }}
     {{- end }}
+  {{- end }}
 {{- end }}
