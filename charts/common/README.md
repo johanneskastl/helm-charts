@@ -1,6 +1,6 @@
 # common
 
-![Version: 5.0.4](https://img.shields.io/badge/Version-5.0.4-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
+![Version: 5.0.5](https://img.shields.io/badge/Version-5.0.5-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
 
 Function library for charts that were forked from k8s-at-home after its deprecation
 
@@ -235,6 +235,21 @@ All notable changes to this library Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### [5.0.5]
+
+#### Added
+
+N/A
+
+#### Changed
+
+N/A
+
+#### Fixed
+
+- fix whitespace errors in statefulset template annotations
+- only include volumeClaimTemplates in statefulset, if they are defined
 
 ### [5.0.4]
 
