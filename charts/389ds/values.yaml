@@ -5,6 +5,9 @@
 # https://github.com/johanneskastl/helm-charts/tree/main/charts/common/values.yaml
 #
 
+controller:
+  type: statefulset
+
 image:
   # -- image repository
   repository: 389ds/dirsrv
