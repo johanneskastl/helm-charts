@@ -98,7 +98,12 @@ N/A
 
 ## Changelog
 
-### Version 5.1.2
+All notable changes to this Helm chart will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 6.0.0
 
 #### Added
 
@@ -106,7 +111,7 @@ N/A
 
 #### Changed
 
-* Upgraded `common` chart dependency to version 4.5.2
+* Forked the chart from k8s-at-home (at version 5.1.2)
 
 #### Fixed
 
