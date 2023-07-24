@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: v1.2.20
+appVersion: v1.2.26
 description: Kanboard is a free and open source Kanban project management software.
 name: kanboard
-version: 6.0.0
+version: 6.0.6
 kubeVersion: ">=1.16.0-0"
 keywords:
   - kanboard
@@ -26,4 +26,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: First version 6.0.0 after forking the Chart from k8s-at-home
+      description: update appVersion to 1.2.26
