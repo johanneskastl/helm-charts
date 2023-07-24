@@ -26,9 +26,9 @@ Kubernetes: `>=1.16.0-0`
 ## TL;DR
 
 ```console
-helm repo add k8s-at-home https://k8s-at-home.com/charts/
+helm repo add johanneskastl-helm-charts https://johanneskastl.github.io/helm-charts/
 helm repo update
-helm install kanboard k8s-at-home/kanboard
+helm install kanboard johanneskastl-helm-charts/kanboard
 ```
 
 ## Installing the Chart
@@ -36,7 +36,7 @@ helm install kanboard k8s-at-home/kanboard
 To install the chart with the release name `kanboard`
 
 ```console
-helm install kanboard k8s-at-home/kanboard
+helm install kanboard johanneskastl-helm-charts/kanboard
 ```
 
 ## Uninstalling the Chart
@@ -59,13 +59,13 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```console
 helm install kanboard \
   --set env.TZ="America/New York" \
-    k8s-at-home/kanboard
+    johanneskastl-helm-charts/kanboard
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install kanboard k8s-at-home/kanboard -f values.yaml
+helm install kanboard johanneskastl-helm-charts/kanboard -f values.yaml
 ```
 
 ## Custom configuration
