@@ -17,8 +17,8 @@ maintainers:
     email: kastl@b1-systems.de
 dependencies:
   - name: common
-    repository: https://library-charts.k8s-at-home.com
-    version: 4.5.2
+    repository: https://johanneskastl.github.io/helm-charts/
+    version: 5.0.5
   - name: postgresql
     version: 11.6.12
     repository: https://charts.bitnami.com/bitnami
