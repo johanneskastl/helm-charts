@@ -1,6 +1,6 @@
 # kanboard
 
-![Version: 6.0.6](https://img.shields.io/badge/Version-6.0.6-informational?style=flat-square) ![AppVersion: v1.2.26](https://img.shields.io/badge/AppVersion-v1.2.26-informational?style=flat-square)
+![Version: 6.0.12](https://img.shields.io/badge/Version-6.0.12-informational?style=flat-square) ![AppVersion: v1.2.32](https://img.shields.io/badge/AppVersion-v1.2.32-informational?style=flat-square)
 
 Kanboard is a free and open source Kanban project management software.
 
@@ -90,7 +90,7 @@ N/A
 | env.TZ | string | `"UTC"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"kanboard/kanboard"` | image repository |
-| image.tag | string | `"v1.2.20"` | image tag |
+| image.tag | string | chart.appVersion | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
 | postgresql | object | See values.yaml | Enable and configure postgresql database subchart under this key.    For more options see [postgresql chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/postgresql) |
@@ -102,6 +102,91 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 6.0.12
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.2.32
+
+#### Fixed
+
+N/A
+
+### Version 6.0.11
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.2.31
+
+#### Fixed
+
+N/A
+
+### Version 6.0.10
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.2.30
+
+#### Fixed
+
+N/A
+
+### Version 6.0.9
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.2.29
+
+#### Fixed
+
+N/A
+
+### Version 6.0.8
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.2.28
+* do no longer hardcode the image tag in the values.yaml file, use the appVersion as default instead
+
+#### Fixed
+
+N/A
+
+### Version 6.0.7
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.2.27
+
+#### Fixed
+
+N/A
 
 ### Version 6.0.6
 
