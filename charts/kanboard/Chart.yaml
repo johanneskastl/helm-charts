@@ -13,8 +13,8 @@ icon: https://raw.githubusercontent.com/kanboard/website/master/assets/img/icon.
 sources:
   - https://github.com/kanboard/kanboard
 maintainers:
-  - name: trly
-    email: trly@users.noreply.github.com
+  - name: johanneskastl
+    email: kastl@b1-systems.de
 dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com
