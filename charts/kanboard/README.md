@@ -4,7 +4,9 @@
 
 Kanboard is a free and open source Kanban project management software.
 
-**This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/k8s-at-home/charts/issues/new/choose)**
+Forked from the chart in the [k8s-at-home repository](https://github.com/k8s-at-home/charts) at version 5.1.2.
+
+**This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/johanneskastl/helm-charts/issues/)**
 
 ## Source Code
 
