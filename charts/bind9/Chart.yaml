@@ -1,0 +1,27 @@
+---
+apiVersion: v2
+appVersion: "9.18"
+description: A Helm chart for Bind9 using the official ISC docker image
+name: bind9
+version: "0.4.0"
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - bind9
+  - named
+  - dns
+  - resolver
+home: https://github.com/johanneskastl/helm-charts/tree/main/charts/bind9
+icon: https://www.isc.org/images/isclogos/Bind_9_ISC_Blue.jpg
+sources:
+  - https://gitlab.isc.org/isc-projects/bind9
+maintainers:
+  - name: johanneskastl
+    email: kastl@b1-systems.de
+dependencies:
+  - name: common
+    repository: https://johanneskastl.github.io/helm-charts/
+    version: 5.0.5
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: first version of the chart in this repository
