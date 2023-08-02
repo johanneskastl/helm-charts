@@ -1,0 +1,124 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from the common library chart. You can check the default values/options here:
+# https://github.com/johanneskastl/helm-charts/tree/main/charts/common/values.yaml
+#
+
+image:
+  # -- image repository
+  repository: bitnami/openldap
+  # as the tag is updated in-place in the upstream image, set the policy to Always
+  # https://hub.docker.com/r/bitnami/openldap/tags
+  # -- image pull policy
+  pullPolicy: Always
+  # -- image tag
+  tag:
+
+# -- Configures service settings for the chart.
+# @default -- See values.yaml
+service:
+  main:
+    enabled: true
+    type: LoadBalancer
+    ports:
+      http:
+        enabled: false
+      ldap-tcp:
+        enabled: true
+        port: 389
+        protocol: TCP
+        targetPort: 1389
+      ldap-udp:
+        enabled: false
+        port: 389
+        protocol: UDP
+        targetPort: 1389
+      ldaps-tcp:
+        enabled: true
+        port: 636
+        protocol: TCP
+        targetPort: 1636
+      ldaps-udp:
+        enabled: false
+        port: 636
+        protocol: UDP
+        targetPort: 1636
+
+ingress:
+  # -- Enable and configure ingress settings for the chart under this key.
+  # @default -- See values.yaml
+  main:
+    enabled: false
+
+# -- Configure persistence settings for the chart under this key.
+# @default -- See values.yaml
+persistence:
+  config:
+    enabled: true
+    type: pvc
+    mountPath: /bitnami/openldap
+    accessMode: ReadWriteOnce
+    size: 1Gi
+    retain: true
+  # For persistence, you should have your certificate stored in Kubernetes in a secret
+  # and mounted into the pod.
+  certificate:
+    enabled: true
+    type: secret
+    mountPath: /etc/ssl/private/
+  # Set this to enabled if you want to import files from a secret.
+  # This disables the autogeneration of the default tree, see
+  # https://github.com/bitnami/bitnami-docker-openldap/issues/86 and
+  # https://github.com/bitnami/bitnami-docker-openldap/issues/83
+  ldifimport:
+    enabled: false
+    type: secret
+    mountPath: /ldif_import/
+
+probes:
+  liveness:
+    enabled: true
+    spec:
+      tcpSocket:
+        port: 1389
+      initialDelaySeconds: 15
+      periodSeconds: 15
+      timeoutSeconds: 1
+      failureThreshold: 3
+  readiness:
+    enabled: true
+    spec:
+      tcpSocket:
+        port: 1389
+      initialDelaySeconds: 15
+      periodSeconds: 15
+      timeoutSeconds: 1
+      failureThreshold: 3
+  startup:
+    enabled: true
+    spec:
+      tcpSocket:
+        port: 1389
+      initialDelaySeconds: 0
+      periodSeconds: 10
+      timeoutSeconds: 1
+      failureThreshold: 12
+
+serviceAccount:
+  create: true
+
+podSecurityContext:
+  fsGroup: 1001
+
+securityContext:
+  capabilities:
+    drop:
+    - ALL
+    add:
+    - NET_BIND_SERVICE
+  readOnlyRootFilesystem: false
+  runAsNonRoot: true
+  runAsUser: 1001
+
+automountServiceAccountToken: false

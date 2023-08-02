@@ -1,0 +1,25 @@
+{{/* Make sure all variables are set properly */}}
+{{- include "common.values.setup" . }}
+
+{{/* Append the hardcoded settings */}}
+{{- define "openldap.hardcodedValues" -}}
+env:
+  {{ if .Values.persistence.ldifimport.enabled }}
+    LDAP_SKIP_DEFAULT_TREE: 'yes'
+    LDAP_CUSTOM_LDIF_DIR: '/ldif_import/'
+  {{ else }}
+    LDAP_SKIP_DEFAULT_TREE: 'no'
+  {{ end }}
+  {{ if .Values.persistence.certificate.enabled }}
+    LDAP_ENABLE_TLS: 'yes'
+    LDAP_TLS_CERT_FILE: '/etc/ssl/private/tls.crt'
+    LDAP_TLS_KEY_FILE: '/etc/ssl/private/tls.key'
+    LDAP_TLS_CA_FILE: '/etc/ssl/private/tls.crt'
+  {{ else }}
+    LDAP_ENABLE_TLS: 'no'
+  {{ end }}
+      {{- end -}}
+    {{- $_ := mergeOverwrite .Values (include "openldap.hardcodedValues" . | fromYaml) -}}
+
+    {{/* Render the templates */}}
+{{ include "common.all" . }}

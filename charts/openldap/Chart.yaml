@@ -1,0 +1,26 @@
+---
+apiVersion: v2
+appVersion: 2.6.6
+description: Helm chart for OpenLDAP based on the Bitnami image
+name: openldap
+version: 2.0.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - OpenLDAP
+  - Directory Server
+home: https://github.com/johanneskastl/helm-charts/tree/main/charts/openldap
+icon: http://www.openldap.org/images/headers/LDAPworm.gif
+sources:
+  - https://git.openldap.org/openldap/openldap
+  - https://github.com/bitnami/containers/tree/main/bitnami/openldap
+maintainers:
+  - name: johanneskastl
+    email: kastl@b1-systems.de
+dependencies:
+  - name: common
+    repository: https://johanneskastl.github.io/helm-charts/
+    version: 5.0.5
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: first version of the chart in this repository
