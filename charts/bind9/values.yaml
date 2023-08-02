@@ -1,0 +1,156 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from the common library chart. You can check the default values/options here:
+# https://github.com/johanneskastl/helm-charts/tree/main/charts/common/values.yaml
+#
+
+# To use this chart to setup a resolver using bind9, enable the resolver mode
+# Possible values:
+# 'resolver': set up a resolver
+# 'authoritative': set up an authoritative nameserver
+#
+chartMode: resolver
+
+# When using this chart to set up a resolver, set the chartMode to 'resolver'
+# and add forwarders and options as you see fit
+resolver:
+  forwarders:
+    - '80.241.218.68'
+    - '159.69.114.157'
+    - '176.9.93.198'
+  dnssec_validation: true
+  ipv6_enabled: true
+  querylog: false
+
+authoritative:
+  dnssec_validation: true
+  ipv6_enabled: true
+  querylog: false
+
+#
+# To enhance the basic configuration of this chart, you can create a secret
+# containing one key called 'named.conf.local' containing your
+# bind9 resolver or nameserver configuration
+# ATTENTION: This must not contain an `options` block, only zone settings
+#            or similar are allowed
+#
+# Example:
+# ```
+# apiVersion: v1
+# kind: Secret
+# metadata:
+#   name: my-secret
+# stringData:
+#   named.conf.local: |
+#     zone "my.corporate-domain.example.org" {
+#         type static-stub;
+#         server-addresses {
+#                 192.168.1.1;
+#                 192.168.1.2;
+#         };
+#     };
+# ```
+#
+mount_configuration_from_secret:
+  enabled: false
+  secretName: my-secret
+
+image:
+  # -- image repository
+  repository: internetsystemsconsortium/bind9
+  # -- image pull policy
+  pullPolicy: IfNotPresent
+  # -- image tag
+  tag:
+
+command:
+  - "/usr/sbin/named"
+  - "-g"
+  - "-c"
+  - "/etc/named/named.conf"
+  - "-u"
+  - "bind"
+
+serviceAccount:
+  create: true
+
+automountServiceAccountToken: false
+
+service:
+  main:
+    enabled: false
+  dns-tcp:
+    enabled: true
+    nameOverride: dns-tcp
+    type: ClusterIP
+    annotations: {}
+    labels: {}
+    ports:
+      dns-tcp:
+        port: 53
+        targetPort: 5053
+        enabled: true
+        protocol: TCP
+  dns-udp:
+    enabled: true
+    type: ClusterIP
+    annotations: {}
+    labels: {}
+    ports:
+      dns-udp:
+        port: 53
+        targetPort: 5053
+        enabled: true
+        protocol: UDP
+
+podSecurityContext:
+  fsGroup: 106
+
+probes:
+  liveness:
+    enabled: true
+    custom: true
+    spec:
+      tcpSocket:
+        port: 5053
+  readiness:
+    enabled: true
+    custom: true
+    spec:
+      tcpSocket:
+        port: 5053
+  startup:
+    enabled: true
+    custom: true
+    spec:
+      tcpSocket:
+        port: 5053
+      initialDelaySeconds: 10
+
+global:
+  labels: {}
+  selectorLables: {}
+
+ingress:
+  # -- Enable and configure ingress settings for the chart under this key.
+  # @default -- See values.yaml
+  main:
+    enabled: false
+
+# -- Configure persistence settings for the chart under this key.
+# @default -- See values.yaml
+persistence:
+  config:
+    enabled: false
+  bind9-resolver-named-conf:
+    enabled: true
+    name: bind9-resolver-named-conf
+    type: secret
+    mountPath: /etc/named/
+    readOnly: true
+  bind9-resolver-user-configuration:
+    enabled: false
+    type: secret
+    mountPath: /named_config/
+    readOnly: true
