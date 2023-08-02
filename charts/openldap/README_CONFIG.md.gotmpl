@@ -1,0 +1,30 @@
+{{- define "custom.notes" -}}
+**This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/johanneskastl/helm-charts/issues/)**
+{{- end -}}
+
+{{- define "custom.custom.configuration.header" -}}
+## Custom configuration
+{{- end -}}
+
+{{- define "custom.custom.configuration" -}}
+{{ template "custom.custom.configuration.header" . }}
+
+By default, this chart wants to mount a TLS secret into the container,
+so the LDAP server supports TLS. If you do **not** want to have TLS enabled,
+disable this by setting `persistence.certificate.enabled` to false:
+
+```
+persistence:
+  certificate:
+    enabled: false
+```
+
+If you want to have custom LDIF files mounted into the container, you can enable this by enabling the persistence setting for `ldifImport` and specifying a secret name:
+
+```
+persistence:
+  ldifImport:
+    enabled: true
+    name: my-ldif-secret
+```
+{{- end -}}
