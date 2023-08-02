@@ -1039,6 +1039,36 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/kanboard-6.0.0/kanboard-6.0.0.tgz
     version: 6.0.0
+  openldap:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: first version of the chart in this repository
+    apiVersion: v2
+    appVersion: 2.6.6
+    created: "2023-08-02T19:31:22.821388224Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Helm chart for OpenLDAP based on the Bitnami image
+    digest: bacce8491f858ec3b63e9c72bd70b8ab570715a23ffa5b1c658368261ef57de1
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/openldap
+    icon: http://www.openldap.org/images/headers/LDAPworm.gif
+    keywords:
+    - OpenLDAP
+    - Directory Server
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: openldap
+    sources:
+    - https://git.openldap.org/openldap/openldap
+    - https://github.com/bitnami/containers/tree/main/bitnami/openldap
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/openldap-2.0.0/openldap-2.0.0.tgz
+    version: 2.0.0
   syncthing:
   - annotations:
       artifacthub.io/changes: |-
@@ -2153,4 +2183,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-08-02T11:30:59.052875237Z"
+generated: "2023-08-02T19:31:22.821514626Z"
