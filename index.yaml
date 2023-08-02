@@ -35,6 +35,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: fix IPv6 syntax in named.conf secrets
+    apiVersion: v2
+    appVersion: "9.18"
+    created: "2023-08-02T19:54:37.407983823Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: A Helm chart for Bind9 using the official ISC docker image
+    digest: 7bb4089efed349466dd5e76afc17ff5813a4a3c8bae991db5b86178300a144a8
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/bind9
+    icon: https://www.isc.org/images/isclogos/Bind_9_ISC_Blue.jpg
+    keywords:
+    - bind9
+    - named
+    - dns
+    - resolver
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: bind9
+    sources:
+    - https://gitlab.isc.org/isc-projects/bind9
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/bind9-0.4.1/bind9-0.4.1.tgz
+    version: 0.4.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: first version of the chart in this repository
     apiVersion: v2
     appVersion: "9.18"
@@ -2183,4 +2213,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-08-02T19:31:22.821514626Z"
+generated: "2023-08-02T19:54:37.408622431Z"
