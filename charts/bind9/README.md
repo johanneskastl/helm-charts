@@ -67,7 +67,11 @@ helm install bind9 johanneskastl-helm-charts/bind9 -f values.yaml
 
 ## Custom configuration
 
-N/A
+This chart can be used to install either a validating resolver or an
+authoritative nameserver.
+
+This is controlled by setting the `chartMode` variable to either `resolver` or
+`authoritative`.
 
 ## Values
 
