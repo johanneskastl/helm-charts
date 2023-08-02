@@ -143,13 +143,13 @@ ingress:
 persistence:
   config:
     enabled: false
-  bind9-named-conf:
+  bind9namedconf:
     enabled: true
     name: bind9-named-conf
     type: secret
     mountPath: /etc/named/
     readOnly: true
-  bind9-user-configuration:
+  bind9userconfiguration:
     enabled: false
     type: secret
     mountPath: /named_config/
