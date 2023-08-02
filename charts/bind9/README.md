@@ -1,6 +1,6 @@
 # bind9
 
-![Version: 0.4.1](https://img.shields.io/badge/Version-0.4.1-informational?style=flat-square) ![AppVersion: 9.18](https://img.shields.io/badge/AppVersion-9.18-informational?style=flat-square)
+![Version: 0.4.2](https://img.shields.io/badge/Version-0.4.2-informational?style=flat-square) ![AppVersion: 9.18](https://img.shields.io/badge/AppVersion-9.18-informational?style=flat-square)
 
 A Helm chart for Bind9 using the official ISC docker image
 
@@ -174,7 +174,7 @@ persistence:
 | command[5] | string | `"bind"` |  |
 | global.labels | object | `{}` |  |
 | global.selectorLables | object | `{}` |  |
-| image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
+| image.pullPolicy | string | `"Always"` | image pull policy |
 | image.repository | string | `"internetsystemsconsortium/bind9"` | image repository |
 | image.tag | string | `nil` | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
@@ -218,6 +218,20 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 0.4.2
+
+#### Added
+
+N/A
+
+#### Changed
+
+N/A
+
+#### Fixed
+
+* set image pullPolicy to Always, as the upstream tag is updated in-place
 
 ### Version 0.4.1
 

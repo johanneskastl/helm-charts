@@ -59,8 +59,10 @@ mount_configuration_from_secret:
 image:
   # -- image repository
   repository: internetsystemsconsortium/bind9
+  # as the tag is updated in-place in the upstream image, set the policy to Always
+  # https://hub.docker.com/r/internetsystemsconsortium/bind9/tags
   # -- image pull policy
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # -- image tag
   tag:
 
