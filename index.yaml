@@ -35,6 +35,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update appVersion to 9.19
+    apiVersion: v2
+    appVersion: "9.19"
+    created: "2023-08-02T20:06:38.207922504Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: A Helm chart for Bind9 using the official ISC docker image
+    digest: 7dd9fb6b21e73d4b2214ad36b7bd585cb49c33c9ffda62755c4961be874da7a8
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/bind9
+    icon: https://www.isc.org/images/isclogos/Bind_9_ISC_Blue.jpg
+    keywords:
+    - bind9
+    - named
+    - dns
+    - resolver
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: bind9
+    sources:
+    - https://gitlab.isc.org/isc-projects/bind9
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/bind9-0.5.0/bind9-0.5.0.tgz
+    version: 0.5.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: set image pullPolicy to Always
     apiVersion: v2
     appVersion: "9.18"
@@ -2243,4 +2273,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-08-02T20:01:47.401211917Z"
+generated: "2023-08-02T20:06:38.208326109Z"
