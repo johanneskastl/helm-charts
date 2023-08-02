@@ -3,6 +3,7 @@
 Collection of helm charts I used in my personal clusters.
 
 - [389ds](./charts/389ds/README.md)
+- [bind9](./charts/bind9/README.md)
 - [blocky](./charts/blocky/README.md)
 - [hedgedoc](./charts/hedgedoc/README.md)
 - [heimdall](./charts/heimdall/README.md)
