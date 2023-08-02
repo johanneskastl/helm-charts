@@ -9,6 +9,49 @@
 {{- define "custom.custom.configuration" -}}
 {{ template "custom.custom.configuration.header" . }}
 
+Depending on your usecase, you need to set the following environment variables for the container.
+
+```
+LDAP_ADMIN_USERNAME: 'admin'
+LDAP_ADMIN_PASSWORD: 'topsecret'
+LDAP_CONFIG_ADMIN_USERNAME: 'admin'
+LDAP_CONFIG_ADMIN_PASSWORD: 'topsecret'
+LDAP_CONFIG_ADMIN_ENABLED: 'yes'
+LDAP_ROOT: 'dc=example,dc=org'
+```
+
+Adjust these values and add them to a Kubernetes secret like so:
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: openldap-secret
+  namespace: openldap
+stringData:
+  LDAP_ADMIN_USERNAME: 'admin'
+  LDAP_ADMIN_PASSWORD: 'topsecret'
+  LDAP_CONFIG_ADMIN_USERNAME: 'admin'
+  LDAP_CONFIG_ADMIN_PASSWORD: 'topsecret'
+  LDAP_CONFIG_ADMIN_ENABLED: 'yes'
+  LDAP_ROOT: 'dc=example,dc=org'
+```
+
+Then reference this secret in the `envFrom` section of your `values.yaml`:
+
+```yaml
+envFrom:
+- secretRef:
+    name: openldap-secret
+```
+
+For debugging you might want to also set these variables:
+
+```
+LDAP_LOGLEVEL: '1'
+BITNAMI_DEBUG: 'true'
+```
+
 By default, this chart wants to mount a TLS secret into the container,
 so the LDAP server supports TLS. If you do **not** want to have TLS enabled,
 disable this by setting `persistence.certificate.enabled` to false:
