@@ -13,6 +13,8 @@ env:
     LDAP_TLS_CERT_FILE: '/etc/ssl/private/tls.crt'
     LDAP_TLS_KEY_FILE: '/etc/ssl/private/tls.key'
     LDAP_TLS_CA_FILE: '/etc/ssl/private/tls.crt'
+  {{ else }}
+    LDAP_ENABLE_TLS: 'no'
   {{ end }}
       {{- end -}}
     {{- $_ := mergeOverwrite .Values (include "openldap.hardcodedValues" . | fromYaml) -}}
