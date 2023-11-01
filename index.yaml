@@ -35,6 +35,35 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: disable TLS by default, can be enabled via the values.yaml
+    apiVersion: v2
+    appVersion: 2.0.0-AM26-TLSoptional
+    created: "2023-11-01T21:06:55.14949406Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: ApacheDS is a LDAP server written in Java
+    digest: 9a9d8de35d922fa64b73c1ea2a3723bf048b5d4753d5d0f1868ce8a72de85301
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/apacheds
+    icon: https://directory.apache.org/images/header-green.png
+    keywords:
+    - LDAP
+    - ApacheDS
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: apacheds
+    sources:
+    - https://directory.apache.org/apacheds/
+    - https://github.com/TremoloSecurity/apacheds
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/apacheds-0.0.3/apacheds-0.0.3.tgz
+    version: 0.0.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: add README
     apiVersion: v2
     appVersion: latest
@@ -3509,4 +3538,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-11-01T20:29:43.098850284Z"
+generated: "2023-11-01T21:06:55.14994186Z"
