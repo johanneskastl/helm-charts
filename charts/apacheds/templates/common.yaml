@@ -11,5 +11,21 @@ env:
 {{- end -}}
 {{- $_ := mergeOverwrite .Values (include "apacheds.hardcodedValues" . | fromYaml) -}}
 
+{{/* add initContainer only if /var/apacheds/ is mounted from a volume */}}
+{{- define "apacheds.initContainers" -}}
+{{ if .Values.persistence.data.enabled }}
+initContainers:
+  changeowner:
+    name: changeowner
+    image: busybox
+    command: ["sh", "-c", "chown -vR 431:433 /var/apacheds/"]
+    volumeMounts:
+    - name: data
+      mountPath: /var/apacheds/
+{{- end -}}
+{{- end -}}
+
+{{- $_ := mergeOverwrite .Values (include "apacheds.initContainers" . | fromYaml) -}}
+
 {{/* Render the templates */}}
 {{ include "common.all" . }}
