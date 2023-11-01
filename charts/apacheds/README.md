@@ -1,6 +1,6 @@
 # apacheds
 
-![Version: 0.0.2](https://img.shields.io/badge/Version-0.0.2-informational?style=flat-square) ![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)
+![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square) ![AppVersion: 2.0.0-AM26-TLSoptional](https://img.shields.io/badge/AppVersion-2.0.0--AM26--TLSoptional-informational?style=flat-square)
 
 ApacheDS is a LDAP server written in Java
 
@@ -164,7 +164,7 @@ The container will import the data from the `data.ldif` file, that is being moun
 | controller.type | string | `"statefulset"` |  |
 | envFrom | list | See values.yaml | Use environment variables from the apacheds-configuration secret |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
-| image.repository | string | `"tremolosecurity/apacheds"` | image repository |
+| image.repository | string | `"johanneskastl/apacheds"` | image repository |
 | image.tag | string | chart.appVersion | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
@@ -215,6 +215,21 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 0.0.3
+
+#### Added
+
+N/A
+
+#### Changed
+
+- disable TLS by default, aka make the keystore secret optional
+- change image to johanneskastl/apacheds
+
+#### Fixed
+
+N/A
 
 ### Version 0.0.2
 
