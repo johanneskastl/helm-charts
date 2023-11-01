@@ -4,7 +4,7 @@
 {{/* Append the hardcoded settings */}}
 {{- define "uptime-kuma.hardcodedValues" -}}
 env:
-    JAVA_OPTS: -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Xms2048m -Xmx2048m
+    JAVA_OPTS: -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Xms{{ .Values.resources.requests.memory | replace "Mi" "" }}m -Xmx{{ .Values.resources.limits.memory | replace "Mi" "" }}m
 {{ if .Values.persistence.ldifimport.enabled }}
     LDIF_FILE: /etc/apacheds-data/data.ldif
 {{- end -}}
