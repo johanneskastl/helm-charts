@@ -1,0 +1,127 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from the common library chart. You can check the default values/options here:
+# https://github.com/johanneskastl/helm-charts/tree/main/charts/common/values.yaml
+#
+
+image:
+  # -- image repository
+  repository: tremolosecurity/apacheds
+  # -- image tag
+  # @default -- chart.appVersion
+  tag:
+  # -- image pull policy
+  pullPolicy: IfNotPresent
+
+controller:
+  type: statefulset
+
+serviceAccount:
+  create: true
+
+# -- Configures service settings for the chart.
+# @default -- See values.yaml
+service:
+  main:
+    enabled: true
+    type: LoadBalancer
+    ports:
+      http:
+        enabled: false
+      ldap-tcp:
+        enabled: true
+        port: 389
+        protocol: TCP
+        targetPort: 10389
+      ldap-udp:
+        enabled: false
+        port: 389
+        protocol: UDP
+        targetPort: 10389
+      ldaps-tcp:
+        enabled: true
+        port: 636
+        protocol: TCP
+        targetPort: 10636
+      ldaps-udp:
+        enabled: false
+        port: 636
+        protocol: UDP
+        targetPort: 10636
+
+ingress:
+  # -- Enable and configure ingress settings for the chart under this key.
+  # @default -- See values.yaml
+  main:
+    enabled: false
+
+# -- Use environment variables from the apacheds-configuration secret
+# @default -- See values.yaml
+envFrom:
+  - secretRef:
+      name: apacheds-configuration
+
+# -- Configure persistence settings for the chart under this key.
+# @default -- See values.yaml
+persistence:
+  # For persistence, you should have your certificate stored in Kubernetes in a secret
+  # and mounted into the pod.
+  # To do that set the `persistence.config.name` key to the name of your existing secret
+  # in your values.yaml file.
+  config:
+    enabled: true
+    mountPath: /etc/apacheds/
+    type: secret
+    readOnly: true
+  data:
+    enabled: true
+    mountPath: /var/apacheds/
+    accessMode: ReadWriteOnce
+    readOnly: false
+    retain: true
+  # Set this to enabled if you want to import files from a secret.
+  # Then set `persistence.ldifimport.name` to the name of your Kubernetes
+  # secret in your values.yaml file.
+  ldifimport:
+    enabled: false
+    type: secret
+    mountPath: /etc/apacheds-data/
+
+probes:
+  liveness:
+    enabled: true
+    spec:
+      tcpSocket:
+        port: 10389
+      initialDelaySeconds: 30
+      periodSeconds: 15
+      timeoutSeconds: 1
+      failureThreshold: 3
+  readiness:
+    enabled: true
+    spec:
+      tcpSocket:
+        port: 10389
+      initialDelaySeconds: 30
+      periodSeconds: 15
+      timeoutSeconds: 1
+      failureThreshold: 3
+  startup:
+    enabled: true
+    spec:
+      tcpSocket:
+        port: 10389
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      timeoutSeconds: 1
+      failureThreshold: 12
+
+# -- Set the resource requests / limits for the main container.
+resources:
+  limits:
+    cpu: 250m
+    memory: 256Mi
+  requests:
+    cpu: 125m
+    memory: 128Mi
