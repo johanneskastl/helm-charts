@@ -68,10 +68,11 @@ helm install apacheds johanneskastl-helm-charts/apacheds -f values.yaml
 
 ## Custom configuration
 
-You need at least two secrets for this chart:
+You need at least one Kubernetes secret for this chart, but there are three in total:
 
 1. A secret containing your configuration (called `apacheds-configuration`)
-1. A secret containing the java keystore containing the certificate.
+1. (optional) A secret containing the java keystore containing the certificate
+1. (optional) A secret containing a `data.ldif` key with LDIF entries you want to have imported into your LDAP server
 
 The configuration secret should contain
 - your admin account password (`APACHEDS_ROOT_PASSWORD`)
@@ -167,9 +168,6 @@ The container will import the data from the `data.ldif` file, that is being moun
 | image.tag | string | chart.appVersion | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
-| persistence.config | object | See below | For persistence, you should have your JAVA keystore stored in Kubernetes in a secret and mounted into the pod. To do that set the `persistence.config.name` key to the name of your existing secret in your values.yaml file. |
-| persistence.config.enabled | bool | `true` | Currently the container image does not work without the keystore secret, so do NOT disable this |
-| persistence.config.mountPath | string | `"/etc/apacheds/"` | The keystore files needs to end up in /etc/apacheds/apacheds.jks |
 | persistence.data | object | See below | Persistence for the application data |
 | persistence.data.accessMode | string | `"ReadWriteOnce"` | There should only be one pod writing to the volume |
 | persistence.data.enabled | bool | `true` | You normally want persistence for the LDAP data. Disable at your own peril... |
@@ -180,6 +178,9 @@ The container will import the data from the `data.ldif` file, that is being moun
 | persistence.ldifimport.enabled | bool | `false` | Set this to true if you want to enable the import from a LDIF file |
 | persistence.ldifimport.mountPath | string | `"/etc/apacheds-data/"` | The container image expects the LDIF file to import to be in /etc/apacheds-data/data.ldif |
 | persistence.ldifimport.type | string | `"secret"` | You should store the LDIF information in a secret |
+| persistence.tlskeystore | object | See below | For LDAPS you should have your JAVA keystore stored in Kubernetes in a secret and mounted into the pod. To do that set the `persistence.tlskeystore.name` key to the name of your existing secret in your values.yaml file. |
+| persistence.tlskeystore.enabled | bool | `false` | Set this to true to enable parsing the keystore file |
+| persistence.tlskeystore.mountPath | string | `"/etc/apacheds/"` | The keystore files needs to end up in /etc/apacheds/apacheds.jks |
 | probes.liveness.enabled | bool | `true` |  |
 | probes.liveness.spec.failureThreshold | int | `3` |  |
 | probes.liveness.spec.initialDelaySeconds | int | `30` |  |
