@@ -9,10 +9,11 @@
 {{- define "custom.custom.configuration" -}}
 {{ template "custom.custom.configuration.header" . }}
 
-You need at least two secrets for this chart:
+You need at least one Kubernetes secret for this chart, but there are three in total:
 
 1. A secret containing your configuration (called `apacheds-configuration`)
-1. A secret containing the java keystore containing the certificate.
+1. (optional) A secret containing the java keystore containing the certificate
+1. (optional) A secret containing a `data.ldif` key with LDIF entries you want to have imported into your LDAP server
 
 The configuration secret should contain
 - your admin account password (`APACHEDS_ROOT_PASSWORD`)

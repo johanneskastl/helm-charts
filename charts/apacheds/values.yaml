@@ -7,7 +7,7 @@
 
 image:
   # -- image repository
-  repository: tremolosecurity/apacheds
+  repository: johanneskastl/apacheds
   # -- image tag
   # @default -- chart.appVersion
   tag:
@@ -65,15 +65,6 @@ envFrom:
 # -- Configure persistence settings for the chart under this key.
 # @default -- See values.yaml
 persistence:
-  # -- For persistence, you should have your JAVA keystore stored in Kubernetes in a secret and mounted into the pod. To do that set the `persistence.config.name` key to the name of your existing secret in your values.yaml file.
-  # @default -- See below
-  config:
-    # -- Currently the container image does not work without the keystore secret, so do NOT disable this
-    enabled: true
-    # -- The keystore files needs to end up in /etc/apacheds/apacheds.jks
-    mountPath: /etc/apacheds/
-    type: secret
-    readOnly: true
   # -- Persistence for the application data
   # @default -- See below
   data:
@@ -87,6 +78,15 @@ persistence:
     readOnly: false
     # -- Do not delete the volume if the helm chart is being uninstalled, to prevent data loss...
     retain: true
+  # -- For LDAPS you should have your JAVA keystore stored in Kubernetes in a secret and mounted into the pod. To do that set the `persistence.tlskeystore.name` key to the name of your existing secret in your values.yaml file.
+  # @default -- See below
+  tlskeystore:
+    # -- Set this to true to enable parsing the keystore file
+    enabled: false
+    # -- The keystore files needs to end up in /etc/apacheds/apacheds.jks
+    mountPath: /etc/apacheds/
+    type: secret
+    readOnly: true
   # -- Set this to enabled if you want to import files from a secret. Then set `persistence.ldifimport.name` to the name of your Kubernetes secret in your values.yaml file.
   # @default -- See below
   ldifimport:

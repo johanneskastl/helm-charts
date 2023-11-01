@@ -1,10 +1,9 @@
 ---
 apiVersion: v2
-# there is only the latest tag for the tremolo/apacheds image
-appVersion: latest
+appVersion: 2.0.0-AM26-TLSoptional
 description: ApacheDS is a LDAP server written in Java
 name: apacheds
-version: 0.0.2
+version: 0.0.3
 kubeVersion: ">=1.16.0-0"
 keywords:
   - LDAP
@@ -24,4 +23,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: add README
+      description: disable TLS by default, can be enabled via the values.yaml
