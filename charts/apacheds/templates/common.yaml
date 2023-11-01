@@ -1,1 +1,12 @@
+{{/* Make sure all variables are set properly */}}
+{{- include "common.values.setup" . }}
+
+{{/* Append the hardcoded settings */}}
+{{- define "uptime-kuma.hardcodedValues" -}}
+env:
+    JAVA_OPTS: -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Xms2048m -Xmx2048m
+{{- end -}}
+    {{- $_ := mergeOverwrite .Values (include "uptime-kuma.hardcodedValues" . | fromYaml) -}}
+
+    {{/* Render the templates */}}
 {{ include "common.all" . }}
