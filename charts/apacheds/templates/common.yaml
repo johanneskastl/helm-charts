@@ -5,6 +5,9 @@
 {{- define "uptime-kuma.hardcodedValues" -}}
 env:
     JAVA_OPTS: -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Xms2048m -Xmx2048m
+{{ if .Values.persistence.ldifimport.enabled }}
+    LDIF_FILE: /etc/apacheds-data/data.ldif
+{{- end -}}
 {{- end -}}
     {{- $_ := mergeOverwrite .Values (include "uptime-kuma.hardcodedValues" . | fromYaml) -}}
 
