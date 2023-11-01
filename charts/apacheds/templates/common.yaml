@@ -11,5 +11,5 @@ env:
 {{- end -}}
 {{- $_ := mergeOverwrite .Values (include "apacheds.hardcodedValues" . | fromYaml) -}}
 
-    {{/* Render the templates */}}
+{{/* Render the templates */}}
 {{ include "common.all" . }}
