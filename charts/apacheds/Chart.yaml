@@ -1,0 +1,27 @@
+---
+apiVersion: v2
+# there is only the latest tag for the tremolo/apacheds image
+appVersion: latest
+description: ApacheDS is a LDAP server written in Java
+name: apacheds
+version: 0.0.1
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - LDAP
+  - ApacheDS
+home: https://github.com/johanneskastl/helm-charts/tree/main/charts/apacheds
+icon: https://directory.apache.org/images/header-green.png
+sources:
+  - https://directory.apache.org/apacheds/
+  - https://github.com/TremoloSecurity/apacheds
+maintainers:
+  - name: johanneskastl
+    email: kastl@b1-systems.de
+dependencies:
+  - name: common
+    repository: https://johanneskastl.github.io/helm-charts/
+    version: 5.0.5
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: created new chart
