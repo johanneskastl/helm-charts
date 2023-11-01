@@ -125,9 +125,15 @@ probes:
 
 # -- Set the resource requests / limits for the main container.
 resources:
+  # -- resource limits for the pod
   limits:
+    # -- cpu limit
     cpu: 250m
+    # -- memory limit
     memory: 256Mi
+  # -- resource requests for the pod
   requests:
+    # -- cpu request
     cpu: 125m
+    # -- memory request
     memory: 128Mi
