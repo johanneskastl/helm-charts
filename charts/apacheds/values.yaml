@@ -7,7 +7,7 @@
 
 image:
   # -- image repository
-  repository: tremolosecurity/apacheds
+  repository: johanneskastl/apacheds
   # -- image tag
   # @default -- chart.appVersion
   tag:
