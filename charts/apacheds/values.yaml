@@ -66,6 +66,7 @@ envFrom:
 # @default -- See values.yaml
 persistence:
   # -- For persistence, you should have your JAVA keystore stored in Kubernetes in a secret and mounted into the pod. To do that set the `persistence.config.name` key to the name of your existing secret in your values.yaml file.
+  # @default -- See below
   config:
     # -- Currently the container image does not work without the keystore secret, so do NOT disable this
     enabled: true
@@ -74,6 +75,7 @@ persistence:
     type: secret
     readOnly: true
   # -- Persistence for the application data
+  # @default -- See below
   data:
     # -- You normally want persistence for the LDAP data. Disable at your own peril...
     enabled: true
@@ -86,6 +88,7 @@ persistence:
     # -- Do not delete the volume if the helm chart is being uninstalled, to prevent data loss...
     retain: true
   # -- Set this to enabled if you want to import files from a secret. Then set `persistence.ldifimport.name` to the name of your Kubernetes secret in your values.yaml file.
+  # @default -- See below
   ldifimport:
     # -- Set this to true if you want to enable the import from a LDIF file
     enabled: false
@@ -124,14 +127,17 @@ probes:
       failureThreshold: 12
 
 # -- Set the resource requests / limits for the main container.
+# @default -- See below
 resources:
   # -- resource limits for the pod
+  # @default -- See below
   limits:
     # -- cpu limit
     cpu: 250m
     # -- memory limit
     memory: 256Mi
   # -- resource requests for the pod
+  # @default -- See below
   requests:
     # -- cpu request
     cpu: 125m
