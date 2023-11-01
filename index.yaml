@@ -31,6 +31,36 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/389ds-0.0.1/389ds-0.0.1.tgz
     version: 0.0.1
+  apacheds:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: created new chart
+    apiVersion: v2
+    appVersion: latest
+    created: "2023-11-01T13:39:01.414640685Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: ApacheDS is a LDAP server written in Java
+    digest: b5eb7315094894aa9b2a0040ac2aa6d5339988ceb2b2e483669ab18337ded702
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/apacheds
+    icon: https://directory.apache.org/images/header-green.png
+    keywords:
+    - LDAP
+    - ApacheDS
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: apacheds
+    sources:
+    - https://directory.apache.org/apacheds/
+    - https://github.com/TremoloSecurity/apacheds
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/apacheds-0.0.1/apacheds-0.0.1.tgz
+    version: 0.0.1
   bind9:
   - annotations:
       artifacthub.io/changes: |-
@@ -3450,4 +3480,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2023-10-30T18:31:53.809932175Z"
+generated: "2023-11-01T13:39:01.414869696Z"
