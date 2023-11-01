@@ -2,14 +2,14 @@
 {{- include "common.values.setup" . }}
 
 {{/* Append the hardcoded settings */}}
-{{- define "uptime-kuma.hardcodedValues" -}}
+{{- define "apacheds.hardcodedValues" -}}
 env:
     JAVA_OPTS: -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Xms{{ .Values.resources.requests.memory | replace "Mi" "" }}m -Xmx{{ .Values.resources.limits.memory | replace "Mi" "" }}m
 {{ if .Values.persistence.ldifimport.enabled }}
     LDIF_FILE: /etc/apacheds-data/data.ldif
 {{- end -}}
 {{- end -}}
-    {{- $_ := mergeOverwrite .Values (include "uptime-kuma.hardcodedValues" . | fromYaml) -}}
+{{- $_ := mergeOverwrite .Values (include "apacheds.hardcodedValues" . | fromYaml) -}}
 
     {{/* Render the templates */}}
 {{ include "common.all" . }}
