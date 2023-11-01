@@ -9,5 +9,90 @@
 {{- define "custom.custom.configuration" -}}
 {{ template "custom.custom.configuration.header" . }}
 
-N/A
+You need at least two secrets for this chart:
+
+1. A secret containing your configuration (called `apacheds-configuration`)
+1. A secret containing the java keystore containing the certificate.
+
+The configuration secret should contain
+- your admin account password (`APACHEDS_ROOT_PASSWORD`)
+- the password for the Java keystore (`APACHEDS_TLS_KS_PWD`)
+- the `DN` and `OBJECT_CLASS` for your directory
+
+An example might look like this:
+
+```yaml
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: apacheds-configuration
+  namespace: apacheds
+type: Opaque
+stringData:
+  APACHEDS_TLS_KS_PWD: verysecret
+  APACHEDS_ROOT_PASSWORD: totallysecret
+  DN: dc=example,dc=org
+  OBJECT_CLASS: domain
+```
+
+The keystore secret might look like this:
+
+```yaml
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: apacheds-keystore
+  namespace: apacheds
+type: Opaque
+data:
+  apacheds.jks: <long-base64-encoded-string-goes-here>
+
+```
+
+You can create this via `kubectl` as usual, and reference it in your `values.yaml` file like so:
+
+```yaml
+persistence:
+  config:
+    name: apacheds-keystore
+[...]
+```
+
+In case you want to automatically import data into your LDAP server, create another secret like the following:
+
+```yaml
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: apacheds-ldif
+  namespace: apacheds
+type: Opaque
+stringData:
+  data.ldif: |-
+    dn: DC=example,DC=org
+    objectClass: domain
+    dc: domain
+
+    [...]
+```
+
+Add the LDIF information, but make sure the key is called `data.ldif`.
+
+Then enable the ldifimport in the `values.yaml`'s persistence section:
+
+```yaml
+persistence:
+  [...]
+  ldifimport:
+    enabled: true
+    name: apacheds-ldif
+```
+
+Make sure the `name` in the `ldifimport` block matches your Kubernetes secret's name.
+
+The container will import the data from the `data.ldif` file, that is being mounted from the secret, on startup.
+
 {{- end -}}
