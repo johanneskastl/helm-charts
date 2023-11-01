@@ -60,4 +60,39 @@ persistence:
 [...]
 ```
 
+In case you want to automatically import data into your LDAP server, create another secret like the following:
+
+```yaml
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: apacheds-ldif
+  namespace: apacheds
+type: Opaque
+stringData:
+  data.ldif: |-
+    dn: DC=example,DC=org
+    objectClass: domain
+    dc: domain
+
+    [...]
+```
+
+Add the LDIF information, but make sure the key is called `data.ldif`.
+
+Then enable the ldifimport in the `values.yaml`'s persistence section:
+
+```yaml
+persistence:
+  [...]
+  ldifimport:
+    enabled: true
+    name: apacheds-ldif
+```
+
+Make sure the `name` in the `ldifimport` block matches your Kubernetes secret's name.
+
+The container will import the data from the `data.ldif` file, that is being mounted from the secret, on startup.
+
 {{- end -}}
