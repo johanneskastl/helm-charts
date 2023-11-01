@@ -4,7 +4,7 @@ apiVersion: v2
 appVersion: latest
 description: ApacheDS is a LDAP server written in Java
 name: apacheds
-version: 0.0.1
+version: 0.0.2
 kubeVersion: ">=1.16.0-0"
 keywords:
   - LDAP
@@ -24,4 +24,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: created new chart
+      description: add README
