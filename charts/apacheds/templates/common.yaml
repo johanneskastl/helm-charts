@@ -1,0 +1,31 @@
+{{/* Make sure all variables are set properly */}}
+{{- include "common.values.setup" . }}
+
+{{/* Append the hardcoded settings */}}
+{{- define "apacheds.hardcodedValues" -}}
+env:
+    JAVA_OPTS: -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Xms{{ .Values.resources.requests.memory | replace "Mi" "" }}m -Xmx{{ .Values.resources.limits.memory | replace "Mi" "" }}m
+{{ if .Values.persistence.ldifimport.enabled }}
+    LDIF_FILE: /etc/apacheds-data/data.ldif
+{{- end -}}
+{{- end -}}
+{{- $_ := mergeOverwrite .Values (include "apacheds.hardcodedValues" . | fromYaml) -}}
+
+{{/* add initContainer only if /var/apacheds/ is mounted from a volume */}}
+{{- define "apacheds.initContainers" -}}
+{{ if .Values.persistence.data.enabled }}
+initContainers:
+  changeowner:
+    name: changeowner
+    image: busybox
+    command: ["sh", "-c", "chown -vR 431:433 /var/apacheds/"]
+    volumeMounts:
+    - name: data
+      mountPath: /var/apacheds/
+{{- end -}}
+{{- end -}}
+
+{{- $_ := mergeOverwrite .Values (include "apacheds.initContainers" . | fromYaml) -}}
+
+{{/* Render the templates */}}
+{{ include "common.all" . }}
