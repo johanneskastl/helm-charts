@@ -116,7 +116,7 @@ probes:
     spec:
       tcpSocket:
         port: 10389
-      initialDelaySeconds: 30
+      initialDelaySeconds: 150
       periodSeconds: 15
       timeoutSeconds: 1
       failureThreshold: 3
@@ -125,7 +125,7 @@ probes:
     spec:
       tcpSocket:
         port: 10389
-      initialDelaySeconds: 30
+      initialDelaySeconds: 150
       periodSeconds: 15
       timeoutSeconds: 1
       failureThreshold: 3
