@@ -98,6 +98,19 @@ persistence:
     mountPath: /etc/apacheds-data/
 
 probes:
+  startup:
+    enabled: true
+    custom: true
+    spec:
+      exec:
+        command:
+          - sh
+          - -c
+          - test -f /tmp/apacheds_startup_finished
+      initialDelaySeconds: 210
+      periodSeconds: 10
+      timeoutSeconds: 1
+      failureThreshold: 30
   liveness:
     enabled: true
     spec:
@@ -116,15 +129,6 @@ probes:
       periodSeconds: 15
       timeoutSeconds: 1
       failureThreshold: 3
-  startup:
-    enabled: true
-    spec:
-      tcpSocket:
-        port: 10389
-      initialDelaySeconds: 30
-      periodSeconds: 10
-      timeoutSeconds: 1
-      failureThreshold: 12
 
 # -- Set the resource requests / limits for the main container.
 # @default -- See below
