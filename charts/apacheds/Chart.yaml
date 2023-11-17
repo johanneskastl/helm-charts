@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: 2.0.0-AM26-TLSoptional
+appVersion: 2.0.0-AM26-startupProbe
 description: ApacheDS is a LDAP server written in Java
 name: apacheds
-version: 0.0.3
+version: 0.0.4
 kubeVersion: ">=1.16.0-0"
 keywords:
   - LDAP
@@ -23,4 +23,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: disable TLS by default, can be enabled via the values.yaml
+      description: refactor startupProbe/readinessProbe/livenessProbe
