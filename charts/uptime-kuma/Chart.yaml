@@ -16,7 +16,7 @@ sources:
   - https://github.com/louislam/uptime-kuma
 maintainers:
   - name: johanneskastl
-    email: kastl@b1-systems.de
+    email: git@johannes-kastl.de
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
