@@ -479,4 +479,3 @@ First version of the chart, with appVersion v1.38.2
 ## Support
 
 Open an [issue](https://github.com/johanneskastl/helm-charts/issues/).
-
