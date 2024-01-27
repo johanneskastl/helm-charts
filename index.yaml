@@ -1869,6 +1869,34 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update appVersion to 1.58.1
+    apiVersion: v2
+    appVersion: v1.58.1
+    created: "2024-01-27T14:05:31.670036132Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Run a tailscale subnet router in Kubernetes
+    digest: 3431abad9a0622ddbc8466315d623e0422d6b112e22bcd104f01bcda85807f3f
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/tailscale
+    keywords:
+    - tailscale
+    - vpn
+    - wireguard
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: tailscale
+    sources:
+    - https://github.com/tailscale/tailscale
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/tailscale-0.10.1/tailscale-0.10.1.tgz
+    version: 0.10.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update appVersion to 1.58.0
     apiVersion: v2
     appVersion: v1.58.0
@@ -4191,4 +4219,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2024-01-20T18:59:03.090806012Z"
+generated: "2024-01-27T14:05:31.670366478Z"
