@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: 1.18.6
 description: Open Source Continuous File Synchronization
 name: syncthing
-version: 4.0.6
+version: 4.0.7
 kubeVersion: ">=1.16.0-0"
 keywords:
   - syncthing
@@ -19,8 +19,8 @@ maintainers:
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
-    version: 5.0.0
+    version: 5.0.5
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update appVersion to 1.18.6
+      description: update dependency for 'common' chart
