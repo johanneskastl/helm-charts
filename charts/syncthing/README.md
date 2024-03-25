@@ -1,6 +1,6 @@
 # syncthing
 
-![Version: 4.7.0](https://img.shields.io/badge/Version-4.7.0-informational?style=flat-square) ![AppVersion: 1.25.0](https://img.shields.io/badge/AppVersion-1.25.0-informational?style=flat-square)
+![Version: 4.8.0](https://img.shields.io/badge/Version-4.8.0-informational?style=flat-square) ![AppVersion: 1.26.0](https://img.shields.io/badge/AppVersion-1.26.0-informational?style=flat-square)
 
 Open Source Continuous File Synchronization
 
@@ -91,6 +91,16 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 4.8.0
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.26.0
 
 ### Version 4.7.0
 
