@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: "9.19"
 description: A Helm chart for Bind9 using the official ISC docker image
 name: bind9
-version: "0.5.0"
+version: "0.5.1"
 kubeVersion: ">=1.16.0-0"
 keywords:
   - bind9
@@ -24,4 +24,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update appVersion to 9.19
+      description: properly set dnssec-validation instead of hardcoding yes
