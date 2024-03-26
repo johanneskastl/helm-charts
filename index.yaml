@@ -152,6 +152,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: properly set dnssec-validation instead of hardcoding yes
+    apiVersion: v2
+    appVersion: "9.19"
+    created: "2024-03-26T11:13:08.943881533Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: A Helm chart for Bind9 using the official ISC docker image
+    digest: ab628c32dcd9dede05af962687c17c07bc35f5e94b841132aaa30df9b421aa2d
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/bind9
+    icon: https://www.isc.org/images/isclogos/Bind_9_ISC_Blue.jpg
+    keywords:
+    - bind9
+    - named
+    - dns
+    - resolver
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: kastl@b1-systems.de
+      name: johanneskastl
+    name: bind9
+    sources:
+    - https://gitlab.isc.org/isc-projects/bind9
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/bind9-0.5.1/bind9-0.5.1.tgz
+    version: 0.5.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update appVersion to 9.19
     apiVersion: v2
     appVersion: "9.19"
@@ -5245,4 +5275,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2024-03-25T11:02:18.344539959Z"
+generated: "2024-03-26T11:13:08.944129726Z"
