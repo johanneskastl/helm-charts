@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: v1.64.2
+appVersion: v1.66.0
 description: Run a tailscale subnet router in Kubernetes
 name: tailscale
-version: 0.14.2
+version: 0.16.0
 kubeVersion: ">=1.19.0-0"
 keywords:
   - tailscale
@@ -22,4 +22,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update appVersion to 1.64.2
+      description: update appVersion to 1.66.0
