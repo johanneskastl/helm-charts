@@ -1,6 +1,6 @@
 # tailscale
 
-![Version: 0.16.1](https://img.shields.io/badge/Version-0.16.1-informational?style=flat-square) ![AppVersion: v1.66.1](https://img.shields.io/badge/AppVersion-v1.66.1-informational?style=flat-square)
+![Version: 0.16.2](https://img.shields.io/badge/Version-0.16.2-informational?style=flat-square) ![AppVersion: v1.66.2](https://img.shields.io/badge/AppVersion-v1.66.2-informational?style=flat-square)
 
 Run a tailscale subnet router in Kubernetes
 
@@ -118,7 +118,7 @@ Read through the [values.yaml](./values.yaml) file to see the complete list of p
 |-----|------|---------|-------------|
 | env | object | See below | environment variables |
 | image.pullPolicy | string | `"Always"` | image pull policy |
-| image.repository | string | `"tailscale/tailscale"` | image repository |
+| image.repository | string | `"ghcr.io/tailscale/tailscale"` | image repository |
 | image.tag | string | chart.appVersion | image tag |
 | podSecurityContext | object | `{"runAsGroup":1000,"runAsUser":1000}` | Configure the Security Context for the Pod |
 | probes.liveness.enabled | bool | `false` |  |
@@ -135,6 +135,16 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 0.16.2
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.66.2
 
 ### Version 0.16.1
 
