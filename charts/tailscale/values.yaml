@@ -7,7 +7,7 @@
 
 image:
   # -- image repository
-  repository: tailscale/tailscale
+  repository: ghcr.io/tailscale/tailscale
   # -- image tag
   # @default -- chart.appVersion
   tag:
