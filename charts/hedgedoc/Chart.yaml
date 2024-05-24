@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: 1.9.9-ls127
+appVersion: 1.9.9-ls128
 description: HedgeDoc lets you create real-time collaborative markdown notes.
 name: hedgedoc
-version: 2.1.31
+version: 2.1.32
 kubeVersion: ">=1.19.0-0"
 keywords:
   - hedgedoc
@@ -22,7 +22,7 @@ maintainers:
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
-    version: 5.0.0
+    version: 5.0.5
   - name: mariadb
     version: ~1.0.5
     repository: https://nicholaswilde.github.io/helm-charts/
@@ -30,4 +30,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |
     - kind: changed
-      description: update appVersion to 1.9.9-ls127
+      description: update appVersion to 1.9.9-ls128
