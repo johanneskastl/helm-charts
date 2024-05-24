@@ -22,7 +22,7 @@ maintainers:
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
-    version: 5.0.0
+    version: 5.0.5
   - name: mariadb
     version: ~1.0.5
     repository: https://nicholaswilde.github.io/helm-charts/
