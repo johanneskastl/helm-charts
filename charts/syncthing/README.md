@@ -1,6 +1,6 @@
 # syncthing
 
-![Version: 4.9.8](https://img.shields.io/badge/Version-4.9.8-informational?style=flat-square) ![AppVersion: 1.27.8](https://img.shields.io/badge/AppVersion-1.27.8-informational?style=flat-square)
+![Version: 4.9.9](https://img.shields.io/badge/Version-4.9.9-informational?style=flat-square) ![AppVersion: 1.27.9](https://img.shields.io/badge/AppVersion-1.27.9-informational?style=flat-square)
 
 Open Source Continuous File Synchronization
 
@@ -80,7 +80,7 @@ N/A
 |-----|------|---------|-------------|
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"syncthing/syncthing"` | image repository |
-| image.tag | string | `"1.18.2"` | image tag |
+| image.tag | string | chart.appVersion | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
 | service | object | See values.yaml | Configures service settings for the chart. |
@@ -91,6 +91,16 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 4.9.9
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to 1.27.9
 
 ### Version 4.9.8
 
