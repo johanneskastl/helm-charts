@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: v1.66.4
+appVersion: v1.68.0
 description: Run a tailscale subnet router in Kubernetes
 name: tailscale
-version: 0.16.4
+version: 0.18.0
 kubeVersion: ">=1.19.0-0"
 keywords:
   - tailscale
@@ -14,7 +14,7 @@ sources:
   - https://github.com/tailscale/tailscale
 maintainers:
   - name: johanneskastl
-    email: kastl@b1-systems.de
+    email: git@johannes-kastl.de
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
@@ -22,4 +22,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: change
-      description: update appVersion to 1.66.4
+      description: update appVersion to 1.68.0
