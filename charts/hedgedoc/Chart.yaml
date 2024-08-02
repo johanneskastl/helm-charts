@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: 1.9.9-ls135
+appVersion: 1.9.9-ls136
 description: HedgeDoc lets you create real-time collaborative markdown notes.
 name: hedgedoc
-version: 2.1.39
+version: 2.1.40
 kubeVersion: ">=1.19.0-0"
 keywords:
   - hedgedoc
@@ -18,7 +18,7 @@ sources:
   - https://hub.docker.com/r/linuxserver/hedgedoc
 maintainers:
   - name: johanneskastl
-    email: kastl@b1-systems.de
+    email: git@johannes-kastl.de
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
@@ -30,4 +30,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |
     - kind: changed
-      description: update appVersion to 1.9.9-ls135
+      description: update appVersion to 1.9.9-ls136
