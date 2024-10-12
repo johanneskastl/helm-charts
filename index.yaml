@@ -704,6 +704,42 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: update appVersion to 1.10.0-ls141
+    apiVersion: v2
+    appVersion: 1.10.0-ls141
+    created: "2024-10-12T19:09:12.418642752Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://nicholaswilde.github.io/helm-charts/
+      version: ~1.0.5
+    description: HedgeDoc lets you create real-time collaborative markdown notes.
+    digest: 4d0a35abae6ad29ba40819e6adcef28444d56e6260c238492bc392758d42c632
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/hedgedoc
+    icon: https://avatars1.githubusercontent.com/u/67865462
+    keywords:
+    - hedgedoc
+    - hedge
+    - doc
+    - markdown
+    - editor
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: hedgedoc
+    sources:
+    - https://github.com/hedgedoc/hedgedoc
+    - https://hub.docker.com/r/linuxserver/hedgedoc
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/hedgedoc-2.2.2/hedgedoc-2.2.2.tgz
+    version: 2.2.2
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: update appVersion to 1.10.0-ls140
     apiVersion: v2
     appVersion: 1.10.0-ls140
@@ -6938,4 +6974,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2024-10-12T19:01:25.251432025Z"
+generated: "2024-10-12T19:09:12.41899121Z"
