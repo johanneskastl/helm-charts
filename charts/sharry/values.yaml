@@ -49,7 +49,7 @@ config: |
     backend {
       auth {
         fixed {
-          enabled = false  # set to true to enable this auth provider
+          enabled = true
           user = "admin"
           password = "admin"
           order = 10
