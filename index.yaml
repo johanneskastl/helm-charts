@@ -3169,6 +3169,36 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/openldap-2.0.0/openldap-2.0.0.tgz
     version: 2.0.0
+  sharry:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Forked the chart from k8s@home
+    apiVersion: v2
+    appVersion: 1.8.0
+    created: "2024-10-26T09:09:51.641827801Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Sharry allows to share files with others in a simple way. It is a
+      self-hosted web application. The basic concept is to upload files and get a
+      url back that can then be shared.
+    digest: d062a436e63c6742505c78aa19ba7457a7f6cf18f3a9f3a5684100f4f6f9d2a3
+    home: https://github.com/johanneskastl/charts/tree/main/charts/sharry
+    icon: https://github.com/eikek/sharry/blob/master/artwork/logo.svg?raw=true
+    keywords:
+    - file sharing
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: sharry
+    sources:
+    - https://github.com/eikek/sharry
+    - https://hub.docker.com/r/eikek0/sharry
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/sharry-6.0.0/sharry-6.0.0.tgz
+    version: 6.0.0
   syncthing:
   - annotations:
       artifacthub.io/changes: |-
@@ -7219,4 +7249,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2024-10-16T17:47:43.281447894Z"
+generated: "2024-10-26T09:09:51.642187178Z"
