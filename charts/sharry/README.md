@@ -1,6 +1,6 @@
 # sharry
 
-![Version: 5.4.2](https://img.shields.io/badge/Version-5.4.2-informational?style=flat-square) ![AppVersion: 1.8.0](https://img.shields.io/badge/AppVersion-1.8.0-informational?style=flat-square)
+![Version: 6.0.0](https://img.shields.io/badge/Version-6.0.0-informational?style=flat-square) ![AppVersion: 1.8.0](https://img.shields.io/badge/AppVersion-1.8.0-informational?style=flat-square)
 
 Sharry allows to share files with others in a simple way. It is a self-hosted web application. The basic concept is to upload files and get a url back that can then be shared.
 
@@ -78,13 +78,18 @@ N/A
 | config | string | See values.yaml | Sharry configuration. Supports Helm templates. See [application docs](https://eikek.github.io/sharry/doc/configure) for more details. |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"eikek0/sharry"` | image repository |
-| image.tag | string | `"1.8.0"` | image tag |
+| image.tag | string | chart.appVersion | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | service | object | See values.yaml | Configures service settings for the chart. |
 
 ## Changelog
 
-### Version 5.4.2
+All notable changes to this Helm chart will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 6.0.0
 
 #### Added
 
@@ -92,7 +97,7 @@ N/A
 
 #### Changed
 
-* Upgraded `common` chart dependency to version 4.5.2
+* Forked the chart from k8s-at-home (at version 5.4.2)
 
 #### Fixed
 
