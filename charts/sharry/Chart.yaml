@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: 1.14.0
+appVersion: v1.14.0
 description: Sharry allows to share files with others in a simple way. It is a self-hosted web application. The basic concept is to upload files and get a url back that can then be shared.
 name: sharry
-version: 6.6.0
+version: 6.7.0
 keywords:
   - file sharing
 home: https://github.com/johanneskastl/charts/tree/main/charts/sharry
@@ -21,4 +21,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update appVersion to 1.14.0
+      description: fix appVersion to have a leading v
