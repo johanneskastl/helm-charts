@@ -9,6 +9,8 @@ Collection of helm charts I used in my personal clusters.
 - [hedgedoc](./charts/hedgedoc/README.md)
 - [heimdall](./charts/heimdall/README.md)
 - [jellyfin](./charts/jellyfin/README.md)
+- [kanboard](./charts/kanboard/README.md)
+- [sharry](./charts/sharry/README.md)
 - [syncthing](./charts/syncthing/README.md)
 - [tailscale](./charts/tailscale/README.md)
 - [uptime-kuma](./charts/uptime-kuma/README.md)
