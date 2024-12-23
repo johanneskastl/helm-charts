@@ -1,6 +1,6 @@
 # hedgedoc
 
-![Version: 2.2.9](https://img.shields.io/badge/Version-2.2.9-informational?style=flat-square) ![AppVersion: 1.10.0-ls148](https://img.shields.io/badge/AppVersion-1.10.0--ls148-informational?style=flat-square)
+![Version: 2.2.10](https://img.shields.io/badge/Version-2.2.10-informational?style=flat-square) ![AppVersion: 1.10.0-ls149](https://img.shields.io/badge/AppVersion-1.10.0--ls149-informational?style=flat-square)
 
 HedgeDoc lets you create real-time collaborative markdown notes.
 
@@ -115,6 +115,16 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### 2.2.10
+
+#### Added
+
+N/A
+
+#### Changed
+
+- update appVersion to 1.10.0-ls149
 
 ### 2.2.9
 
