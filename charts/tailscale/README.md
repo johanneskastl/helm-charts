@@ -1,6 +1,6 @@
 # tailscale
 
-![Version: 0.24.0](https://img.shields.io/badge/Version-0.24.0-informational?style=flat-square) ![AppVersion: v1.78.0](https://img.shields.io/badge/AppVersion-v1.78.0-informational?style=flat-square)
+![Version: 0.24.1](https://img.shields.io/badge/Version-0.24.1-informational?style=flat-square) ![AppVersion: v1.78.1](https://img.shields.io/badge/AppVersion-v1.78.1-informational?style=flat-square)
 
 Run a tailscale subnet router in Kubernetes
 
@@ -135,6 +135,16 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 0.24.1
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update appVersion to v1.78.1
 
 ### Version 0.24.0
 
