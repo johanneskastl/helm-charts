@@ -1,5 +1,7 @@
 ---
 apiVersion: v2
+# no leading v on the appVersion
+# in contrast to the tags in GitHub
 appVersion: 1.29.0
 description: Open Source Continuous File Synchronization
 name: syncthing
