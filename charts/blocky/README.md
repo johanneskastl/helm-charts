@@ -1,6 +1,6 @@
 # blocky
 
-![Version: 11.5.0](https://img.shields.io/badge/Version-11.5.0-informational?style=flat-square) ![AppVersion: v0.25](https://img.shields.io/badge/AppVersion-v0.25-informational?style=flat-square)
+![Version: 11.6.0](https://img.shields.io/badge/Version-11.6.0-informational?style=flat-square) ![AppVersion: v0.25](https://img.shields.io/badge/AppVersion-v0.25-informational?style=flat-square)
 
 DNS proxy as ad-blocker for local network
 
@@ -104,6 +104,16 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 11.6.0
+
+#### Added
+
+N/A
+
+#### Changed
+
+* add new service dns with port 53 for both UDP and TCP
 
 ### Version 11.5.0
 
