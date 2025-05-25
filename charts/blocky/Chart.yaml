@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: v0.26.1
+appVersion: v0.26.2
 description: DNS proxy as ad-blocker for local network
 name: blocky
-version: 11.7.1
+version: 11.7.2
 kubeVersion: ">=1.19.0-0"
 keywords:
   - blocky
@@ -27,4 +27,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update appVersion to v0.26.1
+      description: update appVersion to v0.26.2
