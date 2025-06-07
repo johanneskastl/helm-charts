@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: 1.10.2-ls161
+appVersion: 1.10.3-ls161
 description: HedgeDoc lets you create real-time collaborative markdown notes.
 name: hedgedoc
-version: 2.2.23
+version: 2.2.24
 kubeVersion: ">=1.19.0-0"
 keywords:
   - hedgedoc
@@ -30,4 +30,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |
     - kind: changed
-      description: update appVersion to 1.10.2-ls161
+      description: update appVersion to 1.10.3-ls161
