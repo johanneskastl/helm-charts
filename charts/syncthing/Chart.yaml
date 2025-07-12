@@ -2,10 +2,10 @@
 apiVersion: v2
 # no leading v on the appVersion
 # in contrast to the tags in GitHub
-appVersion: 1.29.7
+appVersion: 1.30.0
 description: Open Source Continuous File Synchronization
 name: syncthing
-version: 4.11.7
+version: 4.12.0
 kubeVersion: ">=1.16.0-0"
 keywords:
   - syncthing
@@ -25,4 +25,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update appVersion to 1.29.7
+      description: update appVersion to 1.30.0
