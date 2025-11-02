@@ -10,8 +10,6 @@ on:
     paths:
       - 'scripts/*.sh'
   pull_request:
-    branches:
-      - main
     paths:
       - 'scripts/*.sh'
 
