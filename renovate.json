@@ -17,16 +17,16 @@
   },
   "packageRules": [
     {
-      "matchManagers": ["regex"],
+      "matchManagers": ["custom.regex"],
       "postUpgradeTasks": {
         "commands": [
           "./scripts/update_chart.sh '{{{parentDir}}}' '{{{updateType}}}'",
           "./scripts/generate_readmes_with_helm-docs.sh '{{{parentDir}}}'"
         ],
         "fileFilters": [
-                "**/Chart.yaml",
-                "**/README.md",
-                "**/README_CHANGELOG.md.gotmpl"
+          "**/Chart.yaml",
+          "**/README.md",
+          "**/README_CHANGELOG.md.gotmpl"
         ],
         "executionMode": "branch"
       }
