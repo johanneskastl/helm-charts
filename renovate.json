@@ -3,7 +3,7 @@
   "labels": ["renovate"],
   "addLabels": ["renovate"],
   "bumpVersion": "patch",
-  "gitAuthor": "renovatebot <renovatebot@ojkastl.de>",
+  "gitAuthor": "renovatebot <renovatebot@johannes-kastl.de>",
   "separateMajorMinor": true,
   "separateMinorPatch": true,
   "separateMultipleMajor": true,
