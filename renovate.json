@@ -12,6 +12,9 @@
   "branchConcurrentLimit": 0,
   "prConcurrentLimit": 0,
   "additionalBranchPrefix": "{{parentDir}}-",
+  "pre-commit": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "matchManagers": ["regex"],
