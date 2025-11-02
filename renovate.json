@@ -1,0 +1,32 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "labels": ["renovate"],
+  "addLabels": ["renovate"],
+  "bumpVersion": "patch",
+  "gitAuthor": "renovatebot <renovatebot@ojkastl.de>",
+  "separateMajorMinor": true,
+  "separateMinorPatch": true,
+  "separateMultipleMajor": true,
+  "separateMultipleMinor": true,
+  "prHourlyLimit": 0,
+  "branchConcurrentLimit": 0,
+  "prConcurrentLimit": 0,
+  "additionalBranchPrefix": "{{parentDir}}-",
+  "packageRules": [
+    {
+      "matchManagers": ["regex"],
+      "postUpgradeTasks": {
+        "commands": [
+          "./scripts/update_chart.sh '{{{parentDir}}}' '{{{updateType}}}'",
+          "./scripts/generate_readmes_with_helm-docs.sh '{{{parentDir}}}'"
+        ],
+        "fileFilters": [
+                "**/Chart.yaml",
+                "**/README.md",
+                "**/README_CHANGELOG.md.gotmpl"
+        ],
+        "executionMode": "branch"
+      }
+    }
+  ]
+}
