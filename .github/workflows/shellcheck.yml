@@ -8,12 +8,10 @@ on:
     branches:
       - main
     paths:
-      - '*.sh'
+      - 'scripts/*.sh'
   pull_request:
-    branches:
-      - main
     paths:
-      - '*.sh'
+      - 'scripts/*.sh'
 
 jobs:
   shellcheck:
