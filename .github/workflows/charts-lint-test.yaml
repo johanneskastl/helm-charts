@@ -30,7 +30,7 @@ jobs:
         with:
           version: v3.11.1
 
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.10'
           check-latest: true
