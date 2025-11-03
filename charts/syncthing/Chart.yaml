@@ -10,7 +10,7 @@ kubeVersion: ">=1.16.0-0"
 keywords:
   - syncthing
   - file sync
-home: https://github.com/johanneskastl/helm-charts/tree/master/charts/stable/syncthing
+home: https://github.com/johanneskastl/helm-charts/tree/main/charts/syncthing
 icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
 sources:
   - https://syncthing.net/
