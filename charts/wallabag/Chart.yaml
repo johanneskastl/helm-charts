@@ -14,7 +14,7 @@ sources:
   - https://hub.docker.com/wallabag/wallabag
 maintainers:
   - name: johanneskastl
-    email: kastl@b1-systems.de
+    email: git@johannes-kastl.de
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
@@ -34,4 +34,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: fixed typo in home URL
+      description: update redis dependency to 23.2.3
