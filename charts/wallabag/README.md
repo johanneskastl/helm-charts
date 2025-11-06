@@ -1,6 +1,6 @@
 # wallabag
 
-![Version: 8.0.2](https://img.shields.io/badge/Version-8.0.2-informational?style=flat-square) ![AppVersion: 2.4.2](https://img.shields.io/badge/AppVersion-2.4.2-informational?style=flat-square)
+![Version: 8.0.3](https://img.shields.io/badge/Version-8.0.3-informational?style=flat-square) ![AppVersion: 2.4.2](https://img.shields.io/badge/AppVersion-2.4.2-informational?style=flat-square)
 
 A self hostable application for saving web pages, freely.
 
@@ -24,7 +24,7 @@ Kubernetes: `>=1.16.0-0`
 | https://charts.bitnami.com/bitnami | mariadb | 11.0.14 |
 | https://charts.bitnami.com/bitnami | postgresql | 11.6.12 |
 | https://charts.bitnami.com/bitnami | redis | 23.2.3 |
-| https://johanneskastl.github.io/helm-charts/ | common | 5.0.0 |
+| https://johanneskastl.github.io/helm-charts/ | common | 5.0.5 |
 
 ## TL;DR
 
@@ -99,6 +99,20 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 8.0.3
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update common chart to 5.0.5
+
+#### Fixed
+
+N/A
 
 ### Version 8.0.2
 
