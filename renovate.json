@@ -31,5 +31,9 @@
         "executionMode": "branch"
       }
     }
+  ],
+  "ignoreDeps": [
+    "mariadb",
+    "postgresql"
   ]
 }
