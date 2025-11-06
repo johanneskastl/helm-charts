@@ -14,7 +14,7 @@ sources:
   - https://github.com/linuxserver/heimdall
 maintainers:
   - name: johanneskastl
-    email: kastl@b1-systems.de
+    email: git@johannes-kastl.de
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
@@ -22,4 +22,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: generate README with helm-docs
+      description: update common chart to 5.0.5
