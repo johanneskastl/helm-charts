@@ -17,6 +17,20 @@
   },
   "packageRules": [
     {
+      "matchManagers": ["helm-values"],
+      "postUpgradeTasks": {
+        "commands": [
+          "./scripts/update_chart.sh '{{{parentDir}}}' '{{{updateType}}}'"
+        ],
+        "fileFilters": [
+                "**/Chart.yaml",
+                "**/README.md",
+                "**/README_CHANGELOG.md.gotmpl"
+        ],
+        "executionMode": "branch"
+      }
+    },
+    {
       "matchManagers": ["custom.regex"],
       "postUpgradeTasks": {
         "commands": [
