@@ -48,6 +48,8 @@
     }
   ],
   "ignoreDeps": [
+    "ghcr.io/nicolaka/netshoot",
+    "ghcr.io/coder/code-server",
     "mariadb",
     "postgresql"
   ]
