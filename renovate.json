@@ -50,6 +50,8 @@
   "ignoreDeps": [
     "ghcr.io/nicolaka/netshoot",
     "ghcr.io/coder/code-server",
+    "docker.io/qmcgaw/gluetun",
+    "docker.io/grafana/promtail",
     "mariadb",
     "postgresql"
   ]
