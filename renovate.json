@@ -21,7 +21,8 @@
       "matchManagers": ["helm-values"],
       "postUpgradeTasks": {
         "commands": [
-          "./scripts/update_chart.sh '{{{parentDir}}}' '{{{updateType}}}'"
+          "./scripts/update_chart.sh '{{{parentDir}}}' '{{{updateType}}}'",
+          "./scripts/generate_readmes_with_helm-docs.sh '{{{parentDir}}}'"
         ],
         "fileFilters": [
                 "**/Chart.yaml",
@@ -32,16 +33,16 @@
       }
     },
     {
-      "matchManagers": ["custom.regex"],
+      "matchManagers": ["helmv3"],
       "postUpgradeTasks": {
         "commands": [
-          "./scripts/update_chart.sh '{{{parentDir}}}' '{{{updateType}}}'",
+          "./scripts/update_dependency_in_chart.sh '{{{parentDir}}}' '{{{updateType}}}' '{{{depName}}}' '{{{newVersion}}}'",
           "./scripts/generate_readmes_with_helm-docs.sh '{{{parentDir}}}'"
         ],
         "fileFilters": [
-          "**/Chart.yaml",
-          "**/README.md",
-          "**/README_CHANGELOG.md.gotmpl"
+                "**/Chart.yaml",
+                "**/README.md",
+                "**/README_CHANGELOG.md.gotmpl"
         ],
         "executionMode": "branch"
       }
