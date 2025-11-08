@@ -9,8 +9,8 @@ image:
   # -- image repository
   repository: wallabag/wallabag
   # -- image tag
-  # Note: Upgrading the wallabag version generally requires a migration. https://doc.wallabag.org/en/admin/upgrade.html
-  tag: 2.4.2
+  # @default -- chart.appVersion
+  tag:
   # -- image pull policy
   pullPolicy: IfNotPresent
 
