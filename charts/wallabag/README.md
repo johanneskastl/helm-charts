@@ -1,6 +1,6 @@
 # wallabag
 
-![Version: 8.0.4](https://img.shields.io/badge/Version-8.0.4-informational?style=flat-square) ![AppVersion: 2.4.2](https://img.shields.io/badge/AppVersion-2.4.2-informational?style=flat-square)
+![Version: 8.0.5](https://img.shields.io/badge/Version-8.0.5-informational?style=flat-square) ![AppVersion: 2.4.2](https://img.shields.io/badge/AppVersion-2.4.2-informational?style=flat-square)
 
 A self hostable application for saving web pages, freely.
 
@@ -85,7 +85,7 @@ Default login is `wallabag:wallabag`.
 | env.TZ | string | `"UTC"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"wallabag/wallabag"` | image repository |
-| image.tag | string | `"2.4.2"` | image tag Note: Upgrading the wallabag version generally requires a migration. https://doc.wallabag.org/en/admin/upgrade.html |
+| image.tag | string | chart.appVersion | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | mariadb | object | See values.yaml | Enable and configure mariadb database subchart under this key.    For more options see [mariadb chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/mariadb) |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
@@ -99,6 +99,34 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 8.0.5
+
+#### Added
+
+N/A
+
+#### Changed
+
+* remove image tag value and use appVersion instead
+
+#### Fixed
+
+N/A
+
+### Version 8.0.4
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update dependency redis to 23.2.12
+
+#### Fixed
+
+N/A
 
 ### Version 8.0.3
 

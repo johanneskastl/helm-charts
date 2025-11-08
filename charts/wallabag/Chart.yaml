@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: 2.4.2
 description: A self hostable application for saving web pages, freely.
 name: wallabag
-version: 8.0.4
+version: 8.0.5
 kubeVersion: ">=1.16.0-0"
 keywords:
   - wallabag
@@ -34,4 +34,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update dependency redis to 23.2.12
+      description: remove image tag value and use appVersion instead
