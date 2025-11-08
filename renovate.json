@@ -15,6 +15,20 @@
   "pre-commit": {
     "enabled": true
   },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update appVersion references in Chart.yaml",
+      "managerFilePatterns": [
+        "^charts\\/wallabag\\/Chart\\.yaml$"
+      ],
+      "matchStrings": [
+        "appVersion:\\s+(?<currentValue>.*)"
+      ],
+      "depNameTemplate": "wallabag/wallabag",
+      "datasourceTemplate": "docker"
+    }
+  ],
   "packageRules": [
     {
       "matchManagers": ["helm-values"],
@@ -32,7 +46,10 @@
       }
     },
     {
-      "matchManagers": ["helmv3"],
+      "matchManagers": [
+        "helmv3",
+        "custom.regex"
+      ],
       "postUpgradeTasks": {
         "commands": [
           "./scripts/update_dependency_in_chart.sh '{{{parentDir}}}' '{{{updateType}}}' '{{{depName}}}' '{{{newVersion}}}'",
