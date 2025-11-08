@@ -10,8 +10,6 @@ on:
       - '!charts/**/README.md'
       - '!charts/**/README.md.gotmpl'
   pull_request:
-    branches:
-      - main
     paths:
       - 'charts/**'
       - '!charts/**/README.md'
