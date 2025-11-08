@@ -20,7 +20,7 @@
       "customType": "regex",
       "description": "Update appVersion references in Chart.yaml",
       "managerFilePatterns": [
-        "^charts\\/wallabag\\/Chart\\.yaml$"
+        "/charts\\/wallabag\\/Chart\\.yaml/"
       ],
       "matchStrings": [
         "appVersion:\\s+(?<currentValue>.*)"
