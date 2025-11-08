@@ -31,6 +31,21 @@
         ],
         "executionMode": "branch"
       }
+    },
+    {
+      "matchManagers": ["helmv3"],
+      "postUpgradeTasks": {
+        "commands": [
+          "./scripts/update_dependency_in_chart.sh '{{{parentDir}}}' '{{{updateType}}}'",
+          "./scripts/generate_readmes_with_helm-docs.sh '{{{parentDir}}}'"
+        ],
+        "fileFilters": [
+                "**/Chart.yaml",
+                "**/README.md",
+                "**/README_CHANGELOG.md.gotmpl"
+        ],
+        "executionMode": "branch"
+      }
     }
   ],
   "ignoreDeps": [
