@@ -23,10 +23,8 @@
         "/charts\\/wallabag\\/Chart\\.yaml/"
       ],
       "matchStrings": [
-        "appVersion:\\s+(?<currentValue>.*)"
-      ],
-      "depNameTemplate": "wallabag/wallabag",
-      "datasourceTemplate": "docker"
+        "#\\s+renovate\\s+datasource=(?<datasource>.+)\\s+registryUrl=(?<registryUrl>.+)\\s+depName=(?<depName>.+)\\s+appVersion:\\s+(?<currentValue>.+)"
+      ]
     }
   ],
   "packageRules": [
