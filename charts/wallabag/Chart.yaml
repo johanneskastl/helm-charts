@@ -1,9 +1,10 @@
 ---
 apiVersion: v2
+# renovate datasource=docker registryUrl=docker.io  depName=wallabag/wallabag
 appVersion: 2.4.2
 description: A self hostable application for saving web pages, freely.
 name: wallabag
-version: 8.0.5
+version: 8.0.6
 kubeVersion: ">=1.16.0-0"
 keywords:
   - wallabag
@@ -33,5 +34,5 @@ dependencies:
     condition: mariadb.enabled
 annotations:
   artifacthub.io/changes: |-
-    - kind: changed
-      description: remove image tag value and use appVersion instead
+    - kind: added
+      description: comment in Chart.yaml to allow updates via Renovatebot
