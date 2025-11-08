@@ -47,12 +47,28 @@
     },
     {
       "matchManagers": [
-        "helmv3",
-        "custom.regex"
+        "helmv3"
       ],
       "postUpgradeTasks": {
         "commands": [
           "./scripts/update_dependency_in_chart.sh '{{{parentDir}}}' '{{{updateType}}}' '{{{depName}}}' '{{{newVersion}}}'",
+          "./scripts/generate_readmes_with_helm-docs.sh '{{{parentDir}}}'"
+        ],
+        "fileFilters": [
+          "**/Chart.yaml",
+          "**/README.md",
+          "**/README_CHANGELOG.md.gotmpl"
+        ],
+        "executionMode": "branch"
+      }
+    },
+    {
+      "matchManagers": [
+        "custom.regex"
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "./scripts/update_appVersion_in_chart.sh '{{{parentDir}}}' '{{{updateType}}}' '{{{newVersion}}}'",
           "./scripts/generate_readmes_with_helm-docs.sh '{{{parentDir}}}'"
         ],
         "fileFilters": [
