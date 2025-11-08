@@ -36,7 +36,7 @@
       "matchManagers": ["helmv3"],
       "postUpgradeTasks": {
         "commands": [
-          "./scripts/update_dependency_in_chart.sh '{{{parentDir}}}' '{{{updateType}}}'",
+          "./scripts/update_dependency_in_chart.sh '{{{parentDir}}}' '{{{updateType}}}' '{{{depName}}}' '{{{newVersion}}}'",
           "./scripts/generate_readmes_with_helm-docs.sh '{{{parentDir}}}'"
         ],
         "fileFilters": [
