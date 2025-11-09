@@ -1,9 +1,10 @@
 ---
 apiVersion: v2
 appVersion: v1.90.6
+# renovate datasource=docker registryUrl=docker.io depName=tailscale/tailscale
 description: Run a tailscale subnet router in Kubernetes
 name: tailscale
-version: 0.32.0
+version: 0.32.1
 kubeVersion: ">=1.19.0-0"
 keywords:
   - tailscale
@@ -21,5 +22,7 @@ dependencies:
     version: 5.0.5
 annotations:
   artifacthub.io/changes: |-
-    - kind: change
-      description: add permission to patch the secret
+    - kind: changed
+      description: adapt README to new name 'authkey' for environment variable
+    - kind: added
+      description: comment in Chart.yaml to allow updates via Renovatebot

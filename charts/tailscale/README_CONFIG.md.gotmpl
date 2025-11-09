@@ -14,7 +14,7 @@ Store the API-key in a secret in the namespace. By default, this chart requires 
 ```yaml
 apiVersion: v1
 stringData:
-  TS_AUTH_KEY: tskey-auth-...
+  authkey: tskey-auth-...
 kind: Secret
 metadata:
   name: tailscale-auth
