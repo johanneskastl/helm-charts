@@ -4368,6 +4368,36 @@ entries:
   jellyfin:
   - annotations:
       artifacthub.io/changes: |-
+        - kind: added
+          description: comment in Chart.yaml to allow updates via Renovatebot
+    apiVersion: v2
+    appVersion: 10.8.1
+    created: "2025-11-09T18:31:28.322036213Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Jellyfin is a Free Software Media System
+    digest: 4d63814922b723a3400ca6441be89dd39fa081f47eab82036343d74dcf01a318
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/jellyfin
+    icon: https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/icon-solid-black.svg
+    keywords:
+    - jellyfin
+    - plex
+    - emby
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: jellyfin
+    sources:
+    - https://hub.docker.com/r/jellyfin/jellyfin
+    - https://github.com/jellyfin/jellyfin
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/jellyfin-10.0.3/jellyfin-10.0.3.tgz
+    version: 10.0.3
+  - annotations:
+      artifacthub.io/changes: |-
         - kind: changed
           description: update common chart to 5.0.5
     apiVersion: v2
@@ -11105,4 +11135,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-11-09T18:31:17.2573072Z"
+generated: "2025-11-09T18:31:28.323053023Z"
