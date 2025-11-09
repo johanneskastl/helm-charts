@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
 # renovate datasource=docker registryUrl=lscr.io depName=linuxserver/heimdall
-appVersion: 2.2.2
+appVersion: 2.4.15
 description: An Application dashboard and launcher
 name: heimdall
-version: 9.0.3
+version: 9.1.0
 kubeVersion: ">=1.16.0-0"
 keywords:
   - heimdall
@@ -23,4 +23,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: remove image tag value and use appVersion instead
+      description: update heimdall to 2.4.15
