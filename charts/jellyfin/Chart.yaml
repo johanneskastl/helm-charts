@@ -1,9 +1,10 @@
 ---
 apiVersion: v2
+# renovate datasource=docker registryUrl=docker.io depName=jellyfin/jellyfin
 appVersion: 10.8.1
 description: Jellyfin is a Free Software Media System
 name: jellyfin
-version: 10.0.2
+version: 10.0.3
 kubeVersion: ">=1.16.0-0"
 keywords:
   - jellyfin
@@ -23,5 +24,5 @@ dependencies:
     version: 5.0.5
 annotations:
   artifacthub.io/changes: |-
-    - kind: changed
-      description: update common chart to 5.0.5
+    - kind: added
+      description: comment in Chart.yaml to allow updates via Renovatebot
