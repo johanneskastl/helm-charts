@@ -38,7 +38,7 @@ sed -i "s/^version:.*/version: ${newversion}/g" "charts/${CHART}/Chart.yaml"
 
 # change artifacthub annotation in Chart.yaml
 sed -i "s/- kind: .*$/- kind: changed/g" "charts/${CHART}/Chart.yaml"
-sed -i "/kind/ {n; s/description:.*/description: update appVersion to ${APPVERSION}/g}" "charts/${CHART}/Chart.yaml"
+sed -i "/kind/ {n; s/description:.*/description: update ${CHART} to ${APPVERSION}/g}" "charts/${CHART}/Chart.yaml"
 
 # change versions in README.md
 sed -i "/img.shields.io/ s/Version\\: ${version}/Version: ${newversion}/g" "charts/${CHART}/README.md"
@@ -53,7 +53,7 @@ N/A
 
 #### Changed
 
-* update appVersion to ${APPVERSION}
+* update ${CHART} to ${APPVERSION}
 
 #### Fixed
 
