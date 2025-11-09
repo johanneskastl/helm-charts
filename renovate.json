@@ -21,8 +21,9 @@
       "customType": "regex",
       "description": "Update appVersion references in Chart.yaml",
       "managerFilePatterns": [
-        "/charts\\/wallabag\\/Chart\\.yaml/",
-        "/charts\\/heimdall\\/Chart\\.yaml/"
+        "/charts\\/heimdall\\/Chart\\.yaml/",
+        "/charts\\/tailscale\\/Chart\\.yaml/",
+        "/charts\\/wallabag\\/Chart\\.yaml/"
       ],
       "matchStrings": [
         "#\\s+renovate\\s+datasource=(?<datasource>.+)\\s+registryUrl=(?<registryUrl>.+)\\s+depName=(?<depName>.+)\\s+appVersion:\\s+(?<currentValue>.+)"
