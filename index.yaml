@@ -152,6 +152,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: change
+          description: maintainer e-mail
+    apiVersion: v2
+    appVersion: "9.19"
+    created: "2025-11-10T19:53:57.262303168Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: A Helm chart for Bind9 using the official ISC docker image
+    digest: e25ed128b14842cfd54facacc901537fcb063f16ebcc616bb294e34044d2ee62
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/bind9
+    icon: https://www.isc.org/images/isclogos/Bind_9_ISC_Blue.jpg
+    keywords:
+    - bind9
+    - named
+    - dns
+    - resolver
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: bind9
+    sources:
+    - https://gitlab.isc.org/isc-projects/bind9
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/bind9-0.5.4/bind9-0.5.4.tgz
+    version: 0.5.4
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: change
           description: registryURL in comment in Chart.yaml
         - kind: change
           description: add docker.io to image.repository to make this explicit
@@ -11502,4 +11532,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-11-10T19:36:45.092905896Z"
+generated: "2025-11-10T19:53:57.262804595Z"
