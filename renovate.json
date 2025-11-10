@@ -22,6 +22,7 @@
       "description": "Update appVersion references in Chart.yaml",
       "managerFilePatterns": [
         "/charts\\/heimdall\\/Chart\\.yaml/",
+        "/charts\\/jellyfin\\/Chart\\.yaml/",
         "/charts\\/tailscale\\/Chart\\.yaml/",
         "/charts\\/wallabag\\/Chart\\.yaml/"
       ],
