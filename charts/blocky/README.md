@@ -1,6 +1,6 @@
 # blocky
 
-![Version: 11.8.3](https://img.shields.io/badge/Version-11.8.3-informational?style=flat-square) ![AppVersion: v0.27.0](https://img.shields.io/badge/AppVersion-v0.27.0-informational?style=flat-square)
+![Version: 11.8.4](https://img.shields.io/badge/Version-11.8.4-informational?style=flat-square) ![AppVersion: v0.27.0](https://img.shields.io/badge/AppVersion-v0.27.0-informational?style=flat-square)
 
 DNS proxy as ad-blocker for local network
 
@@ -104,6 +104,30 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 11.8.4
+
+#### Added
+
+* add comment in Chart.yaml to allow updates via Renovatebot
+
+#### Changed
+
+N/A
+
+### Version 11.8.3
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update redis dependency to 23.2.12
+
+### Version 11.8.2
+
+(skipped)
 
 ### Version 11.8.1
 
