@@ -28,6 +28,7 @@
         "/charts\\/kanboard\\/Chart\\.yaml/",
         "/charts\\/sharry\\/Chart\\.yaml/",
         "/charts\\/tailscale\\/Chart\\.yaml/",
+        "/charts\\/vaultwarden\\/Chart\\.yaml/",
         "/charts\\/wallabag\\/Chart\\.yaml/"
       ],
       "matchStrings": [
