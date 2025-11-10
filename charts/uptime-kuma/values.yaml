@@ -7,7 +7,7 @@
 
 image:
   # -- image repository
-  repository: louislam/uptime-kuma
+  repository: docker.io/louislam/uptime-kuma
   # -- image tag
   # @default -- chart.appVersion
   tag:
