@@ -64,6 +64,35 @@ entries:
   apacheds:
   - annotations:
       artifacthub.io/changes: |-
+        - kind: added
+          description: comment in Chart.yaml to allow updates via Renovatebot
+    apiVersion: v2
+    appVersion: 2.0.0-AM26-startupProbe
+    created: "2025-11-10T20:17:52.509633469Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: ApacheDS is a LDAP server written in Java
+    digest: ead42af62b40ebee08ee364ecdebc14834c48d0f1929bfa1cddfdba20d9c3086
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/apacheds
+    icon: https://directory.apache.org/images/header-green.png
+    keywords:
+    - LDAP
+    - ApacheDS
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: apacheds
+    sources:
+    - https://directory.apache.org/apacheds/
+    - https://github.com/TremoloSecurity/apacheds
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/apacheds-0.0.5/apacheds-0.0.5.tgz
+    version: 0.0.5
+  - annotations:
+      artifacthub.io/changes: |-
         - kind: changed
           description: refactor startupProbe/readinessProbe/livenessProbe
     apiVersion: v2
@@ -11598,4 +11627,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-11-10T20:08:08.034170726Z"
+generated: "2025-11-10T20:17:52.510158616Z"
