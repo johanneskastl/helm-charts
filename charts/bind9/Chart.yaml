@@ -4,7 +4,7 @@ apiVersion: v2
 appVersion: "9.19"
 description: A Helm chart for Bind9 using the official ISC docker image
 name: bind9
-version: 0.5.3
+version: 0.5.4
 kubeVersion: ">=1.16.0-0"
 keywords:
   - bind9
@@ -17,7 +17,7 @@ sources:
   - https://gitlab.isc.org/isc-projects/bind9
 maintainers:
   - name: johanneskastl
-    email: kastl@b1-systems.de
+    email: git@johannes-kastl.de
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
@@ -25,6 +25,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: change
-      description: registryURL in comment in Chart.yaml
-    - kind: change
-      description: add docker.io to image.repository to make this explicit
+      description: maintainer e-mail
