@@ -1,6 +1,6 @@
 # bind9
 
-![Version: 0.5.2](https://img.shields.io/badge/Version-0.5.2-informational?style=flat-square) ![AppVersion: 9.19](https://img.shields.io/badge/AppVersion-9.19-informational?style=flat-square)
+![Version: 0.5.3](https://img.shields.io/badge/Version-0.5.3-informational?style=flat-square) ![AppVersion: 9.19](https://img.shields.io/badge/AppVersion-9.19-informational?style=flat-square)
 
 A Helm chart for Bind9 using the official ISC docker image
 
@@ -175,7 +175,7 @@ persistence:
 | global.labels | object | `{}` |  |
 | global.selectorLables | object | `{}` |  |
 | image.pullPolicy | string | `"Always"` | image pull policy |
-| image.repository | string | `"internetsystemsconsortium/bind9"` | image repository |
+| image.repository | string | `"docker.io/internetsystemsconsortium/bind9"` | image repository |
 | image.tag | string | `nil` | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | mount_configuration_from_secret.enabled | bool | `false` |  |
@@ -224,6 +224,21 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 0.5.3
+
+#### Added
+
+N/A
+
+#### Changed
+
+* registryURL in comment in Chart.yaml
+* add docker.io to image.repository to make this explicit
+
+#### Fixed
+
+N/A
 
 ### Version 0.5.2
 
