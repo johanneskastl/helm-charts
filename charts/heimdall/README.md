@@ -1,6 +1,6 @@
 # heimdall
 
-![Version: 9.3.0](https://img.shields.io/badge/Version-9.3.0-informational?style=flat-square) ![AppVersion: 2.6.3](https://img.shields.io/badge/AppVersion-2.6.3-informational?style=flat-square)
+![Version: 9.4.0](https://img.shields.io/badge/Version-9.4.0-informational?style=flat-square) ![AppVersion: 2.7.6](https://img.shields.io/badge/AppVersion-2.7.6-informational?style=flat-square)
 
 An Application dashboard and launcher
 
@@ -95,6 +95,20 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 9.4.0
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update heimdall to 2.7.6
+
+#### Fixed
+
+N/A
 
 ### Version 9.3.0
 
