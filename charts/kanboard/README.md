@@ -1,6 +1,6 @@
 # kanboard
 
-![Version: 6.0.13](https://img.shields.io/badge/Version-6.0.13-informational?style=flat-square) ![AppVersion: v1.2.32](https://img.shields.io/badge/AppVersion-v1.2.32-informational?style=flat-square)
+![Version: 6.0.14](https://img.shields.io/badge/Version-6.0.14-informational?style=flat-square) ![AppVersion: v1.2.48](https://img.shields.io/badge/AppVersion-v1.2.48-informational?style=flat-square)
 
 Kanboard is a free and open source Kanban project management software.
 
@@ -102,6 +102,20 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 6.0.14
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update kanboard to v1.2.48
+
+#### Fixed
+
+N/A
 
 ### Version 6.0.13
 
