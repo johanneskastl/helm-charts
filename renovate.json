@@ -24,6 +24,7 @@
         "/charts\\/blocky\\/Chart\\.yaml/",
         "/charts\\/heimdall\\/Chart\\.yaml/",
         "/charts\\/jellyfin\\/Chart\\.yaml/",
+        "/charts\\/kanboard\\/Chart\\.yaml/",
         "/charts\\/sharry\\/Chart\\.yaml/",
         "/charts\\/tailscale\\/Chart\\.yaml/",
         "/charts\\/wallabag\\/Chart\\.yaml/"

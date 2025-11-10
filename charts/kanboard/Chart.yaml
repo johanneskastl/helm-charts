@@ -1,9 +1,10 @@
 ---
 apiVersion: v2
+# renovate datasource=docker registryUrl=docker.io depName=kanboard/kanboard
 appVersion: v1.2.32
 description: Kanboard is a free and open source Kanban project management software.
 name: kanboard
-version: 6.0.12
+version: 6.0.13
 kubeVersion: ">=1.16.0-0"
 keywords:
   - kanboard
@@ -14,7 +15,7 @@ sources:
   - https://github.com/kanboard/kanboard
 maintainers:
   - name: johanneskastl
-    email: kastl@b1-systems.de
+    email: git@johannes-kastl.de
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
@@ -25,5 +26,5 @@ dependencies:
     condition: postgresql.enabled
 annotations:
   artifacthub.io/changes: |-
-    - kind: changed
-      description: update appVersion to 1.2.32
+    - kind: added
+      description: comment in Chart.yaml to allow updates via Renovatebot
