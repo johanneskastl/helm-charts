@@ -1,9 +1,10 @@
 ---
 apiVersion: v2
+# renovate datasource=docker registryUrl=docker.io depName=johanneskastl/apacheds
 appVersion: 2.0.0-AM26-startupProbe
 description: ApacheDS is a LDAP server written in Java
 name: apacheds
-version: 0.0.4
+version: 0.0.5
 kubeVersion: ">=1.16.0-0"
 keywords:
   - LDAP
@@ -15,12 +16,12 @@ sources:
   - https://github.com/TremoloSecurity/apacheds
 maintainers:
   - name: johanneskastl
-    email: kastl@b1-systems.de
+    email: git@johannes-kastl.de
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
     version: 5.0.5
 annotations:
   artifacthub.io/changes: |-
-    - kind: changed
-      description: refactor startupProbe/readinessProbe/livenessProbe
+    - kind: added
+      description: comment in Chart.yaml to allow updates via Renovatebot
