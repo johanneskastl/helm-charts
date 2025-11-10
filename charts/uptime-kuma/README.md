@@ -1,6 +1,6 @@
 # uptime-kuma
 
-![Version: 3.0.2](https://img.shields.io/badge/Version-3.0.2-informational?style=flat-square) ![AppVersion: 2.0.2](https://img.shields.io/badge/AppVersion-2.0.2-informational?style=flat-square)
+![Version: 3.0.3](https://img.shields.io/badge/Version-3.0.3-informational?style=flat-square) ![AppVersion: 2.0.2](https://img.shields.io/badge/AppVersion-2.0.2-informational?style=flat-square)
 
 A fancy self-hosted monitoring tool for your websites and applications
 
@@ -78,7 +78,7 @@ N/A
 | env.TZ | string | `"UTC"` | Set the container timezone |
 | env.UPTIME_KUMA_DISABLE_FRAME_SAMEORIGIN | int | `0` | Set the frame same-origin policy (int) |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
-| image.repository | string | `"louislam/uptime-kuma"` | image repository |
+| image.repository | string | `"docker.io/louislam/uptime-kuma"` | image repository |
 | image.tag | string | chart.appVersion | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
@@ -90,6 +90,20 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 3.0.3
+
+#### Added
+
+* add comment in Chart.yaml to allow updates via Renovatebot
+
+#### Changed
+
+N/A
+
+#### Fixed
+
+N/A
 
 ### Version 3.0.2
 
