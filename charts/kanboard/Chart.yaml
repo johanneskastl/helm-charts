@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
 # renovate datasource=docker registryUrl=docker.io depName=kanboard/kanboard
-appVersion: v1.2.32
+appVersion: v1.2.48
 description: Kanboard is a free and open source Kanban project management software.
 name: kanboard
-version: 6.0.13
+version: 6.0.14
 kubeVersion: ">=1.16.0-0"
 keywords:
   - kanboard
@@ -26,5 +26,5 @@ dependencies:
     condition: postgresql.enabled
 annotations:
   artifacthub.io/changes: |-
-    - kind: added
-      description: comment in Chart.yaml to allow updates via Renovatebot
+    - kind: changed
+      description: update kanboard to v1.2.48
