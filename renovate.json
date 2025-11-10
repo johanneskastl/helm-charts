@@ -23,6 +23,7 @@
       "managerFilePatterns": [
         "/charts\\/bind9\\/Chart\\.yaml/",
         "/charts\\/blocky\\/Chart\\.yaml/",
+        "/charts\\/hedgedoc\\/Chart\\.yaml/",
         "/charts\\/heimdall\\/Chart\\.yaml/",
         "/charts\\/jellyfin\\/Chart\\.yaml/",
         "/charts\\/kanboard\\/Chart\\.yaml/",
