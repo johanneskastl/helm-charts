@@ -4672,6 +4672,35 @@ entries:
   sharry:
   - annotations:
       artifacthub.io/changes: |-
+        - kind: added
+          description: comment in Chart.yaml to allow updates via Renovatebot
+    apiVersion: v2
+    appVersion: v1.15.0
+    created: "2025-11-10T16:00:35.805886743Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Sharry allows to share files with others in a simple way. It is a
+      self-hosted web application. The basic concept is to upload files and get a
+      url back that can then be shared.
+    digest: dfa131d5e492d376cf9adf9cff18ef141a8828f49452363187eeabf257dcbddd
+    home: https://github.com/johanneskastl/charts/tree/main/charts/sharry
+    icon: https://github.com/eikek/sharry/blob/master/artwork/logo.svg?raw=true
+    keywords:
+    - file sharing
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: sharry
+    sources:
+    - https://github.com/eikek/sharry
+    - https://hub.docker.com/r/eikek0/sharry
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/sharry-6.9.1/sharry-6.9.1.tgz
+    version: 6.9.1
+  - annotations:
+      artifacthub.io/changes: |-
         - kind: changed
           description: update appVersion to 1.15.0
     apiVersion: v2
@@ -11219,4 +11248,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-11-10T15:21:43.05838076Z"
+generated: "2025-11-10T16:00:35.807007111Z"
