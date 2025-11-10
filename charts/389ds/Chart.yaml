@@ -1,9 +1,10 @@
 ---
 apiVersion: v2
+# renovate datasource=docker registryUrl=docker.io depName=389ds/dirsrv
 appVersion: '2.2'
 description: 389ds LDAP server
 name: 389ds
-version: 0.0.1
+version: 0.0.2
 kubeVersion: ">=1.19.0-0"
 keywords:
   - 389-ds
@@ -16,7 +17,7 @@ sources:
   - https://github.com/389ds/389-ds-base/
 maintainers:
   - name: johanneskastl
-    email: kastl@b1-systems.de
+    email: git@johannes-kastl.de
 dependencies:
   - name: common
     repository: https://johanneskastl.github.io/helm-charts/
@@ -24,4 +25,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: first version of the chart
+      description: comment in Chart.yaml to allow updates via Renovatebot
