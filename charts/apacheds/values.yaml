@@ -7,7 +7,7 @@
 
 image:
   # -- image repository
-  repository: johanneskastl/apacheds
+  repository: docker.io/johanneskastl/apacheds
   # -- image tag
   # @default -- chart.appVersion
   tag:
