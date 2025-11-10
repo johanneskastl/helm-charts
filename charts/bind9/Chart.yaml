@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 # renovate datasource=docker registryUrl=ghcr.io depName=internetsystemsconsortium/bind9
-appVersion: 9.19
+appVersion: "9.19"
 description: A Helm chart for Bind9 using the official ISC docker image
 name: bind9
 version: 0.5.2
