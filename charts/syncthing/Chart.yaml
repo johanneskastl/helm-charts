@@ -2,10 +2,11 @@
 apiVersion: v2
 # no leading v on the appVersion
 # in contrast to the tags in GitHub
+# renovate datasource=docker registryUrl=docker.io depName=syncthing/syncthing
 appVersion: 2.0.11
 description: Open Source Continuous File Synchronization
 name: syncthing
-version: 5.0.11
+version: 5.0.12
 kubeVersion: ">=1.16.0-0"
 keywords:
   - syncthing
@@ -24,5 +25,5 @@ dependencies:
     version: 5.0.5
 annotations:
   artifacthub.io/changes: |-
-    - kind: changed
-      description: update appVersion to 2.0.11
+    - kind: added
+      description: comment in Chart.yaml to allow updates via Renovatebot

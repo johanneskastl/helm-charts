@@ -27,6 +27,7 @@
         "/charts\\/jellyfin\\/Chart\\.yaml/",
         "/charts\\/kanboard\\/Chart\\.yaml/",
         "/charts\\/sharry\\/Chart\\.yaml/",
+        "/charts\\/syncthing\\/Chart\\.yaml/",
         "/charts\\/tailscale\\/Chart\\.yaml/",
         "/charts\\/uptime-kuma\\/Chart\\.yaml/",
         "/charts\\/vaultwarden\\/Chart\\.yaml/",
