@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: 1.10.3-ls172
 description: HedgeDoc lets you create real-time collaborative markdown notes.
 name: hedgedoc
-version: 2.2.35
+version: 2.2.36
 kubeVersion: ">=1.19.0-0"
 keywords:
   - hedgedoc
@@ -29,5 +29,5 @@ dependencies:
     condition: mariadb.enabled
 annotations:
   artifacthub.io/changes: |
-    - kind: changed
-      description: update appVersion to 1.10.3-ls172
+    - kind: added
+      description: add comment in Chart.yaml to allow updates via Renovatebot
