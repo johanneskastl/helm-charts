@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
 # renovate datasource=docker registryUrl=ghcr.io depName=0xerr0r/blocky
-appVersion: v0.27.0
+appVersion: v0.28.0
 description: DNS proxy as ad-blocker for local network
 name: blocky
-version: 11.8.4
+version: 11.9.0
 kubeVersion: ">=1.19.0-0"
 keywords:
   - blocky
@@ -27,5 +27,5 @@ dependencies:
     condition: redis.enabled
 annotations:
   artifacthub.io/changes: |-
-    - kind: added
-      description: comment in Chart.yaml to allow updates via Renovatebot
+    - kind: changed
+      description: update blocky to 0.28.0
