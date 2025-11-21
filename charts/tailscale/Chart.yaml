@@ -1,6 +1,6 @@
 ---
 apiVersion: v2
-# renovate datasource=docker registryUrl=docker.io depName=tailscale/tailscale
+# renovate datasource=docker registryUrl=https://docker.io depName=tailscale/tailscale
 appVersion: v1.90.8
 description: Run a tailscale subnet router in Kubernetes
 name: tailscale
