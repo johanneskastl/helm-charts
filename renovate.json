@@ -42,6 +42,13 @@
   ],
   "packageRules": [
     {
+      "matchFileNames": [".pre-commit-config.yaml"],
+      "separateMajorMinor": true,
+      "separateMinorPatch": false,
+      "separateMultipleMajor": false,
+      "separateMultipleMinor": false
+    },
+    {
       "matchManagers": ["helm-values"],
       "postUpgradeTasks": {
         "commands": [
