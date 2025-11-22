@@ -50,6 +50,10 @@
       "separateMultipleMinor": false
     },
     {
+      "matchFileNames": ["charts/hedgedoc/Chart.yaml"],
+      "versioning": "loose"
+    },
+    {
       "matchManagers": ["helm-values"],
       "postUpgradeTasks": {
         "commands": [
