@@ -513,6 +513,39 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update dependency redis to 24.0.0
+    apiVersion: v2
+    appVersion: v0.28.2
+    created: "2025-11-22T10:56:46.245198864Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 24.0.0
+    description: DNS proxy as ad-blocker for local network
+    digest: 6825c9860ec188bb395e6fa248d4aa8858f1b491ee0beca6d0add37642599856
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/blocky
+    icon: https://github.com/0xERR0R/blocky/raw/master/docs/blocky.svg?sanitize=true
+    keywords:
+    - blocky
+    - adblock
+    - dns
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: blocky
+    sources:
+    - https://github.com/0xERR0R/blocky
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/blocky-11.10.0/blocky-11.10.0.tgz
+    version: 11.10.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update blocky to v0.28.2
     apiVersion: v2
     appVersion: v0.28.2
@@ -12208,4 +12241,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-11-22T10:31:57.087997478Z"
+generated: "2025-11-22T10:56:46.245725505Z"
