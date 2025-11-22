@@ -50,7 +50,10 @@
       "separateMultipleMinor": false
     },
     {
-      "matchFileNames": ["charts/hedgedoc/Chart.yaml"],
+      "matchFileNames": [
+        "charts/hedgedoc/Chart.yaml",
+        "charts/heimdall/Chart.yaml"
+      ],
       "versioning": "loose"
     },
     {
