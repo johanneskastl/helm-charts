@@ -4,7 +4,7 @@ apiVersion: v2
 appVersion: 2.4.2
 description: A self hostable application for saving web pages, freely.
 name: wallabag
-version: 8.0.7
+version: 8.1.0
 kubeVersion: ">=1.16.0-0"
 keywords:
   - wallabag
@@ -21,7 +21,7 @@ dependencies:
     repository: https://johanneskastl.github.io/helm-charts/
     version: 5.0.5
   - name: redis
-    version: 23.2.12
+    version: 24.0.0
     repository: https://charts.bitnami.com/bitnami
     condition: redis.enabled
   - name: postgresql
@@ -35,4 +35,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: add https prefix to renovate comment
+      description: update dependency redis to 24.0.0
