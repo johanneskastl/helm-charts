@@ -9195,6 +9195,36 @@ entries:
   uptime-kuma:
   - annotations:
       artifacthub.io/changes: |-
+        - kind: changed
+          description: add https prefix to renovate comment
+    apiVersion: v2
+    appVersion: 2.0.2
+    created: "2025-11-22T07:49:12.124475179Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: 6e56680f2f914ab793090b75fc1bf7b17515a251126221a632becb8ae769dd85
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/uptime-kuma-3.0.4/uptime-kuma-3.0.4.tgz
+    version: 3.0.4
+  - annotations:
+      artifacthub.io/changes: |-
         - kind: added
           description: comment in Chart.yaml to allow updates via Renovatebot
     apiVersion: v2
@@ -12073,4 +12103,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-11-22T07:44:45.618678283Z"
+generated: "2025-11-22T07:49:12.125223729Z"
