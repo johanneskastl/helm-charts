@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
-# renovate datasource=docker registryUrl=docker.io depName=internetsystemsconsortium/bind9
+# renovate datasource=docker registryUrl=https://docker.io depName=internetsystemsconsortium/bind9
 appVersion: "9.19"
 description: A Helm chart for Bind9 using the official ISC docker image
 name: bind9
-version: 0.5.4
+version: 0.5.5
 kubeVersion: ">=1.16.0-0"
 keywords:
   - bind9
@@ -25,4 +25,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: change
-      description: maintainer e-mail
+      description: add https prefix in renovate comment
