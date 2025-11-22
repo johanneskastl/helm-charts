@@ -1,6 +1,6 @@
 # sharry
 
-![Version: 6.9.1](https://img.shields.io/badge/Version-6.9.1-informational?style=flat-square) ![AppVersion: v1.15.0](https://img.shields.io/badge/AppVersion-v1.15.0-informational?style=flat-square)
+![Version: 6.9.2](https://img.shields.io/badge/Version-6.9.2-informational?style=flat-square) ![AppVersion: v1.15.0](https://img.shields.io/badge/AppVersion-v1.15.0-informational?style=flat-square)
 
 Sharry allows to share files with others in a simple way. It is a self-hosted web application. The basic concept is to upload files and get a url back that can then be shared.
 
@@ -90,6 +90,16 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 6.9.2
+
+#### Added
+
+N/A
+
+#### Changed
+
+* add https prefix in renovate comment
 
 ### Version 6.9.1
 

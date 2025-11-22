@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
-# renovate datasource=docker registryUrl=docker.io depName=eikek0/sharry
+# renovate datasource=docker registryUrl=https://docker.io depName=eikek0/sharry
 appVersion: v1.15.0
 description: Sharry allows to share files with others in a simple way. It is a self-hosted web application. The basic concept is to upload files and get a url back that can then be shared.
 name: sharry
-version: 6.9.1
+version: 6.9.2
 keywords:
   - file sharing
 home: https://github.com/johanneskastl/charts/tree/main/charts/sharry
@@ -21,5 +21,5 @@ dependencies:
     version: 5.0.5
 annotations:
   artifacthub.io/changes: |-
-    - kind: added
-      description: comment in Chart.yaml to allow updates via Renovatebot
+    - kind: changed
+      description: add https prefix in renovate comment
