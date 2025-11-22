@@ -50,11 +50,12 @@
       "separateMultipleMinor": false
     },
     {
-      "matchFileNames": [
-        "charts/hedgedoc/Chart.yaml",
-        "charts/heimdall/Chart.yaml"
+      "matchDatasources": ["docker"],
+      "matchPackageNames": [
+        "linuxserver/hedgedoc",
+        "linuxserver/heimdall"
       ],
-      "versioning": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-ls(?<revision>\\d+)"
+      "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-ls(?<revision>\\d+)$"
     },
     {
       "matchManagers": ["helm-values"],
