@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
-# renovate datasource=docker registryUrl=docker.io depName=louislam/uptime-kuma
+# renovate datasource=docker registryUrl=https://docker.io depName=louislam/uptime-kuma
 appVersion: 2.0.2
 description: A fancy self-hosted monitoring tool for your websites and applications
 name: uptime-kuma
-version: 3.0.3
+version: 3.0.4
 kubeVersion: ">=1.16.0-0"
 keywords:
   - uptime-kuma
@@ -24,5 +24,5 @@ dependencies:
     version: 5.0.5
 annotations:
   artifacthub.io/changes: |-
-    - kind: added
-      description: comment in Chart.yaml to allow updates via Renovatebot
+    - kind: changed
+      description: add https prefix to renovate comment
