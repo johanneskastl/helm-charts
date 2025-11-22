@@ -4,6 +4,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: add https prefix to renovate comment
+    apiVersion: v2
+    appVersion: "2.2"
+    created: "2025-11-22T18:55:18.983369728Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: 389ds LDAP server
+    digest: 9a2a14efb9326ee18f0353a54a06fa7099a33d3fcc274bb07c549cb29fccbdbf
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/389ds
+    icon: https://www.port389.org/images/logo-header-transparent.png
+    keywords:
+    - 389-ds
+    - 389ds
+    - dirsrv
+    - LDAP
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: 389ds
+    sources:
+    - https://github.com/389ds/389-ds-base/
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/389ds-0.0.3/389ds-0.0.3.tgz
+    version: 0.0.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: comment in Chart.yaml to allow updates via Renovatebot
     apiVersion: v2
     appVersion: "2.2"
@@ -12281,4 +12311,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-11-22T10:57:31.541807227Z"
+generated: "2025-11-22T18:55:18.98397388Z"
