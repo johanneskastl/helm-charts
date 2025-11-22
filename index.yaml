@@ -211,6 +211,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: change
+          description: add https prefix in renovate comment
+    apiVersion: v2
+    appVersion: "9.19"
+    created: "2025-11-22T06:17:33.349469144Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: A Helm chart for Bind9 using the official ISC docker image
+    digest: 545a9280bd117383377986c90bfb9a4cc6b5a772a3eba15bb58aa5a0aa0a2f85
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/bind9
+    icon: https://www.isc.org/images/isclogos/Bind_9_ISC_Blue.jpg
+    keywords:
+    - bind9
+    - named
+    - dns
+    - resolver
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: bind9
+    sources:
+    - https://gitlab.isc.org/isc-projects/bind9
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/bind9-0.5.5/bind9-0.5.5.tgz
+    version: 0.5.5
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: change
           description: maintainer e-mail
     apiVersion: v2
     appVersion: "9.19"
@@ -11955,4 +11985,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-11-22T06:13:20.557340657Z"
+generated: "2025-11-22T06:17:33.350075402Z"
