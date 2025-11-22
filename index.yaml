@@ -4782,6 +4782,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: use full version string v2.7.6-ls327
+        - kind: changed
+          description: use ghcr.io as registryUrl
+    apiVersion: v2
+    appVersion: v2.7.6-ls327
+    created: "2025-11-22T19:01:14.586278885Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: An Application dashboard and launcher
+    digest: c85baf85e99a3a6eb8bcf8139b1995a0e24af1236da939db0616fd73da9f50d9
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/heimdall
+    icon: https://i.imgur.com/mM4tcO5.png
+    keywords:
+    - heimdall
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: heimdall
+    sources:
+    - https://hub.docker.com/r/linuxserver/heimdall/
+    - https://github.com/linuxserver/heimdall
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/heimdall-9.4.2/heimdall-9.4.2.tgz
+    version: 9.4.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: https prefix in renovate comment
     apiVersion: v2
     appVersion: 2.7.6
@@ -12311,4 +12341,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-11-22T18:55:18.98397388Z"
+generated: "2025-11-22T19:01:14.586832439Z"
