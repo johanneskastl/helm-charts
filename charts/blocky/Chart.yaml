@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
-# renovate datasource=docker registryUrl=ghcr.io depName=0xerr0r/blocky
+# renovate datasource=docker registryUrl=https://ghcr.io depName=0xerr0r/blocky
 appVersion: v0.28.1
 description: DNS proxy as ad-blocker for local network
 name: blocky
-version: 11.9.1
+version: 11.9.2
 kubeVersion: ">=1.19.0-0"
 keywords:
   - blocky
@@ -28,4 +28,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update blocky to 0.28.1
+      description: add https prefix to renovate comment
