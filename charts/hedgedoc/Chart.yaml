@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
-appVersion: 1.10.3-ls172
 # renovate datasource=docker registryUrl=https://ghcr.io depName=linuxserver/hedgedoc
+appVersion: 1.10.3-ls172
 description: HedgeDoc lets you create real-time collaborative markdown notes.
 name: hedgedoc
-version: 2.2.38
+version: 2.2.39
 kubeVersion: ">=1.19.0-0"
 keywords:
   - hedgedoc
@@ -30,5 +30,5 @@ dependencies:
     condition: mariadb.enabled
 annotations:
   artifacthub.io/changes: |
-    - kind: added
-      description: add https prefix in renovate comment
+    - kind: changed
+      description: renovate comment needs to be before appVersion
