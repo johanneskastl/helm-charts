@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
-# renovate datasource=docker registryUrl=docker.io depName=johanneskastl/apacheds
+# renovate datasource=docker registryUrl=https://docker.io depName=johanneskastl/apacheds
 appVersion: 2.0.0-AM26-startupProbe
 description: ApacheDS is a LDAP server written in Java
 name: apacheds
-version: 0.0.5
+version: 0.0.6
 kubeVersion: ">=1.16.0-0"
 keywords:
   - LDAP
@@ -23,5 +23,5 @@ dependencies:
     version: 5.0.5
 annotations:
   artifacthub.io/changes: |-
-    - kind: added
-      description: comment in Chart.yaml to allow updates via Renovatebot
+    - kind: changed
+      description: add https prefix to renovate comment
