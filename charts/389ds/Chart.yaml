@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
-# renovate datasource=docker registryUrl=docker.io depName=389ds/dirsrv
+# renovate datasource=docker registryUrl=https://docker.io depName=389ds/dirsrv
 appVersion: '2.2'
 description: 389ds LDAP server
 name: 389ds
-version: 0.0.2
+version: 0.0.3
 kubeVersion: ">=1.19.0-0"
 keywords:
   - 389-ds
@@ -25,4 +25,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: comment in Chart.yaml to allow updates via Renovatebot
+      description: add https prefix to renovate comment
