@@ -5752,6 +5752,35 @@ entries:
   syncthing:
   - annotations:
       artifacthub.io/changes: |-
+        - kind: changed
+          description: add https prefix to renovate comment
+    apiVersion: v2
+    appVersion: 2.0.11
+    created: "2025-11-22T07:44:45.617794222Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Open Source Continuous File Synchronization
+    digest: aa436ce6260d65bbc270684b2145a19a3b1292e8f2a3bba5450cf49d440f6977
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/syncthing
+    icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
+    keywords:
+    - syncthing
+    - file sync
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: syncthing
+    sources:
+    - https://syncthing.net/
+    - https://github.com/syncthing/syncthing
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/syncthing-5.0.13/syncthing-5.0.13.tgz
+    version: 5.0.13
+  - annotations:
+      artifacthub.io/changes: |-
         - kind: added
           description: comment in Chart.yaml to allow updates via Renovatebot
     apiVersion: v2
@@ -12044,4 +12073,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2025-11-22T06:58:52.109348743Z"
+generated: "2025-11-22T07:44:45.618678283Z"
