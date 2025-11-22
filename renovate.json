@@ -43,6 +43,7 @@
   "packageRules": [
     {
       "matchFileNames": [".pre-commit-config.yaml"],
+      "automerge": true,
       "separateMajorMinor": true,
       "separateMinorPatch": false,
       "separateMultipleMajor": false,
