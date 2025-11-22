@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
-# renovate datasource=docker registryUrl=https://lscr.io depName=linuxserver/heimdall
-appVersion: 2.7.6
+# renovate datasource=docker registryUrl=https://ghcr.io depName=linuxserver/heimdall
+appVersion: v2.7.6-ls327
 description: An Application dashboard and launcher
 name: heimdall
-version: 9.4.1
+version: 9.4.2
 kubeVersion: ">=1.16.0-0"
 keywords:
   - heimdall
@@ -23,4 +23,6 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: https prefix in renovate comment
+      description: use full version string v2.7.6-ls327
+    - kind: changed
+      description: use ghcr.io as registryUrl

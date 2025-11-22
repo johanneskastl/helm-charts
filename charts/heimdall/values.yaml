@@ -7,7 +7,7 @@
 
 image:
   # -- image repository
-  repository: linuxserver/heimdall
+  repository: ghcr.io/linuxserver/heimdall
   # -- image tag
   # @default -- chart.appVersion
   tag:
