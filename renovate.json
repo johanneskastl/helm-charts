@@ -54,7 +54,7 @@
         "charts/hedgedoc/Chart.yaml",
         "charts/heimdall/Chart.yaml"
       ],
-      "versioning": "loose"
+      "versioning": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?:[-\\.r]*(?<build>\\d+))?-ls(?<revision>\\d+)$"
     },
     {
       "matchManagers": ["helm-values"],
