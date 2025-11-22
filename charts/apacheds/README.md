@@ -1,6 +1,6 @@
 # apacheds
 
-![Version: 0.0.5](https://img.shields.io/badge/Version-0.0.5-informational?style=flat-square) ![AppVersion: 2.0.0-AM26-startupProbe](https://img.shields.io/badge/AppVersion-2.0.0--AM26--startupProbe-informational?style=flat-square)
+![Version: 0.0.6](https://img.shields.io/badge/Version-0.0.6-informational?style=flat-square) ![AppVersion: 2.0.0-AM26-startupProbe](https://img.shields.io/badge/AppVersion-2.0.0--AM26--startupProbe-informational?style=flat-square)
 
 ApacheDS is a LDAP server written in Java
 
@@ -218,6 +218,20 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 0.0.6
+
+#### Added
+
+N/A
+
+#### Changed
+
+* add https prefix to renovate comment
+
+#### Fixed
+
+N/A
 
 ### Version 0.0.5
 
