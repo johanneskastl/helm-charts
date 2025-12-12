@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
 # renovate datasource=docker registryUrl=https://ghcr.io depName=linuxserver/hedgedoc
-appVersion: 1.10.3-ls173
+appVersion: 1.10.3-ls174
 description: HedgeDoc lets you create real-time collaborative markdown notes.
 name: hedgedoc
-version: 2.2.40
+version: 2.2.41
 kubeVersion: ">=1.19.0-0"
 keywords:
   - hedgedoc
@@ -31,4 +31,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |
     - kind: changed
-      description: update hedgedoc to 1.10.3-ls173
+      description: update hedgedoc to 1.10.3-ls174
