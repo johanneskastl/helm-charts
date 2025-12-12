@@ -1,6 +1,6 @@
 # heimdall
 
-![Version: 9.4.2](https://img.shields.io/badge/Version-9.4.2-informational?style=flat-square) ![AppVersion: v2.7.6-ls327](https://img.shields.io/badge/AppVersion-v2.7.6--ls327-informational?style=flat-square)
+![Version: 9.4.3](https://img.shields.io/badge/Version-9.4.3-informational?style=flat-square) ![AppVersion: v2.7.6-ls328](https://img.shields.io/badge/AppVersion-v2.7.6--ls328-informational?style=flat-square)
 
 An Application dashboard and launcher
 
@@ -83,7 +83,7 @@ N/A
 | env.PUID | string | `"1000"` | Set the container user id |
 | env.TZ | string | `"UTC"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
-| image.repository | string | `"linuxserver/heimdall"` | image repository |
+| image.repository | string | `"ghcr.io/linuxserver/heimdall"` | image repository |
 | image.tag | string | chart.appVersion | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
@@ -95,6 +95,20 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 9.4.3
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update heimdall to v2.7.6-ls328
+
+#### Fixed
+
+N/A
 
 ### Version 9.4.2
 
