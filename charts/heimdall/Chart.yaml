@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
 # renovate datasource=docker registryUrl=https://ghcr.io depName=linuxserver/heimdall
-appVersion: v2.7.6-ls329
+appVersion: v2.7.6-ls330
 description: An Application dashboard and launcher
 name: heimdall
-version: 9.4.4
+version: 9.4.5
 kubeVersion: ">=1.16.0-0"
 keywords:
   - heimdall
@@ -23,4 +23,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update heimdall to v2.7.6-ls329
+      description: update heimdall to v2.7.6-ls330
