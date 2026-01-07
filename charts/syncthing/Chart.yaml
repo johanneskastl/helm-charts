@@ -3,10 +3,10 @@ apiVersion: v2
 # no leading v on the appVersion
 # in contrast to the tags in GitHub
 # renovate datasource=docker registryUrl=https://docker.io depName=syncthing/syncthing
-appVersion: 2.0.12
+appVersion: 2.0.13
 description: Open Source Continuous File Synchronization
 name: syncthing
-version: 5.0.14
+version: 5.0.15
 kubeVersion: ">=1.16.0-0"
 keywords:
   - syncthing
@@ -26,4 +26,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update syncthing to 2.0.12
+      description: update syncthing to 2.0.13
