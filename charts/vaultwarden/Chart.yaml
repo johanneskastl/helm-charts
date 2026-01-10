@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
 # renovate datasource=docker registryUrl=https://docker.io depName=vaultwarden/server
-appVersion: 1.35.1
+appVersion: 1.35.2
 description: Vaultwarden is a Bitwarden compatible server in Rust
 name: vaultwarden
-version: 6.10.0
+version: 6.10.1
 kubeVersion: ">=1.16.0-0"
 keywords:
   - Vaultwarden
@@ -31,4 +31,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update vaultwarden to 1.35.1
+      description: update vaultwarden to 1.35.2
