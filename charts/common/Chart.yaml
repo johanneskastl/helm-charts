@@ -2,11 +2,11 @@ apiVersion: v2
 name: common
 description: Function library for charts that were forked from k8s-at-home after its deprecation
 type: library
-version: 5.0.5
+version: 5.0.6
 kubeVersion: ">=1.16.0-0"
 keywords:
   - common
 home: https://github.com/johanneskastl/helm-charts/tree/main/charts/common
 maintainers:
   - name: johanneskastl
-    email: kastl@b1-systems.de
+    email: git@johannes-kastl.de
