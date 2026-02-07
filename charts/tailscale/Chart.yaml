@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
 # renovate datasource=docker registryUrl=https://docker.io depName=tailscale/tailscale
-appVersion: v1.92.5
+appVersion: v1.94.1
 description: Run a tailscale subnet router in Kubernetes
 name: tailscale
-version: 0.33.1
+version: 0.34.0
 kubeVersion: ">=1.19.0-0"
 keywords:
   - tailscale
@@ -23,4 +23,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update tailscale to v1.92.5
+      description: update tailscale to v1.94.1
