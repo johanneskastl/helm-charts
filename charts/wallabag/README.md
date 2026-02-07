@@ -1,6 +1,6 @@
 # wallabag
 
-![Version: 8.4.0](https://img.shields.io/badge/Version-8.4.0-informational?style=flat-square) ![AppVersion: 2.4.2](https://img.shields.io/badge/AppVersion-2.4.2-informational?style=flat-square)
+![Version: 8.5.0](https://img.shields.io/badge/Version-8.5.0-informational?style=flat-square) ![AppVersion: 2.6.14](https://img.shields.io/badge/AppVersion-2.6.14-informational?style=flat-square)
 
 A self hostable application for saving web pages, freely.
 
@@ -99,6 +99,20 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 8.5.0
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update wallabag to 2.6.14
+
+#### Fixed
+
+N/A
 
 ### Version 8.0.7
 
