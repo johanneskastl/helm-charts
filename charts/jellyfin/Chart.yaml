@@ -1,10 +1,10 @@
 ---
 apiVersion: v2
 # renovate datasource=docker registryUrl=https://docker.io depName=jellyfin/jellyfin
-appVersion: 10.8.1
+appVersion: 10.9.11
 description: Jellyfin is a Free Software Media System
 name: jellyfin
-version: 10.0.4
+version: 10.1.0
 kubeVersion: ">=1.16.0-0"
 keywords:
   - jellyfin
@@ -24,5 +24,5 @@ dependencies:
     version: 5.0.5
 annotations:
   artifacthub.io/changes: |-
-    - kind: added
-      description: add https prefix in renovate comment
+    - kind: changed
+      description: update jellyfin to 10.9.11
