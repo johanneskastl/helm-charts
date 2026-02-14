@@ -8139,6 +8139,34 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update tailscale to v1.94.2
+    apiVersion: v2
+    appVersion: v1.94.2
+    created: "2026-02-14T14:50:23.176919352Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Run a tailscale subnet router in Kubernetes
+    digest: 86aa016544ed63fc91ad8eddd7f506a5f53610a839605d5f66c55c1b3d31aca0
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/tailscale
+    keywords:
+    - tailscale
+    - vpn
+    - wireguard
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: tailscale
+    sources:
+    - https://github.com/tailscale/tailscale
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/tailscale-0.34.1/tailscale-0.34.1.tgz
+    version: 0.34.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update tailscale to v1.94.1
     apiVersion: v2
     appVersion: v1.94.1
@@ -10269,6 +10297,36 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/tailscale-0.0.1/tailscale-0.0.1.tgz
     version: 0.0.1
   uptime-kuma:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: update uptime-kuma to 2.1.1
+    apiVersion: v2
+    appVersion: 2.1.1
+    created: "2026-02-14T14:50:23.365783586Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: ac04868c45ed1bdc3785666e87e88b8b367994a82a6119b39f39230ff93f37b6
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/uptime-kuma-3.1.1/uptime-kuma-3.1.1.tgz
+    version: 3.1.1
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -13593,4 +13651,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2026-02-14T14:49:31.856548393Z"
+generated: "2026-02-14T14:50:23.367643598Z"
