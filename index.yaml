@@ -5379,6 +5379,34 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update heimdall to v2.7.6-ls339
+    apiVersion: v2
+    appVersion: v2.7.6-ls339
+    created: "2026-03-15T08:23:25.234355502Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: An Application dashboard and launcher
+    digest: 2d58b415faf3e9a75f4a9a6f80671c2595333f9bc6919fcb1c973f4cd9d7929d
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/heimdall
+    icon: https://i.imgur.com/mM4tcO5.png
+    keywords:
+    - heimdall
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: heimdall
+    sources:
+    - https://hub.docker.com/r/linuxserver/heimdall/
+    - https://github.com/linuxserver/heimdall
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/heimdall-9.4.11/heimdall-9.4.11.tgz
+    version: 9.4.11
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update heimdall to v2.7.6-ls338
     apiVersion: v2
     appVersion: v2.7.6-ls338
@@ -6757,6 +6785,35 @@ entries:
     - https://github.com/johanneskastl/helm-charts/releases/download/sharry-6.0.0/sharry-6.0.0.tgz
     version: 6.0.0
   syncthing:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: update syncthing to 2.0.15
+    apiVersion: v2
+    appVersion: 2.0.15
+    created: "2026-03-15T08:23:25.431837335Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Open Source Continuous File Synchronization
+    digest: 8c75e0bdae4955cb8de9d70e058f02596629686adde19ceede960e4d66428cfa
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/syncthing
+    icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
+    keywords:
+    - syncthing
+    - file sync
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: syncthing
+    sources:
+    - https://syncthing.net/
+    - https://github.com/syncthing/syncthing
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/syncthing-5.0.17/syncthing-5.0.17.tgz
+    version: 5.0.17
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -10430,6 +10487,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update uptime-kuma to 2.2.0
+    apiVersion: v2
+    appVersion: 2.2.0
+    created: "2026-03-15T08:23:25.64169492Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: 5aa492ab2df6903fb33c9e38cdfe1b2d36d42e3a16e17784b3ffea8da175d40f
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/uptime-kuma-3.2.0/uptime-kuma-3.2.0.tgz
+    version: 3.2.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update uptime-kuma to 2.1.3
     apiVersion: v2
     appVersion: 2.1.3
@@ -13887,4 +13974,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2026-03-05T07:43:04.673196941Z"
+generated: "2026-03-15T08:23:25.642619562Z"
