@@ -6270,6 +6270,38 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update kanboard to v1.2.52
+    apiVersion: v2
+    appVersion: v1.2.52
+    created: "2026-04-09T07:27:24.887555774Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.12
+    description: Kanboard is a free and open source Kanban project management software.
+    digest: a2eb960d52de00f2c8a712d11fea3cbdab880be63489f95637199f68ce9e2466
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/kanboard
+    icon: https://raw.githubusercontent.com/kanboard/website/master/assets/img/icon.svg
+    keywords:
+    - kanboard
+    - kanban
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: kanboard
+    sources:
+    - https://github.com/kanboard/kanboard
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/kanboard-6.0.19/kanboard-6.0.19.tgz
+    version: 6.0.19
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update kanboard to v1.2.51
     apiVersion: v2
     appVersion: v1.2.51
@@ -14378,4 +14410,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2026-04-09T07:27:03.779101046Z"
+generated: "2026-04-09T07:27:24.888560201Z"
