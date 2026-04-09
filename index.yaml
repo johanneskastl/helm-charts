@@ -7025,6 +7025,35 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update syncthing to 2.0.16
+    apiVersion: v2
+    appVersion: 2.0.16
+    created: "2026-04-09T07:27:03.778365494Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: Open Source Continuous File Synchronization
+    digest: 2f011a5d221eef41194ae795237ffef951bdd7d611ec3a8117982eb580aaf8fd
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/syncthing
+    icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
+    keywords:
+    - syncthing
+    - file sync
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: syncthing
+    sources:
+    - https://syncthing.net/
+    - https://github.com/syncthing/syncthing
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/syncthing-5.0.18/syncthing-5.0.18.tgz
+    version: 5.0.18
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update syncthing to 2.0.15
     apiVersion: v2
     appVersion: 2.0.15
@@ -14349,4 +14378,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2026-04-09T07:26:49.254695757Z"
+generated: "2026-04-09T07:27:03.779101046Z"
