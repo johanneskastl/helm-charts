@@ -4,7 +4,7 @@ apiVersion: v2
 appVersion: '2.2'
 description: 389ds LDAP server
 name: 389ds
-version: 0.0.3
+version: 0.0.4
 kubeVersion: ">=1.19.0-0"
 keywords:
   - 389-ds
