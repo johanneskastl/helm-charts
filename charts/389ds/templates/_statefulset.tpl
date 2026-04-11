@@ -45,9 +45,9 @@ spec:
         {{- end }}
     spec:
       {{- include "common.controller.pod" . | nindent 6 }}
-  {{ with .Values.volumeClaimTemplates }}
+  {{- with .Values.volumeClaimTemplates }}
   volumeClaimTemplates:
-    {{- range $index, $vct := .Values.volumeClaimTemplates }}
+    {{- range $index, $vct := . }}
     - metadata:
         name: {{ $vct.name }}
       spec:
