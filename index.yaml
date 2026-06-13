@@ -5892,6 +5892,34 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update heimdall to v2.7.6-ls350
+    apiVersion: v2
+    appVersion: v2.7.6-ls350
+    created: "2026-06-13T09:59:41.417303253Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    description: An Application dashboard and launcher
+    digest: 0662d23dfae82d3aa63c808d53c5304880ba46b24045f3dfee476a298484b0d4
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/heimdall
+    icon: https://i.imgur.com/mM4tcO5.png
+    keywords:
+    - heimdall
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: heimdall
+    sources:
+    - https://hub.docker.com/r/linuxserver/heimdall/
+    - https://github.com/linuxserver/heimdall
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/heimdall-9.4.18/heimdall-9.4.18.tgz
+    version: 9.4.18
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update heimdall to v2.7.6-ls348
     apiVersion: v2
     appVersion: v2.7.6-ls348
@@ -15439,4 +15467,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2026-06-05T20:03:40.61366929Z"
+generated: "2026-06-13T09:59:41.418217134Z"
