@@ -4,7 +4,7 @@ apiVersion: v2
 appVersion: v0.32.0
 description: DNS proxy as ad-blocker for local network
 name: blocky
-version: 11.29.0
+version: 11.30.0
 kubeVersion: ">=1.19.0-0"
 keywords:
   - blocky
@@ -23,9 +23,9 @@ dependencies:
     version: 5.0.5
   - name: redis
     repository: https://charts.bitnami.com/bitnami
-    version: 27.0.8
+    version: 27.0.10
     condition: redis.enabled
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update blocky to v0.32.0
+      description: update dependency redis to 27.0.10
