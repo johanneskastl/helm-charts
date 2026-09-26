@@ -1,6 +1,6 @@
 # jellyfin
 
-![Version: 10.0.4](https://img.shields.io/badge/Version-10.0.4-informational?style=flat-square) ![AppVersion: 10.8.1](https://img.shields.io/badge/AppVersion-10.8.1-informational?style=flat-square)
+![Version: 10.1.0](https://img.shields.io/badge/Version-10.1.0-informational?style=flat-square) ![AppVersion: 10.9.11](https://img.shields.io/badge/AppVersion-10.9.11-informational?style=flat-square)
 
 Jellyfin is a Free Software Media System
 
@@ -94,6 +94,20 @@ All notable changes to this Helm chart will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Version 10.1.0
+
+#### Added
+
+N/A
+
+#### Changed
+
+* update jellyfin to 10.9.11
+
+#### Fixed
+
+N/A
 
 ### Version 10.0.4
 
