@@ -1,6 +1,6 @@
 # blocky
 
-![Version: 11.41.0](https://img.shields.io/badge/Version-11.41.0-informational?style=flat-square) ![AppVersion: v0.35.0](https://img.shields.io/badge/AppVersion-v0.35.0-informational?style=flat-square)
+![Version: 11.42.0](https://img.shields.io/badge/Version-11.42.0-informational?style=flat-square) ![AppVersion: v0.35.0](https://img.shields.io/badge/AppVersion-v0.35.0-informational?style=flat-square)
 
 DNS proxy as ad-blocker for local network
 
@@ -18,7 +18,7 @@ Kubernetes: `>=1.19.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | redis | 28.2.4 |
+| https://charts.bitnami.com/bitnami | redis | 28.3.1 |
 | https://johanneskastl.github.io/helm-charts/ | common | 5.0.5 |
 
 ## TL;DR
