@@ -16749,6 +16749,46 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update dependency redis to 28.3.12
+    apiVersion: v2
+    appVersion: 2.4.2
+    created: "2026-11-07T12:58:16.149197243Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 28.3.12
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.12
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.14
+    description: A self hostable application for saving web pages, freely.
+    digest: e0b281ffe2aa3015926e043aa9b144faa114bde870cfebd3aba8f99ba739e8f2
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/wallabag
+    icon: https://raw.githubusercontent.com/wallabag/logo/master/app-android/logo-app-android-icon-bg-white-512.png
+    keywords:
+    - wallabag
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: wallabag
+    sources:
+    - https://github.com/wallabag/docker
+    - https://hub.docker.com/wallabag/wallabag
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.28.0/wallabag-8.28.0.tgz
+    version: 8.28.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update dependency redis to 28.3.10
     apiVersion: v2
     appVersion: 2.4.2
@@ -18106,4 +18146,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2026-11-07T12:56:00.643731547Z"
+generated: "2026-11-07T12:58:16.1498139Z"
