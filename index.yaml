@@ -15064,6 +15064,42 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: update vaultwarden to 1.37.5
+    apiVersion: v2
+    appVersion: 1.37.5
+    created: "2026-11-07T12:51:40.130996697Z"
+    dependencies:
+    - name: common
+      repository: https://johanneskastl.github.io/helm-charts/
+      version: 5.0.5
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.0.14
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.12
+    description: Vaultwarden is a Bitwarden compatible server in Rust
+    digest: 30aa637792f272b3a491d61be0e8e36855d4d250f37604d16c537459c2debcd9
+    home: https://github.com/johanneskastl/helm-charts/tree/main/charts/vaultwarden
+    icon: https://sesoodan.sirv.com/bitwarden_rs.png
+    keywords:
+    - Vaultwarden
+    - bitwardenrs
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@johannes-kastl.de
+      name: johanneskastl
+    name: vaultwarden
+    sources:
+    - https://github.com/dani-garcia/vaultwarden
+    urls:
+    - https://github.com/johanneskastl/helm-charts/releases/download/vaultwarden-6.12.3/vaultwarden-6.12.3.tgz
+    version: 6.12.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: update vaultwarden to 1.37.4
     apiVersion: v2
     appVersion: 1.37.4
@@ -18006,4 +18042,4 @@ entries:
     urls:
     - https://github.com/johanneskastl/helm-charts/releases/download/wallabag-8.0.0/wallabag-8.0.0.tgz
     version: 8.0.0
-generated: "2026-11-02T13:48:30.388690918Z"
+generated: "2026-11-07T12:51:40.131746706Z"
